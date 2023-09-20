@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+  },
+  {
+    "objectID": "data/README 2.html",
+    "href": "data/README 2.html",
+    "title": "Data",
+    "section": "",
+    "text": "[Dataset]: Description of the dataset"
+  },
+  {
+    "objectID": "data/README 2.html#variable-names-and-descriptions",
+    "href": "data/README 2.html#variable-names-and-descriptions",
+    "title": "Data",
+    "section": "Variable Names and Descriptions:",
+    "text": "Variable Names and Descriptions:\n\nvariable: Description"
+  },
+  {
+    "objectID": "data/README 2.html#data-types",
+    "href": "data/README 2.html#data-types",
+    "title": "Data",
+    "section": "Data Types:",
+    "text": "Data Types:\n\nColumn: data type"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Feline Footprints",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Feline Footprints",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "presentation.html#quarto",
+    "href": "presentation.html#quarto",
+    "title": "Project title",
+    "section": "Quarto",
+    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
+  },
+  {
+    "objectID": "presentation.html#layouts",
+    "href": "presentation.html#layouts",
+    "title": "Project title",
+    "section": "Layouts",
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
+  },
+  {
+    "objectID": "presentation.html#code",
+    "href": "presentation.html#code",
+    "title": "Project title",
+    "section": "Code",
+    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+  },
+  {
+    "objectID": "presentation.html#plots",
+    "href": "presentation.html#plots",
+    "title": "Project title",
+    "section": "Plots",
+    "text": "Plots"
+  },
+  {
+    "objectID": "presentation.html#plot-and-text",
+    "href": "presentation.html#plot-and-text",
+    "title": "Project title",
+    "section": "Plot and text",
+    "text": "Plot and text\n\n\n\nSome text\ngoes here"
+  },
+  {
+    "objectID": "presentation.html#tables",
+    "href": "presentation.html#tables",
+    "title": "Project title",
+    "section": "Tables",
+    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
+  },
+  {
+    "objectID": "presentation.html#images",
+    "href": "presentation.html#images",
+    "title": "Project title",
+    "section": "Images",
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
+  },
+  {
+    "objectID": "presentation.html#math-expressions",
+    "href": "presentation.html#math-expressions",
+    "title": "Project title",
+    "section": "Math Expressions",
+    "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
+  },
+  {
+    "objectID": "presentation.html#feeling-adventurous",
+    "href": "presentation.html#feeling-adventurous",
+    "title": "Project title",
+    "section": "Feeling adventurous?",
+    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  },
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "",
+    "text": "Rows: 101\nColumns: 16\n$ tag_id                        &lt;chr&gt; \"Tommy-Tag\", \"Athena\", \"Ares\", \"Lola\", \"…\n$ animal_id                     &lt;chr&gt; \"Tommy\", \"Athena\", \"Ares\", \"Lola\", \"Mave…\n$ animal_taxon                  &lt;chr&gt; \"Felis catus\", \"Felis catus\", \"Felis cat…\n$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…\n$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…\n$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …\n$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…\n$ animal_reproductive_condition &lt;chr&gt; \"Neutered\", \"Spayed\", \"Neutered\", \"Spaye…\n$ animal_sex                    &lt;chr&gt; \"m\", \"f\", \"m\", \"f\", \"m\", \"f\", \"m\", \"m\", …\n$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …\n$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…\n$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …\n$ study_site                    &lt;chr&gt; \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\"…\n$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…\n\n\n\n\nPet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, type of food the cats eat is a logical variable and reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied."
+  },
+  {
+    "objectID": "proposal.html#dataset",
+    "href": "proposal.html#dataset",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "",
+    "text": "Rows: 101\nColumns: 16\n$ tag_id                        &lt;chr&gt; \"Tommy-Tag\", \"Athena\", \"Ares\", \"Lola\", \"…\n$ animal_id                     &lt;chr&gt; \"Tommy\", \"Athena\", \"Ares\", \"Lola\", \"Mave…\n$ animal_taxon                  &lt;chr&gt; \"Felis catus\", \"Felis catus\", \"Felis cat…\n$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…\n$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…\n$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …\n$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…\n$ animal_reproductive_condition &lt;chr&gt; \"Neutered\", \"Spayed\", \"Neutered\", \"Spaye…\n$ animal_sex                    &lt;chr&gt; \"m\", \"f\", \"m\", \"f\", \"m\", \"f\", \"m\", \"m\", …\n$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …\n$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…\n$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …\n$ study_site                    &lt;chr&gt; \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\"…\n$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…\n\n\n\n\nPet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, type of food the cats eat is a logical variable and reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied."
+  },
+  {
+    "objectID": "proposal.html#questions",
+    "href": "proposal.html#questions",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Questions",
+    "text": "Questions\n1) Are the cats which live together greater at hunting than those who live alone?\n2) How does the reproductive status of cats influence the hunting pattern?"
+  },
+  {
+    "objectID": "proposal.html#analysis-plan",
+    "href": "proposal.html#analysis-plan",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Analysis plan",
+    "text": "Analysis plan\n\nQuestion 1\n\nThe first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: n_cats (number of cats living in the house), avg_ground_speed (the average speed of entire tracking period), prey_p_month (prey caught per month), age_years (cat’s age).\nWe will then use a Bubble Chart to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:\n\n1) number of cats on the x-axis\n2) prey caught per month on the y-axis,\n3) The size of each bubble will correspond to the values of average ground speed and\n4) The color of the bubbles will be determined by the age of the cats.\n\nA Violin plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.\n\n\n\nQuestion 2\n\nThe second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains animal_reproductive_condition that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have prey_p_month and hrs_indoors that reflec how much time a cat spends indoors or outdoors hunting.\nWe are planning to go with a Parrallel Plot or a Line Chart that will effectively compare the three variables together.\n\n1) Two of the axes of either graph will contain the numeric variables prey_p_month and hrs_indoors.\n2) The third categorical variable will act as a distinguish-er in the groups of the plot.\n\nThis visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point."
+  }
+]
