@@ -1,5 +1,3 @@
-
-
 ```{r}
 #| label: load-pkgs
 #| message: false
@@ -7,20 +5,145 @@
 suppressWarnings(library(tidyverse))
 library(knitr)
 library(lubridate)
-
+library(here)
 ```
-
 
 ## Dataset Setup
+
 ```{r}
 
+cats <- read_csv(here("data", "cats_uk_reference.csv"))
+cats
+```
+
+```{r}
+refs <- read_csv(here("data", "cats_uk.csv"))
+refs
+```
+
+```{r}
+
+refs |>
+  group_by(tag_id) |>
+  summarise(avg_ground_speed=mean(ground_speed))
+```
+
+```{r}
+
+cats_speed <- group_by(refs, tag_id) |> summarise(avg_ground_speed = mean(ground_speed))
+```
+
+```{r}
+
+cats <- left_join(cats, cats_speed, by=c("tag_id" = "tag_id"))
+cats
+```
+
+```{r}
+write.table(cats , 
+            file = here("data", "cats_merged.csv"), 
+            sep=",", row.names=FALSE)
+```
+
+```{r}
+
+cats[cats$n_cats > 4,c("n_cats")]
+```
+
+```{r}
 
 ```
 
-
-
 ## Plots
+
+```{r, warning=FALSE}
+
+cats |>
+  ggplot(aes(x=as.character(n_cats), y=prey_p_month)) +
+  geom_jitter(aes(size=age_years, color=avg_ground_speed)) +
+  # geom_violin() +
+  scale_color_gradient(low = "pink2", high = "black") +
+  theme_minimal()
+
+# The hunting pattern is lonely cats is similar to the cats who live together. only difference being, the cats who are lonely only became better as they aged, but the cats who live together, started hunting more as they were young, and stopped as they got older
+```
+
+```{r, warning=FALSE}
+
+
+# cats[cats$animal_reproductive_condition %in% c("Neutered", "Spayed"),] |>
+#   ggplot(aes(x=prey_p_month, y=hrs_indoors, color=animal_reproductive_condition)) +
+#   geom_jitter() +
+#   # geom_smooth(se=FALSE) +
+#   # geom_line() +
+#   theme_minimal()
+
+cats |>
+  mutate(
+    is_neutered = case_when(
+      animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
+      TRUE ~ "No"
+    )
+  ) |>
+  group_by(is_neutered, hrs_indoors) |>
+  summarize(avg_prey = mean(prey_p_month), avg_age=mean(age_years), 
+            .groups = "drop") |>
+  drop_na() |>
+  ggplot(aes(x=avg_prey, y=hrs_indoors, color=is_neutered)) +
+  geom_jitter() +
+  # geom_smooth(se=FALSE) +
+  geom_line(size=0.8) +
+  theme_minimal()
+```
+
 ```{r}
 
+cats |>
+  mutate(
+    is_neutered = case_when(
+      animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
+      TRUE ~ "No"
+    )
+  ) |>
+  group_by(is_neutered, prey_p_month) |>
+  summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years), 
+            .groups = "drop") |>
+  # drop_na() |>
+  ggplot(aes(x=prey_p_month, y=sum_hrs, color=is_neutered)) +
+  geom_jitter() +
+  # geom_smooth(se=FALSE
+  geom_line(aes(size=avg_age)) +
+  theme_minimal()
+```
 
+```{r}
+
+library(hrbrthemes)
+library(GGally)
+# library(viridis) 
+
+cats |>
+  mutate(
+    is_neutered = case_when(
+      animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
+      TRUE ~ "No"
+    )
+  ) |>
+  group_by(is_neutered, prey_p_month) |>
+  summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years),
+            .groups = "drop") |>
+  # drop_na() |>
+  ggparcoord(
+      columns = 2:3, groupColumn=1, #order = "allClass",
+      scale="uniminmax",
+      showPoints = TRUE, 
+      title = "Parallel Coordinate Plot for the Iris Data",
+      alphaLines = 0.3
+      ) + 
+      # scale_color_viridis(discrete=TRUE) +
+    scale_color_manual(values=c("red", "black")) +
+    theme_ipsum()+
+    theme(
+      plot.title = element_text(size=10)
+    )
 ```

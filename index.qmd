@@ -1,5 +1,5 @@
 ---
-title: "Project title"
+title: "Feline Footprints"
 subtitle: "INFO 526 - Project 1"
 author: "Team name"
 format: html

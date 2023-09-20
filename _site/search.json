@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+  },
+  {
     "objectID": "data/README 2.html",
     "href": "data/README 2.html",
     "title": "Data",
@@ -21,11 +28,18 @@
     "text": "Data Types:\n\nColumn: data type"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Feline Footprints",
     "section": "",
-    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Feline Footprints",
+    "section": "",
+    "text": "Add project abstract here."
   },
   {
     "objectID": "presentation.html#quarto",
@@ -91,45 +105,31 @@
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project title",
-    "section": "",
-    "text": "Add project abstract here."
-  },
-  {
-    "objectID": "index.html#abstract",
-    "href": "index.html#abstract",
-    "title": "Project title",
-    "section": "",
-    "text": "Add project abstract here."
-  },
-  {
     "objectID": "proposal.html",
     "href": "proposal.html",
-    "title": "Proposal title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "",
-    "text": "library(tidyverse)"
+    "text": "Rows: 101\nColumns: 16\n$ tag_id                        &lt;chr&gt; \"Tommy-Tag\", \"Athena\", \"Ares\", \"Lola\", \"…\n$ animal_id                     &lt;chr&gt; \"Tommy\", \"Athena\", \"Ares\", \"Lola\", \"Mave…\n$ animal_taxon                  &lt;chr&gt; \"Felis catus\", \"Felis catus\", \"Felis cat…\n$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…\n$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…\n$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …\n$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…\n$ animal_reproductive_condition &lt;chr&gt; \"Neutered\", \"Spayed\", \"Neutered\", \"Spaye…\n$ animal_sex                    &lt;chr&gt; \"m\", \"f\", \"m\", \"f\", \"m\", \"f\", \"m\", \"m\", …\n$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …\n$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…\n$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …\n$ study_site                    &lt;chr&gt; \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\"…\n$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…\n\n\n\n\nPet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, type of food the cats eat is a logical variable and reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied."
   },
   {
     "objectID": "proposal.html#dataset",
     "href": "proposal.html#dataset",
-    "title": "Proposal title",
-    "section": "Dataset",
-    "text": "Dataset\nA brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.\nMake sure to load the data and use inline code for some of this information."
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "",
+    "text": "Rows: 101\nColumns: 16\n$ tag_id                        &lt;chr&gt; \"Tommy-Tag\", \"Athena\", \"Ares\", \"Lola\", \"…\n$ animal_id                     &lt;chr&gt; \"Tommy\", \"Athena\", \"Ares\", \"Lola\", \"Mave…\n$ animal_taxon                  &lt;chr&gt; \"Felis catus\", \"Felis catus\", \"Felis cat…\n$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…\n$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…\n$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …\n$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…\n$ animal_reproductive_condition &lt;chr&gt; \"Neutered\", \"Spayed\", \"Neutered\", \"Spaye…\n$ animal_sex                    &lt;chr&gt; \"m\", \"f\", \"m\", \"f\", \"m\", \"f\", \"m\", \"m\", …\n$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …\n$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…\n$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…\n$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …\n$ study_site                    &lt;chr&gt; \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\", \"UK\"…\n$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…\n\n\n\n\nPet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, type of food the cats eat is a logical variable and reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied."
   },
   {
     "objectID": "proposal.html#questions",
     "href": "proposal.html#questions",
-    "title": "Proposal title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Questions",
-    "text": "Questions\nThe two questions you want to answer."
+    "text": "Questions\n1) Are the cats which live together greater at hunting than those who live alone?\n2) How does the reproductive status of cats influence the hunting pattern?"
   },
   {
     "objectID": "proposal.html#analysis-plan",
     "href": "proposal.html#analysis-plan",
-    "title": "Proposal title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Analysis plan",
-    "text": "Analysis plan\n\nA plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any)."
+    "text": "Analysis plan\n\nQuestion 1\n\nThe first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: n_cats (number of cats living in the house), avg_ground_speed (the average speed of entire tracking period), prey_p_month (prey caught per month), age_years (cat’s age).\nWe will then use a Bubble Chart to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:\n\n1) number of cats on the x-axis\n2) prey caught per month on the y-axis,\n3) The size of each bubble will correspond to the values of average ground speed and\n4) The color of the bubbles will be determined by the age of the cats.\n\nA Violin plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.\n\n\n\nQuestion 2\n\nThe second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains animal_reproductive_condition that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have prey_p_month and hrs_indoors that reflec how much time a cat spends indoors or outdoors hunting.\nWe are planning to go with a Parrallel Plot or a Line Chart that will effectively compare the three variables together.\n\n1) Two of the axes of either graph will contain the numeric variables prey_p_month and hrs_indoors.\n2) The third categorical variable will act as a distinguish-er in the groups of the plot.\n\nThis visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point."
   }
 ]

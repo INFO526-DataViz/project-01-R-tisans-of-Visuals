@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Title - Proposal title</title>
+<title>Project Title - Analysing Cat Hunting Behaviour</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,8 +55,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
@@ -153,9 +118,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a>
+  <ul class="collapse">
+  <li><a href="#reason-of-choosing-the-dataset" id="toc-reason-of-choosing-the-dataset" class="nav-link" data-scroll-target="#reason-of-choosing-the-dataset">Reason of choosing the dataset</a></li>
+  </ul></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a></li>
+  <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -164,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proposal title</h1>
+<h1 class="title">Analysing Cat Hunting Behaviour</h1>
 <p class="subtitle lead">Proposal</p>
 </div>
 
@@ -180,25 +152,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.</p>
-<p>Make sure to load the data and use inline code for some of this information.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 101
+Columns: 16
+$ tag_id                        &lt;chr&gt; "Tommy-Tag", "Athena", "Ares", "Lola", "…
+$ animal_id                     &lt;chr&gt; "Tommy", "Athena", "Ares", "Lola", "Mave…
+$ animal_taxon                  &lt;chr&gt; "Felis catus", "Felis catus", "Felis cat…
+$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…
+$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…
+$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …
+$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…
+$ animal_reproductive_condition &lt;chr&gt; "Neutered", "Spayed", "Neutered", "Spaye…
+$ animal_sex                    &lt;chr&gt; "m", "f", "m", "f", "m", "f", "m", "m", …
+$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …
+$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…
+$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
+$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
+$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …
+$ study_site                    &lt;chr&gt; "UK", "UK", "UK", "UK", "UK", "UK", "UK"…
+$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…</code></pre>
+</div>
+</div>
+<section id="description-of-data" class="level4">
+<h4 class="anchored" data-anchor-id="description-of-data"><strong>Description of data</strong></h4>
+<p><strong>Pet Cats</strong> data set comes from <a href="https://www.datarepository.movebank.org/handle/10255/move.882"><strong>Movebank for Animal Tracking Data</strong></a>, collected from volunteers using GPS sensors on their pet cats around <em>UK, US, Australia and New Zealand</em>. The <strong>UK dataset</strong> contains two subsets called <code>cats_uk</code> and <code>cats_uk_reference</code>. So does the <strong>US dataset</strong>.</p>
+<p><code>cats_uk</code> contains <em>18215 observations</em> of <em>11 variables</em> providing data such as <code>ground speed</code>, geographic <code>longitude</code> and <code>latitude</code> estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.</p>
+<p><code>cats_uk_reference</code> contains <em>101 observations</em> of <em>16 variables</em> and primarily describes the number of cats living in a house, whether they are allowed to <code>hunt</code>, their <code>prey per month</code> and <code>age</code>. These are numerical data. Also, <code>type of food</code> the cats eat is a logical variable and <code>reproductive condition</code> and animal sex are categorical variables.</p>
+</section>
+<section id="reason-of-choosing-the-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="reason-of-choosing-the-dataset">Reason of choosing the dataset</h3>
+<p>We selected this dataset because we can gain <em>insights into the habits of cats</em> by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied.</p>
+</section>
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<p>The two questions you want to answer.</p>
+<p>1) Are the cats which live together greater at hunting than those who live alone?</p>
+<p>2) How does the reproductive status of cats influence the hunting pattern?</p>
 </section>
 <section id="analysis-plan" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <ul>
-<li>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</li>
+<li>The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: <code>n_cats</code> (number of cats living in the house), <code>avg_ground_speed</code> (the average speed of entire tracking period), <code>prey_p_month</code> (prey caught per month), <code>age_years</code> (cat’s age).</li>
+<li>We will then use a <strong>Bubble Chart</strong> to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:
+<ul>
+<li>1) number of cats on the x-axis</li>
+<li>2) prey caught per month on the y-axis,</li>
+<li>3) The size of each bubble will correspond to the values of average ground speed and</li>
+<li>4) The color of the bubbles will be determined by the age of the cats.</li>
+</ul></li>
+<li>A <em>Violin plot</em> can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.</li>
+</ul>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<ul>
+<li><p>The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains <code>animal_reproductive_condition</code> that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have <code>prey_p_month</code> and <code>hrs_indoors</code> that reflec how much time a cat spends indoors or outdoors hunting.</p></li>
+<li><p>We are planning to go with a <strong>Parrallel Plot</strong> or a <strong>Line Chart</strong> that will effectively compare the three variables together.</p>
+<ul>
+<li><p>1) Two of the axes of either graph will contain the numeric variables <code>prey_p_month</code> and <code>hrs_indoors</code>.</p></li>
+<li><p>2) The third categorical variable will act as a distinguish-er in the groups of the plot.</p></li>
+</ul></li>
+<li><p>This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.</p></li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

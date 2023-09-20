@@ -1,31 +1,65 @@
 ---
-title: "Proposal title"
+title: "Analysing Cat Hunting Behaviour"
 subtitle: "Proposal"
 format: html
 editor: visual
 ---
 
-```{r}
+```{r, echo=FALSE}
 #| label: load-pkgs
 #| message: false
 library(tidyverse)
+library(here)
 ```
 
 ## Dataset
 
-```{r}
+```{r, echo=FALSE}
 #| label: load-dataset
 #| message: false
+
+cats <- read_csv(here("data", "cats_uk_reference.csv"))
+cats |> glimpse()
 ```
 
-A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
+#### **Description of data**
 
-Make sure to load the data and use inline code for some of this information.
+**Pet Cats** data set comes from [**Movebank for Animal Tracking Data**](https://www.datarepository.movebank.org/handle/10255/move.882), collected from volunteers using GPS sensors on their pet cats around *UK, US, Australia and New Zealand*. The **UK dataset** contains two subsets called `cats_uk` and `cats_uk_reference`. So does the **US dataset**.
+
+`cats_uk` contains *18215 observations* of *11 variables* providing data such as `ground speed`, geographic `longitude` and `latitude` estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.
+
+`cats_uk_reference` contains *101 observations* of *16 variables* and primarily describes the number of cats living in a house, whether they are allowed to `hunt`, their `prey per month` and `age`. These are numerical data. Also, `type of food` the cats eat is a logical variable and `reproductive condition` and animal sex are categorical variables.
+
+### Reason of choosing the dataset
+
+We selected this dataset because we can gain *insights into the habits of cats* by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied.
 
 ## Questions
 
-The two questions you want to answer.
+1\) Are the cats which live together greater at hunting than those who live alone?
+
+2\) How does the reproductive status of cats influence the hunting pattern?
 
 ## Analysis plan
 
--   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+### Question 1
+
+-   The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: `n_cats` (number of cats living in the house), `avg_ground_speed` (the average speed of entire tracking period), `prey_p_month` (prey caught per month), `age_years` (cat's age).
+-   We will then use a **Bubble Chart** to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:
+    -   1\) number of cats on the x-axis
+    -   2\) prey caught per month on the y-axis,
+    -   3\) The size of each bubble will correspond to the values of average ground speed and
+    -   4\) The color of the bubbles will be determined by the age of the cats.
+-   A *Violin plot* can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.
+
+### Question 2
+
+-   The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains `animal_reproductive_condition` that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have `prey_p_month` and `hrs_indoors` that reflec how much time a cat spends indoors or outdoors hunting.
+
+-   We are planning to go with a **Parrallel Plot** or a **Line Chart** that will effectively compare the three variables together.
+
+    -   1\) Two of the axes of either graph will contain the numeric variables `prey_p_month` and `hrs_indoors`.
+
+    -   2\) The third categorical variable will act as a distinguish-er in the groups of the plot.
+
+-   This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.
