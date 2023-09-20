@@ -131,12 +131,5 @@
     "title": "Analysing Cat Hunting Behaviour",
     "section": "Analysis plan",
     "text": "Analysis plan\n\nQuestion 1\n\nThe first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: n_cats (number of cats living in the house), avg_ground_speed (the average speed of entire tracking period), prey_p_month (prey caught per month), age_years (cat’s age).\nWe will then use a Bubble Chart to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:\n\n1) number of cats on the x-axis\n2) prey caught per month on the y-axis,\n3) The size of each bubble will correspond to the values of average ground speed and\n4) The color of the bubbles will be determined by the age of the cats.\n\nA Violin plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.\n\n\n\nQuestion 2\n\nThe second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains animal_reproductive_condition that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have prey_p_month and hrs_indoors that reflec how much time a cat spends indoors or outdoors hunting.\nWe are planning to go with a Parrallel Plot or a Line Chart that will effectively compare the three variables together.\n\n1) Two of the axes of either graph will contain the numeric variables prey_p_month and hrs_indoors.\n2) The third categorical variable will act as a distinguish-er in the groups of the plot.\n\nThis visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point."
-  },
-  {
-    "objectID": "proposal.html#source",
-    "href": "proposal.html#source",
-    "title": "Analysing Cat Hunting Behaviour",
-    "section": "Source:",
-    "text": "Source:\nInformation about the dataset description is derived from the following Tidy Tuesday page: Pet Cats."
   }
 ]
