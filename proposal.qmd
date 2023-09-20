@@ -63,3 +63,7 @@ We selected this dataset because we can gain *insights into the habits of cats* 
     -   2\) The third categorical variable will act as a distinguish-er in the groups of the plot.
 
 -   This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.
+
+## Source:
+
+Information about the dataset description is derived from the following Tidy Tuesday page: [Pet Cats](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-31/readme.md).
