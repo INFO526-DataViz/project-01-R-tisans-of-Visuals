@@ -20,24 +20,27 @@ library(formattable)
 #| message: false
 
 cats <- read_csv(here("data", "cats_uk_reference.csv"))
-cats[1:7,] |> formattable()
+cats[1:2,] |> formattable()
+
+geo_tagged <- read_csv(here("data", "cats_uk.csv"))
+geo_tagged[1:2,] |> formattable()
 ```
 
 #### **Description of data**
 
-**Pet Cats** data set comes from [**Movebank for Animal Tracking Data**](https://www.datarepository.movebank.org/handle/10255/move.882), collected from volunteers using GPS sensors on their pet cats around *UK, US, Australia and New Zealand*. The **UK dataset** contains two subsets called `cats_uk` and `cats_uk_reference`. So does the **US dataset**.
+The **Pet Cats** data set comes from [**Movebank for Animal Tracking Data**](https://www.datarepository.movebank.org/handle/10255/move.882), collected from volunteers using GPS sensors on their pet cats around *UK, US, Australia and New Zealand*. The **UK dataset** contains two subsets called `cats_uk` and `cats_uk_reference`. So does the **US dataset**.
 
 `cats_uk` contains *18215 observations* of *11 variables* providing data such as `ground speed`, geographic `longitude` and `latitude` estimated by the sensor, time-stamp for sensor measurements and an event id. These are all numerical variables.
 
-`cats_uk_reference` contains *101 observations* of *16 variables* and primarily describes the number of cats living in a house, whether they are allowed to `hunt`, their `prey per month` and `age`. These are numerical data. Also, `type of food` the cats eat is a logical variable and `reproductive condition` and animal sex are categorical variables.
+`cats_uk_reference` contains *101 observations* of *16 variables* and primarily describes the number of cats living in a house, whether they are allowed to `hunt`, their `prey per month` and `age`. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. `reproductive condition` and `animal sex` are categorical variables.
 
 ### Reason of choosing the dataset
 
-We selected this dataset because we can gain *insights into the habits of cats* by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied.
+We selected this dataset because we can gain *insights into the habits of cats* by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We all found the dataset interesting, as cats have fascinating characteristics. There seems to be potential relations between hunting capacities, reproductive condition, food habits, age. Representing them through visualizations would provide a great learning curve as the data is varied.
 
 ## Questions
 
-1\) Are the cats which live together good at hunting than those which live alone?
+1\) Are the cats which live together better at hunting than those which live alone?
 
 2\) How does the reproductive status of cats influence the hunting pattern?
 
@@ -45,7 +48,8 @@ We selected this dataset because we can gain *insights into the habits of cats* 
 
 ### Question 1
 
--   The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: `n_cats` (number of cats living in the house), `avg_ground_speed` (the average speed of entire tracking period), `prey_p_month` (prey caught per month), `age_years` (cat's age). All of these variables are already present in the dataset except `avg_ground_speed`, which will be derived from the *geo-tagged dataset* using data feature manipulation. We chose to add *"age"* and *"ground_speed"* because it gives a varied dynamic on the cat's hunting abilities. Ground speed shows how fast the cat hunts, and age is an indirect factor of the cat's experience.
+-   The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: `n_cats` (number of cats living in the house), `avg_ground_speed` (the average speed of entire tracking period), `prey_p_month` (prey caught per month), `age_years` (cat's age). All of these variables are already present in the dataset except `avg_ground_speed`, which will be derived from the *geo-tagged dataset* using data feature manipulation. The *geo-tagged dataset* `cats_uk.csv` contains the ground speed of the cat (referenced with `tag_id`) for each day it was tracked (and went outside). We will take the average of those values of speed for each cat, and create a new column in the *reference dataset* called `avg_ground_speed`.
+-   We chose to add *"age" (years)* and *"ground_speed"* because it gives a varied dynamic on the cat's hunting abilities. Ground speed shows how fast the cat hunts, and age is an indirect factor of the cat's experience.
 -   We will then use a **Bubble Chart** to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:
     -   1\) number of cats on the x-axis
     -   2\) prey caught per month on the y-axis,
@@ -55,13 +59,13 @@ We selected this dataset because we can gain *insights into the habits of cats* 
 
 ### Question 2
 
--   The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains `animal_reproductive_condition` that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have `prey_p_month` and `hrs_indoors` that reflect how much time a cat spends indoors or outdoors hunting.
+-   The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains `animal_reproductive_condition` that specifies whether the animal was neutered or not. We also have `prey_p_month` and `hrs_indoors` that reflect how much time a cat spends indoors or outdoors hunting.
 
 -   We are planning to go with a **Parallel Plot** or a **Line Chart** that will effectively compare the three variables together.
 
     -   1\) Two of the axes of either graph will contain the numeric variables `prey_p_month` and `hrs_indoors`.
 
-    -   2\) The third categorical variable will act as a distinguish-er in the groups of the plot.
+    -   2\) The third categorical variable will help further to categorize (differentiate) the groups in the plot.
 
 -   This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.
 
