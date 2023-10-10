@@ -12,25 +12,43 @@ library(here)
 
 ```{r}
 
-cats <- read_csv(here("data", "cats_uk_reference.csv"))
+cats <- read.csv(here("data", "cats_uk_reference.csv"))
+cats_usa <- read.csv(here("data", "cats_usa_reference.csv"))
 cats
+cats_usa
 ```
 
 ```{r}
 refs <- read_csv(here("data", "cats_uk.csv"))
+refs_usa <- read.csv(here("data","cats_usa.csv"))
 refs
+refs_usa
 ```
 
 ```{r}
 
-refs |>
+#cats_australia <- read.csv(here("data","cats_australia.csv"))
+#cats_australia_refs <- read.csv("data","cats_australia_reference")'
+colnames(refs_usa) <- gsub("[.]", "_", colnames(refs_usa))
+colnames(cats_usa) <- gsub("[.]", "_", colnames(cats_usa))
+
+cats_australia
+ref_uk_usa <- full_join(refs,refs_usa, by="event_id")
+cats_uk_usa <- full_join(cats,cats_usa, by="tag_id")
+%>% 
+  #mutate(country = ifelse(is.na(country), "Unknown", country))
+```
+
+```{r}
+
+cats_uk_usa_refs |>
   group_by(tag_id) |>
-  summarise(avg_ground_speed=mean(ground_speed))
+  summarise(avg_ground_speed=mean(ground_speed.x))
 ```
 
 ```{r}
 
-cats_speed <- group_by(refs, tag_id) |> summarise(avg_ground_speed = mean(ground_speed))
+cats_speed <- group_by(cats_uk_usa_refs, tag_id) |> summarise(avg_ground_speed = mean(ground_speed.x))
 ```
 
 ```{r}
@@ -92,7 +110,7 @@ cats |>
   ggplot(aes(x=avg_prey, y=hrs_indoors, color=is_neutered)) +
   geom_jitter() +
   # geom_smooth(se=FALSE) +
-  geom_line(size=0.8) +
+  #geom_line(size=0.8) +
   theme_minimal()
 ```
 
@@ -146,4 +164,9 @@ cats |>
     theme(
       plot.title = element_text(size=10)
     )
+```
+
+```{r}
+
+
 ```
