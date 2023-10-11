@@ -6,6 +6,7 @@ suppressWarnings(library(tidyverse))
 library(knitr)
 library(lubridate)
 library(here)
+library(ggridges)
 ```
 
 ## Dataset Setup
@@ -21,6 +22,10 @@ cats_usa
 ```{r}
 refs <- read_csv(here("data", "cats_uk.csv"))
 refs_usa <- read.csv(here("data","cats_usa.csv"))
+cats_all <- read_csv(here("data","cats_all.csv"))
+cats_all_new <- read_csv(here("data", "cats_all_new.csv"))
+
+
 refs
 refs_usa
 ```
@@ -32,18 +37,33 @@ refs_usa
 colnames(refs_usa) <- gsub("[.]", "_", colnames(refs_usa))
 colnames(cats_usa) <- gsub("[.]", "_", colnames(cats_usa))
 
-cats_australia
-ref_uk_usa <- full_join(refs,refs_usa, by="event_id")
-cats_uk_usa <- full_join(cats,cats_usa, by="tag_id")
+ <- cats_usa %>%
+  separate(
+    animal_comments,
+    into = c("hunt", "prey_p_month"),
+    sep = "; ",
+    remove = FALSE
+  )
+
+cats_usa <- cats_usa %>%
+  separate(
+    animal_comments,
+    into = c("hrs_indoors", "n_cats"),
+    sep = "; ",
+    remove = FALSE
+  )
+
+ref_uk_usa <- inner_join(refs,refs_usa, by="event_id")
+cats_uk_usa <- inner_join(cats,cats_usa, by="tag_id")
 %>% 
   #mutate(country = ifelse(is.na(country), "Unknown", country))
 ```
 
 ```{r}
 
-cats_uk_usa_refs |>
+cats_all |>
   group_by(tag_id) |>
-  summarise(avg_ground_speed=mean(ground_speed.x))
+  summarise(avg_ground_speed=mean(ground_speed))
 ```
 
 ```{r}
@@ -65,7 +85,7 @@ write.table(cats ,
 
 ```{r}
 
-cats[cats$n_cats > 4,c("n_cats")]
+cats_uk_usa[cats_uk_usa$n_cats > 4,c("n_cats")]
 ```
 
 ```{r}
@@ -76,7 +96,7 @@ cats[cats$n_cats > 4,c("n_cats")]
 
 ```{r, warning=FALSE}
 
-cats |>
+cats_uk_usa |>
   ggplot(aes(x=as.character(n_cats), y=prey_p_month)) +
   geom_jitter(aes(size=age_years, color=avg_ground_speed)) +
   # geom_violin() +
@@ -96,7 +116,7 @@ cats |>
 #   # geom_line() +
 #   theme_minimal()
 
-cats |>
+cats_all |>
   mutate(
     is_neutered = case_when(
       animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
@@ -116,21 +136,23 @@ cats |>
 
 ```{r}
 
-cats |>
+
+cats_all_new |>
   mutate(
     is_neutered = case_when(
       animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
       TRUE ~ "No"
     )
   ) |>
-  group_by(is_neutered, prey_p_month) |>
-  summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years), 
-            .groups = "drop") |>
+  #group_by(is_neutered) |>
+  #summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years), 
+            #.groups = "drop") |>
   # drop_na() |>
-  ggplot(aes(x=prey_p_month, y=sum_hrs, color=is_neutered)) +
-  geom_jitter() +
+  ggplot(aes(x=cats_all$age_years, y=cats_all$prey_p_month, color = animal_reproductive_condition)) +
+  geom_jitter(size = 2, alpha = 1) +
+  facet_wrap(~cats_all_new$animal_reproductive_condition) +
   # geom_smooth(se=FALSE
-  geom_line(aes(size=avg_age)) +
+  #geom_dotplot() +
   theme_minimal()
 ```
 
@@ -140,7 +162,7 @@ library(hrbrthemes)
 library(GGally)
 # library(viridis) 
 
-cats |>
+cats_all |>
   mutate(
     is_neutered = case_when(
       animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
@@ -168,5 +190,65 @@ cats |>
 
 ```{r}
 
-
+cats_all_new |>
+  ggplot(aes(cats_all$age_years, prey_p_month, color= animal_reproductive_condition)) +
+  geom_jitter(alpha = 0.5, size = 2) +
+  #facet_wrap(~cats_all_new$animal_reproductive_condition) +
+  labs(
+    x = "Age",
+    y = "Prey per month"
+  )
 ```
+
+```{r}
+
+cats_all %>%
+  ggplot(aes(x = hrs_indoors, y = prey_p_month, color = animal_reproductive_condition)) +
+  geom_jitter(alpha = 1, size = 4) +
+  #facet_wrap(~animal_sex) +
+  labs(
+    x = "Hours indoors",
+    y = "Prey per month"
+  ) +
+  scale_color_manual(values = c("Spayed" = "#D669FF", "Fixed" = "black", "Neutered" = "#58A6F0", "Not fixed" = "#4BAF0B" ))  # Adjust colors as needed
+```
+
+```{r}
+
+cats_all %>%
+  ggplot(aes(x = hrs_indoors, y = prey_p_month, color = animal_reproductive_condition)) +
+  geom_boxplot() +
+  #facet_wrap(~animal_sex) +
+  labs(
+    x = "Hours indoors",
+    y = "Prey per month"
+  )
+  
+  #scale_color_manual(values = c("Spayed" = "#D669FF", "Fixed" = "black", "Neutered" = "#58A6F0", "Not fixed" = "#4BAF0B" ))  
+```
+
+```{r}
+
+cats_all_new |>
+  mutate(
+    is_neutered = case_when(
+      animal_reproductive_condition %in% c("Neutered", "Spayed") ~ "Yes",
+      TRUE ~ "No"
+    )
+  ) |>
+  #group_by(is_neutered) |>
+  #summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years), 
+            #.groups = "drop") |>
+  # drop_na() |>
+  ggplot(aes(x=cats_all$prey_p_month, color = animal_reproductive_condition)) +
+  geom_density() +
+  #facet_wrap(~cats_all_new$animal_reproductive_condition) +
+  # geom_smooth(se=FALSE
+  #geom_dotplot() +
+  theme_minimal()
+```
+
+\
+\
+\
+\
