@@ -8,4 +8,4 @@ editor: visual
 
 ## Abstract
 
-Add project abstract here.
+Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account \[1\]. Our data set consist of pet cats hunting details from six countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior.
