@@ -215,7 +215,7 @@ cats_all %>%
 
 ```{r}
 
-cats_all %>%
+cats_all_new %>%
   ggplot(aes(x = hrs_indoors, y = prey_p_month, color = animal_reproductive_condition)) +
   geom_boxplot() +
   #facet_wrap(~animal_sex) +
@@ -236,19 +236,82 @@ cats_all_new |>
       TRUE ~ "No"
     )
   ) |>
-  #group_by(is_neutered) |>
-  #summarize(sum_hrs = sum(hrs_indoors), avg_age=mean(age_years), 
-            #.groups = "drop") |>
-  # drop_na() |>
-  ggplot(aes(x=cats_all$prey_p_month, color = animal_reproductive_condition)) +
-  geom_density() +
-  #facet_wrap(~cats_all_new$animal_reproductive_condition) +
-  # geom_smooth(se=FALSE
-  #geom_dotplot() +
+  ggplot(aes(x=cats_all_new$age_years,prey_p_month, shape = cats_all_new$animal_reproductive_condition, color = animal_reproductive_condition)) +
+  geom_jitter(alpha = 0.5, size = 3) +
+  scale_color_manual(values = c("Fixed" = "pink2", "Unneutered" = "blue3")) +
+  theme_minimal() + 
+  labs(
+    x = "Cat age in years",
+    y = "Prey per month",
+  )
+```
+
+```{r warning=FALSE, message=FALSE}
+
+cats_all_new |>
+  ggplot(aes(x=prey_p_month,y=animal_reproductive_condition, 
+             fill = factor(stat(quantile)))) +
+  stat_density_ridges(quantile_lines = TRUE, 
+                      quantiles = 3, 
+                      alpha = 0.5,
+                      geom = "density_ridges_gradient", 
+                      calc_ecdf = TRUE) +
+  scale_fill_viridis_d() +
+  #scale_fill_manual(values = c("#950A9B","#259703","skyblue")) +
+  facet_wrap(~cats_all_new$study_site) +
+  labs(
+    title = "Trends in hunting prey by Country",
+    x = "Prey per month",
+    y = "Annimal reproductive condition"
+  ) +
   theme_minimal()
 ```
 
-\
+```{r}
+
+cats_fixed <- filter(cats_all_new,cats_all_new$animal_reproductive_condition == "Fixed")
+cats_unn <- filter(cats_all_new,cats_all_new$animal_reproductive_condition == "Unneutered")
+
+library(viridis)
+
+cats_fixed |>
+  ggplot(aes(x=prey_p_month, y = age_years, color = animal_reproductive_condition)) +
+  geom_jitter(data = filter(cats_all_new, animal_reproductive_condition == "Fixed"), aes(size = 2,alpha = 0.5)) +
+  geom_jitter(data = filter(cats_all_new, animal_reproductive_condition == "Unneutered"), aes(size = 2)) +
+   scale_fill_viridis(palette = "colorblind") +
+  labs(
+    x = "Prey per month",
+    y = "Age years"
+  )
+```
+
+```{r}
+
+cats_fixed |>
+  ggplot(aes(x=prey_p_month, y = age_years, color = animal_reproductive_condition)) +
+  geom_hex(data = filter(cats_all_new, animal_reproductive_condition == "Fixed"), aes(size = 2,alpha = 0.5)) +
+  geom_hex(data = filter(cats_all_new, animal_reproductive_condition == "Unneutered"), aes(size = 2)) +
+  labs(
+    x = "Prey per month",
+    y = "Age years"
+  )
+
+
+cats_all_new |>
+  ggplot(aes(x=prey_p_month, y = age_years, color = animal_reproductive_condition)) +
+  geom_hex(data = filter(cats_all_new, animal_reproductive_condition == "Fixed",bins = 20)
+```
+
+```{r}
+
+cats_all_new |>
+  ggplot(aes(x=prey_p_month,y = age_years, fill = animal_reproductive_condition)) +
+geom_hex(data = filter(cats_all_new, animal_reproductive_condition == "Fixed"), bins = 15) +
+geom_hex(data = filter(cats_all_new, animal_reproductive_condition == "Unneutered"), bins = 20) +
+scale_fill_manual(values = c("Fixed" = "black", "Unneutered" = "pink"))
+
+```
+
 \
 \
 \
