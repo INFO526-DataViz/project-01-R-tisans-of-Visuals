@@ -1,0 +1,207 @@
+tag-id,animal-id,animal-taxon,deploy-on-date,deploy-off-date,hunt, prey_p_month,age_years,animal-reproductive-condition,animal-sex,hrs_indoors,study-site
+Gingernut,Gingernut,Felis catus,04:07.0,32:43.0, Yes,11,2,Neutered,m,2,NZ
+TabithaTag,Tabitha,Felis catus,01:55.0,00:22.0, Yes,1,1,Spayed,f,10,NZ
+KittyTag,Kitty,Felis catus,02:40.0,53:06.0, Yes,1,14,Spayed,f,8,NZ
+MurphyTag,Murphy,Felis catus,03:10.0,48:30.0, Yes,2,5,Neutered,m,8,NZ
+PandaTag,Panda,Felis catus,47:26.0,18:52.0, Yes,1,3,Spayed,f,10,NZ
+GeordieTag,Geordie,Felis catus,01:06.0,31:52.0, Yes,1,,Spayed,f,12,NZ
+FritzTag,Fritz,Felis catus,01:43.0,07:03.0, Yes,5,7,Neutered,m,12,NZ
+BanzaiTag,Banzai,Felis catus,02:32.0,25:50.0, Yes,1,3,Neutered,m,15,NZ
+NekoTag,Neko,Felis catus,03:41.0,11:28.0, Yes,1,2,Neutered,m,5,NZ
+MogadonTag,Mogadon,Felis catus,04:05.0,17:19.0, No,0,9,Spayed,f,23,NZ
+SkyTag,Sky,Felis catus,02:18.0,08:26.0, Yes,2,6,Neutered,m,18,NZ
+PussumsTag,Pussums,Felis catus,03:12.0,40:58.0, Yes,21,5,Neutered,m,4,NZ
+SmudgeTag,Smudge,Felis catus,00:17.0,57:44.0, Yes,3,4,Neutered,m,10,NZ
+TacoTag,Taco,Felis catus,01:41.0,38:15.0, Yes,5,1,Neutered,m,8,NZ
+BlackieTag,Blackie,Felis catus,01:47.0,59:45.0, Yes,3,9,Neutered,m, ,NZ
+TiggerTag,Tigger,Felis catus,02:03.0,01:48.0, Yes,11,6,Neutered,m,8,NZ
+SpecklesTag,Speckles1,Felis catus,02:32.0,43:01.0, Yes,7,0.8,Spayed,f,6,NZ
+MuffinTag,Muffin,Felis catus,02:26.0,55:06.0, No,0,9,Spayed,f,15,NZ
+MollyTag,Molly,Felis catus,20:56.0,53:16.0, No,0,8,Spayed,f,12,NZ
+FlossTag,Floss,Felis catus,05:28.0,00:19.0, Yes,11,1,Spayed,f,12,NZ
+JinxTag,Jinx,Felis catus,00:56.0,32:15.0, Yes,1,8,Neutered,m,20,NZ
+AvaTag,Ava,Felis catus,02:06.0,31:38.0, Yes,2,2,Spayed,f,20,NZ
+AllieTag,Allie,Felis catus,00:16.0,02:35.0, Yes,2,8,Spayed,f,6,NZ
+JessTag,Jess,Felis catus,01:06.0,46:46.0, Yes,1,11,Spayed,f,12,NZ
+Timmy1Tag,Timmy1,Felis catus,01:36.0,48:52.0, Yes,6,1,Neutered,m,12,NZ
+TeddyTag,Teddy,Felis catus,01:53.0,45:09.0, No,0,5,Neutered,m,15,NZ
+AresTag,Ares,Felis catus,02:32.0,51:47.0,No,0,14,Neutered,m,14,NZ
+TheoTag,Theo,Felis catus,02:25.0,27:56.0, Yes,1,5,Neutered,m,22,NZ
+NikoTag,Niko,Felis catus,14:23.0,23:23.0, Yes,21,1,Neutered,m,10,NZ
+Maximus1Tag,Maximus1,Felis catus,18:52.0,16:50.0,No,0,0.3,Neutered,m,23,NZ
+Babs1Tag,Babs1,Felis catus,02:18.0,38:07.0, Yes,15,0.4,Spayed,f,14,NZ
+KiriTag,Kiri,Felis catus,47:50.0,41:18.0, Yes,21,0.8,Spayed,f,12,NZ
+LucyTag,Lucy,Felis catus,05:52.0,05:25.0, No,0,7,Spayed,f,6,NZ
+SnufflesTag,Snuffles,Felis catus,40:26.0,24:34.0, Yes,3,,Spayed,f,16,NZ
+ZeusTag,Zeus,Felis catus,03:27.0,56:04.0, Yes,7,1,Neutered,m,10,NZ
+DelphiTag,Delphi,Felis catus,07:07.0,54:41.0, Yes,4,1,Spayed,f,10,NZ
+HufferTag,Huffer,Felis catus,02:59.0,08:30.0, No,0,7,Neutered,m,12,NZ
+PoppyTag,Poppy,Felis catus,02:17.0,55:01.0, No,0,16,Spayed,f,23,NZ
+MontyTag,Monty,Felis catus,02:14.0,12:15.0, No,0,2,Neutered,m,16,NZ
+TysonTag,Tyson,Felis catus,56:39.0,17:04.0, Yes,1,8,Neutered,m,5,NZ
+SophiaTag,Sophia,Felis catus,01:21.0,16:58.0, Yes,1,3,Spayed,f,10,NZ
+PoppyIITag,PoppyII,Felis catus,01:58.0,38:47.0, No,0,15,Spayed,f,6,NZ
+YasasTag,Yasas,Felis catus,00:09.0,53:45.0, No,0,9,Neutered,m,20,NZ
+MabelTag,Mabel,Felis catus,00:19.0,22:36.0, Yes,2,3,Spayed,f,14,NZ
+ColinTag,Colin,Felis catus,01:50.0,15:45.0,No,,3,Neutered,m,8,NZ
+MaxTag,Max,Felis catus,01:52.0,58:25.0, Yes,2,1,Neutered,m,20,NZ
+PercyTag,Percy,Felis catus,17:57.0,56:52.0, Yes,3,9,Neutered,m,8,NZ
+KaosTag,Kaos,Felis catus,00:17.0,21:41.0, Yes,3,7,Neutered,m,4,NZ
+OkieTag,Okie,Felis catus,00:19.0,11:59.0, Yes,6,1,Spayed,f,16,NZ
+RiggsTag,Riggs,Felis catus,01:44.0,54:05.0, Yes,4,1,Neutered,m,14,NZ
+NalaTag,Nala,Felis catus,02:04.0,07:16.0, Yes,7,1,Spayed,f,8,NZ
+AslanTag,Aslan,Felis catus,02:16.0,26:29.0, No,,11,Neutered,m,15,NZ
+MuffinIITag,MuffinII,Felis catus,45:02.0,34:17.0, Yes,1,4,Spayed,f,18,NZ
+SylvesterTag,Sylvester,Felis catus,00:52.0,16:03.0, Yes,5,7,Neutered,m,10,NZ
+CharlieTag,Charlie,Felis catus,02:31.0,44:08.0, No,,1,Neutered,m,20,NZ
+KyroTag,Kyro,Felis catus,04:45.0,28:44.0, No,,11,Neutered,m,12,NZ
+MontyIITag,MontyII,Felis catus,17:14.0,47:11.0, Yes,1,1,Neutered,m,10,NZ
+BootsTag,Boots,Felis catus,30:01.0,42:16.0,No,,2,Spayed,f,12,NZ
+RichieTag,Richie,Felis catus,02:51.0,39:16.0, Yes,8,3,Neutered,m,4,NZ
+GeorgeTag,George,Felis catus,59:48.0,34:01.0, Yes,1,9,Neutered,m,15,NZ
+SamanthaTag,Samantha,Felis catus,02:35.0,47:18.0, Yes,1,9,Spayed,f,21,NZ
+MaggieTag,Maggie,Felis catus,02:50.0,59:14.0, Yes,1,4,Spayed,f,15,NZ
+MaddieTag,Maddie,Felis catus,04:25.0,08:09.0, No,,4,Spayed,f,12,NZ
+CarinaTag,Carina,Felis catus,04:55.0,17:45.0, Yes,8,2,Spayed,f,18,NZ
+HappyFeetTag,HappyFeet,Felis catus,08:48.0,52:19.0, Yes,,4,Neutered,m,10,NZ
+ChilliTag,Chilli,Felis catus,02:33.0,44:31.0, Yes,,1,Neutered,m,22,NZ
+TinaTag,Tina,Felis catus,02:38.0,10:15.0, Yes,1,4,Spayed,f,5,NZ
+CornflakeTag,Cornflake,Felis catus,18:09.0,18:59.0, Yes,1,3,Spayed,f,10,NZ
+ArohaJoolsTag,ArohaJools,Felis catus,23:27.0,05:03.0, Yes,1,,Spayed,f,18,NZ
+PharosTag,Pharos,Felis catus,01:58.0,51:36.0, Yes,,8,Spayed,f,8,NZ
+BaileeTag,Bailee,Felis catus,01:59.0,02:04.0, No,,8,Neutered,m,2,NZ
+ApplesTag,Apples,Felis catus,02:33.0,34:20.0, Yes,2,10,Spayed,f,10,NZ
+HenryTag,Henry,Felis catus,01:55.0,29:11.0, Yes,2,6,Neutered,m,4,NZ
+MarleyTag,Marley,Felis catus,02:55.0,32:22.0, Yes,2,3,Neutered,m,5,NZ
+LunaTag,Luna,Felis catus,02:09.0,03:23.0, Yes,3,2,Spayed,f,8,NZ
+MilkshakesTag,Milkshakes,Felis catus,02:31.0,24:30.0, Yes,3,3,Neutered,m,8,NZ
+MidnightTag,Midnight,Felis catus,02:34.0,50:54.0, Yes,,6,Spayed,f,6,NZ
+BellaIITag,BellaII,Felis catus,02:43.0,05:32.0, Yes,3,8,Spayed,f,19,NZ
+SkittlesTag,Skittles,Felis catus,02:35.0,03:26.0, Yes,4,2,Spayed,f,5,NZ
+BellaTag,Bella,Felis catus,00:44.0,17:25.0,No,,4,Spayed,f,20,NZ
+PennyTag,Penny,Felis catus,02:05.0,52:15.0, Yes,5,1,Spayed,f,10,NZ
+NougieTag,Nougie,Felis catus,02:04.0,11:46.0, Yes,3,12,Spayed,f,10,NZ
+MiloTag,Milo,Felis catus,02:28.0,10:01.0, Yes,11,10,Spayed,f, ,NZ
+IzzieTag,Izzie,Felis catus,04:38.0,19:55.0,No,,1,Spayed,f,12,NZ
+MokaTag,Moka,Felis catus,18:56.0,00:59.0, Yes,11,4,Spayed,f,12,NZ
+SniferTag,Snifer,Felis catus,13:36.0,30:39.0, Yes,4,5,Spayed,f,13,NZ
+JinglesTag,Jingles,Felis catus,16:19.0,03:25.0, Yes,21,7,Spayed,f,12,NZ
+EllieTag,Ellie,Felis catus,51:57.0,01:14.0, Yes,1,8,Spayed,f,22,NZ
+AshTag,Ash,Felis catus,31:03.0,24:57.0, Yes,1,8,Neutered,m,18,NZ
+TigerTag,Tiger,Felis catus,01:55.0,04:57.0, Yes,13,1,Neutered,m,16,NZ
+OllieTag,Ollie,Felis catus,00:50.0,28:10.0, Yes,6,2,Neutered,m,12,NZ
+RogerTag,Roger,Felis catus,03:44.0,29:27.0, Yes,5,0.2,Neutered,m,16,NZ
+PresleyTag,Presley,Felis catus,49:11.0,03:29.0, ,,3,,m, ,NZ
+RosieTag,Rosie,Felis catus,49:18.0,09:03.0, No,,0.2,Spayed,f,16,NZ
+McIvorTag,McIvor,Felis catus,02:21.0,22:27.0, No,,10,Neutered,m,22,NZ
+SpudTag,Spud,Felis catus,03:37.0,54:25.0, No,,10,Spayed,f,8,NZ
+NimzyTag,Nimzy,Felis catus,03:58.0,03:41.0,No,,4,Spayed,f,12,NZ
+SabbathTag,Sabbath,Felis catus,04:16.0,38:25.0, Yes,,9,Neutered,m,16,NZ
+BrambleTag,Bramble,Felis catus,48:28.0,09:59.0, Yes,3,3,Spayed,f,16,NZ
+BorisdeJongTag,BorisdeJong,Felis catus,29:11.0,50:10.0, ,,0.2,,m, ,NZ
+BellaIIITag,BellaIII,Felis catus,00:59.0,53:44.0, Yes,2,4,Spayed,f,10,NZ
+LennyTag,Lenny,Felis catus,02:15.0,11:35.0, Yes,6,1,Neutered,m,10,NZ
+ZuluTag,Zulu,Felis catus,17:42.0,19:53.0, Yes,11,4,Spayed,f,14,NZ
+LillyTag,Lilly,Felis catus,18:28.0,26:59.0, Yes,1,3,Spayed,f,10,NZ
+TerabyteTag,Terabyte,Felis catus,21:56.0,22:46.0, Yes,16,1,Spayed,f,12,NZ
+PiggieSueTag,PiggieSue,Felis catus,02:50.0,55:36.0, Yes,3,0.8,Spayed,f,6,NZ
+NekoIITag,NekoII,Felis catus,02:34.0,58:27.0, Yes,,4,Spayed,f,6,NZ
+RogueTag,Rogue,Felis catus,02:51.0,27:58.0, Yes,16,6,Spayed,f,8,NZ
+LorenzoTag,Lorenzo,Felis catus,07:07.0,08:39.0, Yes,,2,Neutered,m,15,NZ
+BasilTag,Basil,Felis catus,14:31.0,15:21.0, Yes,1,9,Neutered,m,8,NZ
+AryaTag,Arya,Felis catus,02:19.0,03:23.0, Yes,16,,Spayed,f,15,NZ
+BuzzTag,Buzz,Felis catus,06:08.0,45:46.0, Yes,6,2,Neutered,m,15,NZ
+CookieTag,Cookie,Felis catus,01:50.0,06:09.0, Yes,16,3,Spayed,f,8,NZ
+TenzingTag,Tenzing,Felis catus,28:38.0,54:28.0, Yes,5,3,Spayed,f,14,NZ
+PushkinTag,Pushkin,Felis catus,53:25.0,16:13.0, Yes,2,8,Spayed,f, ,NZ
+DottiTag,Dotti,Felis catus,00:55.0,27:27.0, Yes,1,7,Spayed,f,18,NZ
+PoppyIIITag,PoppyIII,Felis catus,03:12.0,43:00.0, Yes,2,14,Spayed,f,2,NZ
+EwokTag,Ewok,Felis catus,05:26.0,37:26.0, Yes,,2,, ,10,NZ
+GertieTag,Gertie,Felis catus,31:47.0,09:50.0, Yes,2,2,Spayed,f,15,NZ
+ElliotTag,Elliot,Felis catus,20:21.0,39:13.0, Yes,6,2,Neutered,m,9,NZ
+MosesTag,Moses,Felis catus,19:28.0,11:41.0, Yes,11,2,Neutered,m,12,NZ
+NalaIITag,NalaII,Felis catus,25:04.0,29:57.0, Yes,4,2,Spayed,f,10,NZ
+IggyTag,Iggy,Felis catus,49:24.0,25:17.0, ,,5,,f, ,NZ
+BonnieTag,Bonnie,Felis catus,49:25.0,23:58.0, No,,8,Spayed,f,12,NZ
+SmudgyBumTag,SmudgyBum,Felis catus,40:48.0,32:47.0, Yes,,9,Neutered,m,2,NZ
+SativaTag,Sativa,Felis catus,33:09.0,01:34.0, Yes,2,5,Neutered,m,6,NZ
+SantiTag,Santi,Felis catus,03:25.0,22:58.0, Yes,3,2,Spayed,f,11,NZ
+PalomaTag,Paloma,Felis catus,04:21.0,06:52.0, Yes,1,2,Spayed,f,16,NZ
+PepperTag,Pepper,Felis catus,12:34.0,51:11.0,No,,10,Spayed,f,22,NZ
+MaomaoTag,Maomao,Felis catus,02:32.0,48:18.0, No,,8,Neutered,m,4,NZ
+NuggetTag,Nugget,Felis catus,02:06.0,39:30.0, Yes,1,6,Spayed,f,18,NZ
+CatsbyTag,Catsby,Felis catus,02:26.0,07:24.0, Yes,1,5,Spayed,f,12,NZ
+FelixTag,Felix,Felis catus,02:27.0,58:48.0, Yes,4,7,Neutered,m,8,NZ
+MarcellusWallaceTag,MarcellusWallace,Felis catus,02:33.0,58:29.0,No,,12,Neutered,m, ,NZ
+AstrylTag,Astryl,Felis catus,02:41.0,09:47.0, Yes,2,12,Spayed,f,12,NZ
+CasperTag,Casper,Felis catus,31:55.0,42:45.0, Yes,7,4,Neutered,m,16,NZ
+RosieIITag,RosieII,Felis catus,36:26.0,06:59.0, Yes,8,1,Spayed,f,6,NZ
+DanaTag,Dana,Felis catus,21:27.0,03:18.0, Yes,1,8,Neutered,m,12,NZ
+WillowTag,Willow,Felis catus,01:52.0,05:13.0, No,,15,Spayed,f,20,NZ
+XanderTag,Xander,Felis catus,02:33.0,17:55.0, Yes,2,6,Neutered,m, ,NZ
+TaraTag,Tara,Felis catus,21:22.0,03:43.0, Yes,2,7,Spayed,f,14,NZ
+TriceraCatTag,TriceraCat,Felis catus,00:39.0,57:40.0, Yes,16,4,Spayed,f,14,NZ
+StinkeyTag,Stinkey,Felis catus,02:24.0,49:15.0, Yes,,0.9,Neutered,m,9,NZ
+KittysaurusRexTag,KittysaurusRex,Felis catus,03:18.0,57:29.0, Yes,21,5,Neutered,m,8,NZ
+GinTag,Gin,Felis catus,02:04.0,25:49.0, Yes,,5,Spayed,f,10,NZ
+LailaTag,Laila,Felis catus,02:05.0,08:32.0, Yes,1,7,Spayed,f,12,NZ
+TamariAlmondTag,TamariAlmond,Felis catus,02:21.0,47:18.0,No,,5,Spayed,f,12,NZ
+ZeusIITag,ZeusII,Felis catus,02:23.0,16:27.0, Yes,21,1,Neutered,m,12,NZ
+CazadorTag,Cazador,Felis catus,02:33.0,52:00.0, No,,0.4,Neutered,m,19,NZ
+AxelTag,Axel,Felis catus,03:11.0,10:11.0, No,,0.9,Neutered,m,8,NZ
+PabloTag,Pablo,Felis catus,20:23.0,41:28.0, Yes,6,3,Neutered,m,10,NZ
+PoppyIVTag,PoppyIV,Felis catus,40:34.0,24:46.0, No,,2,Spayed,f,10,NZ
+AliceTag,Alice,Felis catus,45:37.0,24:24.0, ,9,5,Spayed,f,8,NZ
+StellaTag,Stella,Felis catus,16:19.0,49:09.0, No,,11,Spayed,f,15,NZ
+SpiceTag,Spice,Felis catus,01:57.0,15:15.0, No,,4,Neutered,m,10,NZ
+SelenaTag,Selena,Felis catus,01:57.0,16:17.0, Yes,1,9,Spayed,f,18,NZ
+WhiskeyTag,Whiskey,Felis catus,02:28.0,59:24.0, Yes,,1,Neutered,m,16,NZ
+MissieTag,Missie,Felis catus,03:45.0,23:12.0, Yes,,4,Spayed,f,10,NZ
+KatyTag,Katy,Felis catus,21:02.0,46:21.0, Yes,1,10,Spayed,f,7,NZ
+JaxTag,Jax,Felis catus,25:55.0,33:52.0, Yes,1,,Spayed,f,12,NZ
+MinervaTag,Minerva,Felis catus,31:09.0,17:34.0, Yes,1,6,Spayed,f,15,NZ
+MerlinTag,Merlin,Felis catus,10:08.0,04:57.0,No,,0.9,Neutered,m,12,NZ
+CocoTag,Coco,Felis catus,21:43.0,34:52.0, No,,10,Spayed,f,16,NZ
+SubieTag,Subie,Felis catus,00:35.0,06:01.0, Yes,11,2,Spayed,f,14,NZ
+SkyIITag,SkyII,Felis catus,01:53.0,12:03.0, Yes,11,2,Spayed,f,17,NZ
+PollyTag,Polly,Felis catus,02:34.0,58:27.0,No,,7,Neutered,m,10,NZ
+SandmanTag,Sandman,Felis catus,20:11.0,49:54.0, Yes,4,3,Neutered,m,5,NZ
+GussTag,Guss,Felis catus,29:52.0,39:31.0, Yes,3,8,Neutered,m,16,NZ
+VinnieTag,Vinnie,Felis catus,02:25.0,39:34.0, Yes,2,1,Neutered,m,14,NZ
+ZenoTag,Zeno,Felis catus,19:33.0,21:04.0, Yes,1,4,Spayed,f,10,NZ
+RockyTag,Rocky,Felis catus,04:33.0,22:40.0, No,,8,Neutered,m,20,NZ
+LuxTag,Lux,Felis catus,22:22.0,01:10.0, Yes,21,6,Spayed,f,20,NZ
+BearTag,Bear,Felis catus,02:28.0,58:00.0, Yes,6,4,Spayed,f,4,NZ
+GusTag,Gus,Felis catus,06:13.0,04:23.0, Yes,3,3,Neutered,m,10,NZ
+HarveyTag,Harvey,Felis catus,19:24.0,43:52.0, No,,9,Neutered,m,23,NZ
+WinstonTag,Winston,Felis catus,55:23.0,17:02.0, No,,13,Neutered,m,11,NZ
+TabsTag,Tabs,Felis catus,46:49.0,22:54.0, Yes,5,5,Spayed,f,18,NZ
+LemonSqueezyTag,LemonSqueezy,Felis catus,27:27.0,07:27.0, No,,7,Spayed,f,11,NZ
+MungoTag,Mungo,Felis catus,41:03.0,09:48.0, Yes,6,7,Neutered,m,16,NZ
+PipiTag,Pipi,Felis catus,20:18.0,07:55.0, Yes,6,7,Spayed,f,17,NZ
+BuddyTag,Buddy,Felis catus,02:13.0,57:56.0, Yes,1,7,Neutered,m,7,NZ
+ArchieTag,Archie,Felis catus,05:25.0,01:53.0, Yes,1,4,Neutered,m,12,NZ
+ThomasIITag,ThomasII,Felis catus,18:21.0,03:18.0, Yes,,5,Neutered,m,20,NZ
+AlfieTag,Alfie,Felis catus,19:40.0,02:34.0, Yes,4,2,Neutered,m,16,NZ
+RubyTag,Ruby,Felis catus,22:20.0,07:02.0, Yes,3,1,Spayed,f,18,NZ
+HazelTag,Hazel,Felis catus,34:36.0,02:35.0, Yes,,1,Spayed,f, ,NZ
+LokiTag,Loki,Felis catus,19:57.0,42:41.0, Yes,2,1,Neutered,m,14,NZ
+MartyTag,Marty,Felis catus,16:39.0,07:34.0, Yes,1,2,Neutered,m,16,NZ
+SchrodingerTag,Schrodinger,Felis catus,59:34.0,55:26.0, Yes,1,4,Spayed,f,14,NZ
+TuiTag,Tui,Felis catus,22:37.0,22:25.0, Yes,13,2,Spayed,f,14,NZ
+Shadow-NinjaTag,Shadow-Ninja,Felis catus,01:14.0,16:54.0,No,,2,Neutered,m,3,NZ
+DashTag,Dash,Felis catus,02:06.0,33:33.0, Yes,2,4,Neutered,m,7,NZ
+Cutie-GirlTag,Cutie-Girl,Felis catus,03:04.0,10:26.0, Yes,1,2,Spayed,f,4,NZ
+KimyTag,Kimy,Felis catus,34:06.0,34:02.0, Yes,4,7,Spayed,f,6,NZ
+ChessTag,Chess,Felis catus,53:33.0,52:00.0, Yes,1,9,Spayed,f,18,NZ
+SussTag,Suss,Felis catus,41:53.0,29:31.0, Yes,2,4,Spayed,f,12,NZ
+SebTag,Seb,Felis catus,04:58.0,58:57.0, Yes,11,6,Neutered,m,12,NZ
+GinIITag,GinII,Felis catus,02:18.0,59:30.0, Yes,11,5,Neutered,m,12,NZ
+TillyTag,Tilly,Felis catus,02:20.0,20:15.0, Yes,2,4,Neutered,m,8,NZ
+BusterTag,Buster,Felis catus,05:28.0,59:45.0, Yes,5,1,Neutered,m,12,NZ
+DingoTag,Dingo,Felis catus,23:43.0,02:41.0, Yes,11,4,Neutered,m,8,NZ
+TobyTag,Toby,Felis catus,23:08.0,46:08.0, Yes,1,6,Neutered,m,18,NZ
+SleekyTag,Sleeky,Felis catus,02:39.0,55:46.0, No,,11,Neutered,m,4,NZ
+SootyTag,Sooty,Felis catus,18:56.0,09:36.0, Yes,3,2,Spayed,f,10,NZ
+MarmiteTag,Marmite,Felis catus,51:24.0,58:04.0, Yes,2,4,Spayed,f,14,NZ
+MilliGalTag,MilliGal,Felis catus,02:26.0,57:11.0, Yes,5,7,Spayed,f,15,NZ

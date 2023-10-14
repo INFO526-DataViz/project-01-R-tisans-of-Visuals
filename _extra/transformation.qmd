@@ -1,0 +1,305 @@
+---
+title: "data_transformation"
+author: "Visalakshi Iyer"
+editor: visual
+---
+
+```{r}
+
+if(!require(pacman))
+  install.packages("pacman")
+
+pacman::p_load(here, ggplot2, tidyverse, dlookr, dplyr, visdat, 
+               hexbin, ggtext, ggrepel, ggridges)
+```
+
+```{r}
+
+uk<- read_csv(here("data", "cats_uk_reference.csv")) |> 
+  select(!contains("food")) |> 
+  janitor::clean_names()
+
+uk 
+```
+
+```{r}
+
+us <- read_csv(here("data", "cats_us_reference.csv")) |> 
+  select(-state) |> 
+  janitor::clean_names()
+
+us 
+```
+
+```{r}
+
+nz <- read_csv(here("data", "cats_nz_reference.csv")) |>
+  mutate(n_cats = 0) |> 
+  janitor::clean_names()
+nz
+```
+
+```{r}
+
+aus <- read_csv(here("data", "cats_aus_reference.csv")) |> 
+  janitor::clean_names()
+aus
+```
+
+```{r}
+
+cats_all <- rbind(uk, nz, aus, us)
+cats_all
+```
+
+```{r}
+
+cats_all |>
+  select(hunt, prey_p_month, 
+         animal_reproductive_condition, 
+         animal_sex, hrs_indoors, age_years) |>
+  vis_miss()
+```
+
+```{r}
+
+cats_all <- cats_all |>
+  mutate(hunt = case_when(
+    (is.na(hunt) & prey_p_month == 0) ~ "No", 
+    (is.na(hunt) & prey_p_month > 0) ~ "Yes", 
+    TRUE ~ hunt
+    )) |>
+  mutate(hunt = ifelse(hunt == "No", FALSE, TRUE)) 
+```
+
+```{r, warning=FALSE}
+
+cats_all <- cats_all |>
+  mutate(
+    hrs_indoors = as.numeric(hrs_indoors),
+    prey_p_month = as.numeric(prey_p_month),
+    
+    animal_reproductive_condition = 
+           ifelse(is.na(animal_reproductive_condition), 
+                  "Unneutered", animal_reproductive_condition),
+    animal_sex = ifelse(animal_reproductive_condition == "Fixed", 
+                             "f", animal_sex),
+    hunt = ifelse(is.na(hunt) & age_years < 6, FALSE, hunt),
+    prey_p_month = ifelse(hunt == FALSE, 0, prey_p_month),
+    prey_p_month = ifelse(study_site == "NZ", 4, prey_p_month),
+    animal_sex = ifelse(is.na(animal_sex), "m", animal_sex)
+         ) |>
+  drop_na(hunt, age_years, hrs_indoors) 
+  
+  
+```
+
+```{r}
+
+cats_all |> vis_miss()
+```
+
+```{r}
+
+write.table(cats_all, file = here("data", "cats_all.csv"), 
+              sep = ",", row.names = FALSE)
+```
+
+```{r}
+  
+read_csv(here("data", "cats_all.csv"))
+```
+
+```{r}
+
+cats_new <- read_csv(here("data", "cats_all_new.csv"))
+
+```
+
+### Plotting
+
+```{r, warning=FALSE}
+
+cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years > 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    )
+  ) |>
+  ggplot(aes(y = reorder(n_cats, str_sort(n_cats)), x = prey_p_month, 
+             # fill=age_grp, 
+             color=animal_sex
+             )) + 
+  geom_boxplot(aes(fill=)) +
+  # geom_jitter(aes(size = hrs_indoors)) +
+  # geom_smooth(aes(), method = 'loess', formula = 'y ~ x') +
+  scale_fill_manual(values=c("skyblue", "pink2")) +
+  labs(
+    y = "n_cats"
+  ) + 
+  # facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
+  
+  theme_minimal()
+```
+
+```{r, warning=FALSE}
+
+cats_new |>
+  filter(n_cats > 0) |>
+  group_by(animal_sex, n_cats) |>
+  summarise(avg_prey = median(prey_p_month), 
+            min_prey = min(prey_p_month),
+            max_prey = max(prey_p_month),
+            .groups = "keep") |>
+  mutate (
+    n_cats = ifelse(animal_sex == "f", n_cats + 0.2, n_cats - 0.2),
+    avg_prey = ifelse(animal_sex == "f", avg_prey + 0.2, avg_prey - 0.2)
+    ) |>
+  ggplot(aes(color=animal_sex)) +
+  geom_segment(aes(x = min_prey,
+                   y = n_cats,
+                   xend = max_prey,
+                   yend = n_cats
+                   ),
+               linewidth = 0.8,
+               position = position_jitterdodge(dodge.width = -0.2)
+               ) +
+  geom_point(aes(x = avg_prey, y = n_cats),
+             size = 3,
+             ) +
+  labs(
+    title = "How good are loner cats at hunting",
+    subtitle = "as opposed to the cats that live in group \n
+                Grouped w.r.t the sex of the cat",
+    x = "Prey caught per month",
+    y = "Number of cats"
+  ) +
+  scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +
+  theme_minimal()
+```
+
+```{r}
+
+cat_annot <- cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    )
+  ) |>
+  group_by(age_grp, n_cats) |>
+  filter(n_cats < 2 | n_cats > 6) |>
+  summarise(prey_p_month = max(prey_p_month),
+            .groups = "keep")
+cat_annot
+```
+
+```{r, warning=FALSE}
+
+# We can try data highlighting trick where we highlight a certain group
+# annotate outliers
+
+cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    ),
+    hrs_bin = ifelse(hrs_indoors <= 10, 10, 20)
+  ) |>
+  ggplot(aes(x = reorder(n_cats, str_sort(n_cats)), 
+             y = prey_p_month)) +
+  geom_jitter(data = cats_new, color = "snow3") + 
+  geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +
+  facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
+  scale_fill_manual(values=c("skyblue","orange","salmon")) +
+  labs(
+    title = "How good are loner cats at hunting?",
+    subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
+    caption = "Q 1 | Plot 1",
+    x = "Number of cats",
+    y = "Prey caught per month"
+  ) +
+  geom_text_repel(data = cat_annot, aes(label = "label"), ) +
+  # geom_text_repel(aes(group = age_grp, label = "label")) +
+  theme_minimal()
+
+# annotation with min and max value (with resp. n_cats)
+```
+
+```{r}
+
+
+cats_new |>
+  filter(n_cats != 0) |>
+  ggplot(aes(x = prey_p_month, 
+             fill = animal_reproductive_condition)) + 
+  geom_density(alpha=0.8) 
+  # geom_errorbar(aes(y = age_years))
+  # geom_jitter()
+```
+
+```{r}
+
+
+cats_new |>
+  ggplot(aes(x = prey_p_month, y = age_years, color=animal_reproductive_condition)) + 
+  geom_hex(bins=15, show.legend = FALSE) +
+  geom_hex(data = cats_new |> 
+             filter(animal_reproductive_condition == "Unneutered"), 
+           bins = 15, 
+           fill = "maroon4", 
+           color = "maroon4",
+           show.legend = TRUE) +
+  scale_color_manual(values=c("white", "black")) +
+  # scale_fill_manual(values = "pink2", "maroon4") +
+  scale_x_continuous(breaks = seq(0,22,2)) + 
+  scale_fill_gradient(low = "pink2", high = "salmon2") +
+  labs(
+    title = "How are cats impacted by their reproductive condition?",
+    subtitle =  "Observed w.r.t the age of the cat",
+    x = "Prey caught per month",
+    y = "Age of the cat"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_line(linetype = "dashed", color = "grey"),
+    panel.grid.major = element_blank()
+  ) + 
+  guides(
+    color = guide_legend(override.aes = list(fill = c("pink2", "maroon4"),
+                                             color = c("white", "black")))
+  )
+```
+
+```{r, warning=FALSE, message=FALSE}
+
+
+cats_new |>
+  ggplot(aes(x=prey_p_month,y=animal_reproductive_condition, 
+             fill = factor(stat(quantile)))) +
+  stat_density_ridges(quantile_lines = TRUE, 
+                      quantiles = 3, 
+                      alpha = 0.5,
+                      geom = "density_ridges_gradient", 
+                      calc_ecdf = TRUE,
+                      bandwidth = 1.26) +
+  #scale_fill_viridis_d() +
+    scale_fill_manual(values = c("pink2","salmon2","maroon4")) +
+  scale_x_continuous(breaks = seq(0,23,5))+
+  facet_wrap(~cats_new$study_site) +
+  labs(
+    title = "How are cats impacted by their reproductive condition?",
+    subtitle = "Categorized by different countries",
+    x = "Prey per month",
+    y = "Annimal reproductive condition"
+  ) +
+  theme_minimal()
+```

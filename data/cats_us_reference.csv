@@ -1,0 +1,147 @@
+tag-id,animal-id,animal-taxon,deploy-on-date,deploy-off-date,hunt,prey_p_month,age_years,animal-reproductive-condition,animal-sex,hrs_indoors, n_cats,study-site,state
+sweetpeatag,Sweetpea,Felis catus,52:57.0,06:19.0, Yes,12,7,Spayed,f,9,1,US,NC
+motorcattag,Motorcat,Felis catus,05:13.0,44:39.0, Yes,1,14,Spayed,f,12,1,US,NC
+Gracietag,Gracie,Felis catus,04:33.0,12:22.0, Yes,4,10,Spayed,f,4,1,US,NC
+Lestertag,Lester,Felis catus,02:27.0,22:59.0, Yes,1,13,Neutered,m,1,1,US,NC
+LaceyTag,Lacey,Felis catus,01:24.0,57:26.0, Yes,8,3,Spayed,f,11,2,US,NC
+Banjo2Tag,Banjo2,Felis catus,08:36.0,24:28.0, Yes,1,9,Spayed,f,16,1,US,NC
+Tex2Tag,Tex2,Felis catus,41:37.0,59:12.0, Yes,4,5,Spayed,f,11,2,US,NC
+Maddie2Tag,Maddie2,Felis catus,03:29.0,52:08.0, Yes,1,10,Spayed,f,10.5,3,US,NC
+Tiger2Tag,Tiger2,Felis catus,04:33.0,49:43.0, Yes,4,5,Neutered,m,5,2,US,NC
+OatmealTag,Oatmeal,Felis catus,02:35.0,29:43.0, No,0,5,Neutered,m,17,2,US,NC
+OscarNTag,OscarN,Felis catus,02:05.0,25:27.0, No,0,5,Neutered,m,17,1,US,NC
+TonkaTag,Tonka2,Felis catus,21:51.0,58:11.0, Yes,0,13,Neutered,m,7.5,1,US,NC
+Jello2Tag,Jello2,Felis catus,01:58.0,58:23.0, Yes,4,3,Neutered,m,9,2,US,NC
+Harley2Tag,Harley2,Felis catus,03:05.0,41:26.0, Yes,4,5,Spayed,f,24,2,US,NC
+Survivor2Tag,Survivor2,Felis catus,17:35.0,03:05.0, Yes,4,2,Neutered,m,13,3,US,NC
+Beatle2Tag,Beatle2,Felis catus,17:37.0,59:33.0, No,0,7,Neutered,m,10,3,US,NC
+Boris2Tag,Boris2,Felis catus,42:44.0,05:47.0, Yes,4,2,Neutered,m,14,2,US,NC
+Natasha2Tag,Natasha2,Felis catus,27:04.0,34:26.0, No,0,2,Spayed,f,19,2,US,NC
+SasquatchTag,Sasquatch2,Felis catus,02:44.0,05:08.0, Yes,1,4,Neutered,m,8,1,US,NC
+Jams2Tag,Jams2,Felis catus,03:10.0,06:29.0, Yes,4,9,Neutered,m,11,2,US,NC
+Catniss EverdeenTag,Catniss Everdeen,Felis catus,02:29.0,17:15.0, No,0,1,Spayed,f,11,2,US,NC
+Donald FluffypantsTag,Donald Fluffypants,Felis catus,02:34.0,46:57.0, Yes,4,3,Neutered,m,12,2,US,NC
+JetpackTag,Jetpack,Felis catus,02:58.0,27:12.0, Yes,4,2,Spayed,f,12,2,US,NC
+Martha2Tag,Martha Wayne2,Felis catus,03:30.0,21:58.0, No,0,3,Spayed,f,11,1,US,NC
+JitterbugTag,Jitterbug2,Felis catus,16:54.0,58:06.0, Yes,1,2,Spayed,f,9,2,US,NC
+Violet Mae2Tag,Violet Mae2,Felis catus,46:21.0,36:03.0, No,0,7,Spayed,f,2.5,3,US,NC
+Katniss EverdeenTag,Katniss Everdeen,Felis catus,02:29.0,17:15.0, No,0,1,Spayed,f,11,2,US,NC
+Ajax2Tag,Ajax2,Felis catus,35:40.0,22:42.0, Yes,4,3,Neutered,m,11,2,US,TN
+Shakespeare2Tag,Shakespeare2,Felis catus,02:29.0,10:54.0, Yes,1,4,Neutered,m,8,2,US,NC
+Captain America2Tag,Captain America 2,Felis catus,26:47.0,47:47.0, Yes,4,8,Neutered,m,5,1,US,NC
+Luna2Tag,Luna2,Felis catus,02:05.0,27:40.0, No,0,4,Spayed,f,0,1,US,NC
+Little2Tag,Little2,Felis catus,03:55.0,32:06.0, No,0,8,Neutered,m,0,3,US,NC
+Anubis2Tag,Anubis2,Felis catus,05:35.0,20:45.0, Yes,4,2,Neutered,m,0,2,US,NC
+Psycho Kitty2Tag,Psycho Kitty2,Felis catus,19:05.0,57:46.0, Yes,4,7,Spayed,f,12,1,US,NC
+Asibo2Tag,Asibo2,Felis catus,22:56.0,34:58.0, Yes,4,2,Neutered,m,0,2,US,NC
+Zelda2Tag,Zelda2,Felis catus,23:30.0,31:27.0, No,0,3,Spayed,f,10,2,US,TN
+Kagin2Tag,Kagin2,Felis catus,20:25.0,09:50.0, Yes,4,5,Neutered,m,10,1,US,NC
+Tallulah2Tag,Tallulah2,Felis catus,02:27.0,25:06.0, No,0,1,Spayed,f,21,2,US,NC
+Tara2Tag,Tara2,Felis catus,02:50.0,53:09.0, Yes,1,14,Spayed,f,18,1,US,NC
+Don Carlos2Tag,Don Carlos2,Felis catus,20:29.0,52:04.0, Yes,8,4,Neutered,m,20,2,US,NC
+Turtle2Tag,Turtle2,Felis catus,37:21.0,12:35.0, No,0,12,Spayed,f,10,2,US,NC
+Cat MarshallTag,Cat Marshall,Felis catus,01:49.0,25:27.0, No,0,5,Spayed,f,10,2,US,NC
+Nola2Tag,Nola2Tag,Felis catus,02:56.0,52:37.0, No,0,4,Spayed,f,9,1,US,NC
+Zorro2Tag,Zorro2,Felis catus,20:07.0,52:09.0, No,0,4,Neutered,m,7,2,US,NC
+Piper2Tag,Piper2,Felis catus,33:23.0,12:52.0, No,0,1,Spayed,f,12,5,US,NC
+Russel2Tag,Russel2,Felis catus,09:02.0,57:21.0, Yes,1,3,Neutered,m,10,1,US,NC
+Bean2Tag,Bean2,Felis catus,01:44.0,37:49.0, Yes,4,3,Neutered,m,0,5,US,NC
+Roukus2Tag,Roukus2,Felis catus,43:10.0,26:32.0, Yes,16,6,Spayed,f,2,2,US,ME
+Hailey2Tag,Hailey2,Felis catus,28:39.0,07:24.0, Yes,8,10,Spayed,f,2,7,US,NC
+Emmy2Tag,Emmy2,Felis catus,02:23.0,03:46.0, Yes,0,4,Spayed,f,0,2,US,NC
+Snickerdoodle2Tag,Snickerdoodle2,Felis catus,02:29.0,53:38.0, Yes,8,5,Spayed,f,11,1,US,NC
+Cayden2Tag,Cayden2,Felis catus,03:09.0,51:17.0, No,0,4,Neutered,m,9.5,2,US,NC
+Fletcher2Tag,Fletcher2,Felis catus,03:22.0,09:41.0, Yes,4,13,Neutered,m,11,1,US,NC
+Mia2Tag,Mia2,Felis catus,49:41.0,33:33.0, Yes,4,4,Spayed,f,12,3,US,CO
+Cedar2Tag,Cedar2,Felis catus,57:35.0,04:17.0, Yes,4,14,Neutered,m,10,7,US,NC
+Lucky2Tag,Lucky2,Felis catus,15:16.0,59:10.0, No,0,11,Spayed,f,0,3,US,NJ
+Marco2Tag,Marco2,Felis catus,28:18.0,58:45.0, Yes,4,2,Neutered,m,13,4,US,UpstateNY
+Spencer2Tag,Spencer2,Felis catus,49:03.0,48:05.0, Yes,8,2,Neutered,m,8,2,US,NC
+Pumpkin2Tag,Pumpkin2,Felis catus,54:10.0,09:53.0, No,0,12,Neutered,m,12,1,US,NY
+Jack2Tag,Jack2,Felis catus,06:47.0,53:23.0, No,0,5,Neutered,m,16,1,US,NY
+Starbuck2Tag,Starbuck2,Felis catus,04:43.0,48:53.0, Yes,1,6,Neutered,m,11,1,US,NY
+Schubie2Tag,Schubie2,Felis catus,30:22.0,44:48.0, No,0,7,Spayed,f,11,1,US,NY
+Merrie2Tag,Merrie2,Felis catus,32:47.0,09:29.0, Yes,4,7,Spayed,f,11,1,US,Newfoundland
+HersheyTag,Hershey,Felis catus,05:27.0,57:01.0, Yes,4,7,Neutered,m,13.5,1,US,NC
+PumpkinKTag,Pumpkin Kane,Felis catus,03:33.0,24:16.0, Yes,12,8,Spayed,f,12,1,US,NC
+TabascoTag,Tabasco,Felis catus,03:49.0,33:55.0, Yes,4,11,Neutered,m,0,1,US,NC
+PringleTag,Pringle,Felis catus,03:10.0,56:53.0, Yes,1,5,Spayed,f,11,1,US,NC
+BelugaTag,Beluga,Felis catus,02:26.0,58:08.0, No,0,2,Neutered,m,12,11,US,NY
+NiaTag,Nia,Felis catus,16:33.0,58:22.0, Yes,1,4,Spayed,f,16,1,US,GA
+OscarL Tag,Oscar L,Felis catus,05:03.0,59:36.0, Yes,4,11,Neutered,m,12,4,US,CT
+Goliath2Tag,Goliath2,Felis catus,15:04.0,03:11.0, Yes,4,6,Neutered,m,10,1,US,CO
+HemingwayTag,Hemingway,Felis catus,00:31.0,59:57.0, Yes,1,4,Neutered,m,8,2,US,NY
+MistyTag,Misty,Felis catus,49:05.0,44:43.0, Yes,4,3,Spayed,f,24,2,US,NY
+OscarJ Tag,Oscar J,Felis catus,01:50.0,59:05.0, Yes,4,2,Neutered,m,10,1,US,NY
+PeanutTag,Peanut,Felis catus,11:36.0,57:22.0, Yes,4,1,Spayed,f,12,3,US,NY
+Mr.LuckyTag,Mr.Lucky,Felis catus,32:04.0,54:58.0, No,0,3,Neutered,m,12,2,US,CT
+PolyTag,Poly,Felis catus,32:52.0,57:46.0, Yes,8,4,Spayed,f,20,1,US,CT
+BooBooKittyTag,BooBooKitty,Felis catus,19:48.0,42:08.0, No,0,12,Spayed,f,14,1,US,NY
+SheldonTag,Sheldon,Felis catus,02:20.0,05:20.0, Yes,8,7,Spayed,f,13,2,US,CT
+Atticus Tag,Atticus,Felis catus,01:03.0,55:19.0, Yes,1,8,Neutered,m,24,3,US,NC
+Frank,Frank,Felis catus,08:03.0,49:43.0, Yes,12,3,Neutered,m,12,2,US,CT
+CoalTag,Coal,Felis catus,09:52.0,58:29.0, Yes,4,7,Neutered,m,16,2,US,CT
+DouglasTag,Douglas,Felis catus,02:37.0,59:44.0, Yes,1,7,Neutered,m,11,2,US,NC
+SpikeTag,Spike,Felis catus,18:07.0,57:20.0, Yes,4,4,Neutered,m,10,3,US,NC
+SylvesterTag,Sylvester,Felis catus,05:52.0,58:35.0, Yes,4,7,Neutered,m,14,2,US,CT
+OrangeTag,Orange,Felis catus,27:28.0,54:02.0, Yes,4,4,Spayed,f,20,2,US,FL
+Justice,Justice,Felis catus,39:03.0,58:20.0, No,0,9,Neutered,m,0.75,2,US,CT
+ZoeyTag,Zoey,Felis catus,02:28.0,57:23.0, Yes,12,5,Spayed,f,12,3,US,NC
+MinnieH Tag,Minnie H,Felis catus,02:35.0,57:20.0, No,0,14,Spayed,f,12,3,US,NC
+PicchuTag,Picchu,Felis catus,34:17.0,36:35.0, Yes,4,9,Neutered,m,6,2,US,NC
+RockyTag,Rocky,Felis catus,17:56.0,48:25.0, Yes,4,9,Neutered,m,15.5,3,US,NY
+Louie,LouieTag,Felis catus,02:04.0,59:48.0, No,0,5,Neutered,m,14,1,US,CT
+Mindy2Tag,Mindy2,Felis catus,42:07.0,47:54.0, Yes,8,5,Spayed,f,12,3,US,NY
+JoeyTag,Joey,Felis catus,13:33.0,38:35.0, Yes,4,10,Neutered,m,8,4,US,NC
+MiloTag,Milo,Felis catus,00:34.0,59:04.0, Yes,8,3,Neutered,m,11,1,US,CT
+ElleTag,Elle,Felis catus,16:34.0,41:23.0, No,0,5,Spayed,f,2,4,US,NC
+BennyTag,Benny,Felis catus,00:35.0,20:29.0, Yes,8,4,Neutered,m,18,2,US,NC
+PeanutRTag,PeanutR,Felis catus,00:35.0,20:21.0, Yes,8,4,Neutered,m,9.5,2,US,NC
+Leopard2Tag,Leopard2,Felis catus,03:05.0,58:12.0, N/A, N/A,2,Neutered,m, N/A,1,US,NC
+FranklinTag,Franklin,Felis catus,05:01.0,58:55.0, Yes,8,8,Neutered,m,6,2,US,NC
+Junior2Tag,Junior2,Felis catus,19:42.0,57:25.0, Yes,1,6,Neutered,m,12,2,US,NC
+ConanTag,Conan,Felis catus,52:53.0,59:30.0, Yes,1,13,Neutered,m,1,1,US,NC
+Gianni2Tag,Gianni2,Felis catus,19:44.0,04:21.0, Yes,8,10,Neutered,m,6,4,US,NC
+SmattieTag,Smattie,Felis catus,09:58.0,48:29.0, Yes,8,6,Neutered,m,6,4,US,NC
+Seth2Tag,Seth2,Felis catus,02:12.0,08:25.0, No,0,4,Neutered,m,13,6,US,NC
+Aya2Tag,Aya2,Felis catus,16:16.0,26:41.0, Yes,4,3,Neutered,m,8,2,US,Denmark
+Fiona2Tag,Fiona2,Felis catus,02:34.0,59:11.0, Yes,20,1,Spayed,f,13,2,US,NC
+Purrcy2Tag,Purrcy2,Felis catus,02:56.0,56:46.0, Yes,8,5,Neutered,m,13,3,US,NC
+George2Tag,George2,Felis catus,04:04.0,59:46.0, Yes,16,1,Neutered,m,13,2,US,NC
+Selkie2Tag,Selkie2,Felis catus,07:05.0,58:00.0, Yes,4,5,Spayed,f,22,4,US,NC
+Reggie2Tag,Reggie2,Felis catus,18:36.0,59:20.0, No,0,13,Neutered,m,12,1,US,NC
+Asher2Tag,Asher2,Felis catus,02:50.0,24:45.0, Yes,8,3,Neutered,m,11,1,US,NC
+Climber2Tag,Climber2,Felis catus,05:38.0,26:09.0, Yes,4,9,Neutered,m,0,2,US,NC
+Sunny2Tag,Sunny2,Felis catus,38:50.0,59:52.0, No,0,9,Spayed,f,0,2,US,NC
+Nikki2Tag,Nikki2,Felis catus,02:15.0,09:19.0, Yes,4,8,Spayed,f,3,2,US,NY
+Bumbles2Tag,Bumbles2,Felis catus,01:44.0,51:43.0, Yes,12,9,Neutered,m,12,2,US,CT
+Bela2Tag,Bela2,Felis catus,03:22.0,59:42.0, Yes,1,2,Neutered,m,12,2,US,NC
+Pickles2Tag,Pickles2,Felis catus,05:57.0,49:44.0, Yes,12,3,Neutered,m,5,2,US,CT
+Bongo2Tag,Bongo2,Felis catus,02:34.0,58:37.0, Yes,12,4,Neutered,m,12,1,US,CT
+Lupe2Tag,Lupe2,Felis catus,02:04.0,58:32.0, Yes,12,4,Neutered,m,7,2,US,MA
+Chester2Tag,Chester2,Felis catus,22:14.0,58:56.0, Yes,4,4,Neutered,m,10,2,US,NY
+Maisey2Tag,Maisey2,Felis catus,47:57.0,01:21.0, Yes,4,2,Spayed,f,12,2,US,NY
+Jingles2Tag,Jingles2,Felis catus,05:26.0,57:17.0, Yes,28,8,Neutered,m,15,1,US,CT
+Misu2Tag,Misu2,Felis catus,02:22.0,57:35.0, Yes,4,9,Neutered,m,13,1,US,CT
+NattyBumpo2Tag,NattyBumpo2,Felis catus,47:14.0,29:29.0, Yes,12,8,Spayed,f,13,2,US,CT
+Fenimore Cooper2Tag,Fenimore Cooper2,Felis catus,02:30.0,30:00.0, Yes,4,8,Neutered,m,12,2,US,CT
+Penelope2Tag,Penelope2,Felis catus,03:15.0,59:04.0, Yes,8,3,Spayed,f,10,1,US,CT
+Bella2Tag,Bella2,Felis catus,02:43.0,58:08.0, Yes,8,5,Spayed,f,10.5,4,US,NC
+Gracie L2 Tag,Gracie L2,Felis catus,02:57.0,42:44.0, Yes,4,16,Spayed,f,10.5,4,US,NC
+Solo2Tag,Solo2,Felis catus,35:49.0,58:27.0, No,1,2,Neutered,m,13,2,US,NC
+Oreo2Tag,Oreo2,Felis catus,01:53.0,57:29.0, Yes,8,5,Neutered,m,7,3,US,NC
+Ladybird2Tag,Ladybird2,Felis catus,05:32.0,35:34.0, Yes,4,10,Spayed,f,17,6,US,NC
+Striper2Tag,Striper2,Felis catus,05:33.0,58:08.0, Yes,4,10,Spayed,f,16.5,6,US,NC
+Billy Whiskers2Tag,Billy Whiskers2,Felis catus,06:06.0,48:20.0, Yes,4,2,Neutered,m,9,6,US,NC
+Baby Kitty2Tag,Baby Kitty 2,Felis catus,06:08.0,07:37.0, Yes,8,1,Not fixed,m,9.5,6,US,NC
+Diamond2Tag,Diamond2,Felis catus,07:10.0,01:11.0, Yes,16,2,Spayed,f,12,6,US,NC
+Smokey2Tag,Smokey2,Felis catus,47:34.0,33:33.0, Yes,4,3,Neutered,m,12,2,US,CT
+Shadow2Tag,Shadow2,Felis catus,48:01.0,53:48.0, Yes,4,3,Neutered,m,12,2,US,CT
+Senor2Tag,Senor2,Felis catus,03:23.0,29:39.0, Yes,4,13,Neutered,m,0,2,US,CT
+Sandstorm2Tag,Sandstorm2,Felis catus,53:52.0,03:12.0, Yes,4,4,Spayed,f,6,2,US,NC
+Oliver2Tag,Oliver2,Felis catus,02:43.0,59:06.0, Yes,8,7,Neutered,m,12,1,US,CT
+Herman2Tag,Herman2,Felis catus,21:48.0,05:22.0, Yes,4,8,Neutered,m,16,2,US,NY
+Willy2Tag,Willy2,Felis catus,01:59.0,59:41.0, Yes,8,13,Neutered,m,12,1,US,CT
+SparklesTag,Sparkles,Felis catus,33:46.0,58:22.0, No,0,4,Neutered,m,13,2,US,CA
+ZiggyTag,Ziggy,Felis catus,02:11.0,59:32.0, Yes,1,8,Neutered,m,11,1,US,MD
+ParkerTag,Parker,Felis catus,01:25.0,56:05.0, Yes,4,6,Neutered,m,12,1,US,CT
