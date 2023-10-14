@@ -23,3 +23,27 @@ Each country data set is divided into two subsets. The first subset comprises ob
 ### Are the cats which live together better at hunting than those which live alone?
 
 In this question, we are investigating whether cats that live together exhibit better hunting abilities compared to cats that live alone. Our interest lies in understanding if the presence of other cats in the same living environment influences the hunting skills and behavior of individual cats. To explore this question, we have aggregated data from different countries into a single data set. We are utilizing four key features from the data set: the number of cats (n_cats), the number of prey caught per month (prey_per_month), the age of the cats, and we are additionally using the feature of the cat's sex to analyze hunting behavior in relation to gender.
+
+## Approach
+
+Our initial plot is a scatter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups. The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the scatterplot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age.
+
+## **Analysis**
+
+## **Discussion**
+
+##  
+
+# Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats
+
+## Introduction
+
+### How does the reproductive status of cats influence the hunting pattern?
+
+Our second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors).
+
+## Approach
+
+## **Analysis**
+
+## **Discussion**
