@@ -32,7 +32,7 @@ Our initial plot is a scatter plot illustrating the hunting abilities of cats. W
 
 ## **Discussion**
 
-##  
+## 
 
 # Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats
 

@@ -147,3 +147,32 @@ cats |>
       plot.title = element_text(size=10)
     )
 ```
+
+```{r}
+
+target <- tibble(pos = c("inner", "middle", "outer"), 
+                 radii = c(25, 26, 27),
+                 clrs = c("#E80018", "#FFFFFF", "#E80018")
+                 )
+target <- target |> melt(id.vars=c(1,2))
+
+target
+
+target |>
+  ggplot(aes(x=factor(1), y=radii, fill=pos)) + 
+  geom_bar(stat = "identity",
+           width=1,
+           show.legend = FALSE) +
+    coord_polar() + 
+  scale_fill_manual(values= target$value) +
+  # scale_fill_identity() +
+  labs(
+    x = expression('TARGET '["®"]),
+    y = NULL,
+    
+  ) +
+  theme_void() +
+  theme(
+    axis.title.x = element_text(size=20, colour = "#E80018", face = "bold")
+  )
+```

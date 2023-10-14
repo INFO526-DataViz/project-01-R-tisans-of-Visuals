@@ -120,6 +120,28 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#question-1-investigating-the-hunting-abilities-of-cohabitating-cats-vs.-solitary-cats" id="toc-question-1-investigating-the-hunting-abilities-of-cohabitating-cats-vs.-solitary-cats" class="nav-link" data-scroll-target="#question-1-investigating-the-hunting-abilities-of-cohabitating-cats-vs.-solitary-cats">Question 1 : <strong>Investigating the Hunting Abilities of Cohabitating Cats vs.&nbsp;Solitary Cats</strong></a>
+  <ul class="collapse">
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone" id="toc-are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone" class="nav-link" data-scroll-target="#are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone">Are the cats which live together better at hunting than those which live alone?</a></li>
+  </ul></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><strong>Analysis</strong></a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><strong>Discussion</strong></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  <li><a href="#question-2-exploring-the-impact-of-reproductive-status-on-hunting-patterns-in-cats" id="toc-question-2-exploring-the-impact-of-reproductive-status-on-hunting-patterns-in-cats" class="nav-link" data-scroll-target="#question-2-exploring-the-impact-of-reproductive-status-on-hunting-patterns-in-cats">Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats</a>
+  <ul class="collapse">
+  <li><a href="#introduction-2" id="toc-introduction-2" class="nav-link" data-scroll-target="#introduction-2">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern" id="toc-how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern" class="nav-link" data-scroll-target="#how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern">How does the reproductive status of cats influence the hunting pattern?</a></li>
+  </ul></li>
+  <li><a href="#approach-1" id="toc-approach-1" class="nav-link" data-scroll-target="#approach-1">Approach</a></li>
+  <li><a href="#analysis-1" id="toc-analysis-1" class="nav-link" data-scroll-target="#analysis-1"><strong>Analysis</strong></a></li>
+  <li><a href="#discussion-1" id="toc-discussion-1" class="nav-link" data-scroll-target="#discussion-1"><strong>Discussion</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -152,9 +174,56 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Add project abstract here.</p>
+<p>Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Our team decided to anlysis the Pet Cats data set from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. This data set contains information on individual cat characteristics, including age,gender, neuter status and hunting behaviour along with timestamped GPS data. Since cats having a fascinating characteristics, our team has chosen to utilize this data set to gain a valuable insights into cat hunting bhaviours. We aim to explore whether the number of cats living together has any impact on hunting behavior and whether the reproductive status influences their hunting patterns.</p>
+<p>Each country data set is divided into two subsets. The first subset comprises observations of 11 variables, providing data such as ground speed, geographic longitude and latitude estimated by sensors, timestamps for sensor measurements, and event IDs. The second subset contains observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month, the type of food that the cats consume, reproductive condition, and the sex of the animals. For this project, our team has utilize this data to create visualizations aimed at analyzing hunting behavior.</p>
+</section>
+<section id="question-1-investigating-the-hunting-abilities-of-cohabitating-cats-vs.-solitary-cats" class="level1">
+<h1>Question 1 : <strong>Investigating the Hunting Abilities of Cohabitating Cats vs.&nbsp;Solitary Cats</strong></h1>
+<section id="introduction-1" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-1">Introduction</h2>
+<section id="are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone" class="level3">
+<h3 class="anchored" data-anchor-id="are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone">Are the cats which live together better at hunting than those which live alone?</h3>
+<p>In this question, we are investigating whether cats that live together exhibit better hunting abilities compared to cats that live alone. Our interest lies in understanding if the presence of other cats in the same living environment influences the hunting skills and behavior of individual cats. To explore this question, we have aggregated data from different countries into a single data set. We are utilizing four key features from the data set: the number of cats (n_cats), the number of prey caught per month (prey_per_month), the age of the cats, and we are additionally using the feature of the cat’s sex to analyze hunting behavior in relation to gender.</p>
+</section>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>Our initial plot is a scatter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups. The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the scatterplot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age.</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis"><strong>Analysis</strong></h2>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion"><strong>Discussion</strong></h2>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+</section>
+<section id="question-2-exploring-the-impact-of-reproductive-status-on-hunting-patterns-in-cats" class="level1">
+<h1>Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats</h1>
+<section id="introduction-2" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-2">Introduction</h2>
+<section id="how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern">How does the reproductive status of cats influence the hunting pattern?</h3>
+<p>Our second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors).</p>
+</section>
+</section>
+<section id="approach-1" class="level2">
+<h2 class="anchored" data-anchor-id="approach-1">Approach</h2>
+</section>
+<section id="analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-1"><strong>Analysis</strong></h2>
+</section>
+<section id="discussion-1" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-1"><strong>Discussion</strong></h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

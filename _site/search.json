@@ -7,39 +7,81 @@
     "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
   },
   {
-    "objectID": "data/README 2.html",
-    "href": "data/README 2.html",
-    "title": "Data",
-    "section": "",
-    "text": "[Dataset]: Description of the dataset"
-  },
-  {
-    "objectID": "data/README 2.html#variable-names-and-descriptions",
-    "href": "data/README 2.html#variable-names-and-descriptions",
-    "title": "Data",
-    "section": "Variable Names and Descriptions:",
-    "text": "Variable Names and Descriptions:\n\nvariable: Description"
-  },
-  {
-    "objectID": "data/README 2.html#data-types",
-    "href": "data/README 2.html#data-types",
-    "title": "Data",
-    "section": "Data Types:",
-    "text": "Data Types:\n\nColumn: data type"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Paws N’ Patterns 🐾",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
     "title": "Paws N’ Patterns 🐾",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\nOur team decided to anlysis the Pet Cats data set from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. This data set contains information on individual cat characteristics, including age,gender, neuter status and hunting behaviour along with timestamped GPS data. Since cats having a fascinating characteristics, our team has chosen to utilize this data set to gain a valuable insights into cat hunting bhaviours. We aim to explore whether the number of cats living together has any impact on hunting behavior and whether the reproductive status influences their hunting patterns.\nEach country data set is divided into two subsets. The first subset comprises observations of 11 variables, providing data such as ground speed, geographic longitude and latitude estimated by sensors, timestamps for sensor measurements, and event IDs. The second subset contains observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month, the type of food that the cats consume, reproductive condition, and the sex of the animals. For this project, our team has utilize this data to create visualizations aimed at analyzing hunting behavior."
+  },
+  {
+    "objectID": "index.html#introduction-1",
+    "href": "index.html#introduction-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\n\nAre the cats which live together better at hunting than those which live alone?\nIn this question, we are investigating whether cats that live together exhibit better hunting abilities compared to cats that live alone. Our interest lies in understanding if the presence of other cats in the same living environment influences the hunting skills and behavior of individual cats. To explore this question, we have aggregated data from different countries into a single data set. We are utilizing four key features from the data set: the number of cats (n_cats), the number of prey caught per month (prey_per_month), the age of the cats, and we are additionally using the feature of the cat’s sex to analyze hunting behavior in relation to gender."
+  },
+  {
+    "objectID": "index.html#approach",
+    "href": "index.html#approach",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Approach",
+    "text": "Approach\nOur initial plot is a scatter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups. The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the scatterplot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age."
+  },
+  {
+    "objectID": "index.html#analysis",
+    "href": "index.html#analysis",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "index.html#discussion",
+    "href": "index.html#discussion",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Discussion",
+    "text": "Discussion"
+  },
+  {
+    "objectID": "index.html#introduction-2",
+    "href": "index.html#introduction-2",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\n\nHow does the reproductive status of cats influence the hunting pattern?\nOur second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors)."
+  },
+  {
+    "objectID": "index.html#approach-1",
+    "href": "index.html#approach-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Approach",
+    "text": "Approach"
+  },
+  {
+    "objectID": "index.html#analysis-1",
+    "href": "index.html#analysis-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "index.html#discussion-1",
+    "href": "index.html#discussion-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Discussion",
+    "text": "Discussion"
   },
   {
     "objectID": "presentation.html#quarto",
@@ -102,7 +144,7 @@
     "href": "presentation.html#feeling-adventurous",
     "title": "Project title",
     "section": "Feeling adventurous?",
-    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
   },
   {
     "objectID": "proposal.html",
