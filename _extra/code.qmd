@@ -256,15 +256,28 @@ cats_all_new |>
                       alpha = 0.5,
                       geom = "density_ridges_gradient", 
                       calc_ecdf = TRUE) +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   #scale_fill_manual(values = c("#950A9B","#259703","skyblue")) +
+    scale_fill_manual(values = c("skyblue2","brown","#259703")) +
+  scale_x_continuous(breaks = seq(0,23,5))+
   facet_wrap(~cats_all_new$study_site) +
   labs(
-    title = "Trends in hunting prey by Country",
+    title = "How are cats impacted by their reproductive condition?",
+    subtitle = "Categorized by different countries",
     x = "Prey per month",
     y = "Annimal reproductive condition"
   ) +
   theme_minimal()
+```
+
+```{r}
+
+library(dlookr)
+
+#find out mean value for each country
+#We will hide the legend
+
+describe(cats_all_new)
 ```
 
 ```{r}
