@@ -30,20 +30,28 @@ Our initial plot is a scatter plot illustrating the hunting abilities of cats. W
 
 ## **Analysis**
 
+![](images/WhatsApp Image 2023-10-14 at 14.13.19_fcbc75cb.jpg)
+
 ## **Discussion**
 
-## 
+The primary goal of our initial question was to understand the hunting behavior of cats living together compared to those living alone. To assess hunting abilities based on age, we categorized cats into three groups: kittens, young cats, and mature cats. Figure 1 provides insights into this analysis.
 
-# Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats
+The observation from Figure 1 indicates that cats living alone and those in small groups exhibit superior hunting skills. Notably, the data reveals that cats living alone tend to improve their hunting abilities as they transition from kitten to young age, but this gradually decreases as they mature. Additionally, when the number of cats living together exceeds five, the prey caught decreases, and this stops as the cats age.
+
+# Qndefineduestion 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats
 
 ## Introduction
 
 ### How does the reproductive status of cats influence the hunting pattern?
 
-Our second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors).
+Our second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p\_month ), the time cats spends indoors (hrs_indoors).
 
 ## Approach
 
 ## **Analysis**
+
+![](images/WhatsApp Image 2023-10-14 at 14.18.44_d0299f55.jpg)
+
+![](images/WhatsApp Image 2023-10-14 at 14.50.22_6b2b1078.jpg)
 
 ## **Discussion**
