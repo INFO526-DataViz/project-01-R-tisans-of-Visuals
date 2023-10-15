@@ -110,5 +110,82 @@
     "title": "Analysing Cat Hunting Behaviour",
     "section": "Text",
     "text": "Text\n\nKittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.\nHunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.\nMature cats show varied hunting success rates, with a broad spread in the data."
+  },
+  {
+    "objectID": "presentation.html#code-1",
+    "href": "presentation.html#code-1",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Code",
+    "text": "Code\n\ncats_new |>\n  filter(n_cats > 0) |>\n  group_by(animal_sex, n_cats) |>\n  summarise(avg_prey = median(prey_p_month), \n            min_prey = min(prey_p_month),\n            max_prey = max(prey_p_month),\n            .groups = \"keep\") |>\n  mutate (\n    n_cats = ifelse(animal_sex == \"f\", n_cats + 0.2, n_cats - 0.2),\n    avg_prey = ifelse(animal_sex == \"f\", avg_prey + 0.2, avg_prey - 0.2)\n    ) |>\n  ggplot(aes(color=animal_sex)) +\n  geom_segment(aes(x = min_prey,\n                   y = n_cats,\n                   xend = max_prey,\n                   yend = n_cats\n                   ),\n               linewidth = 0.8,\n               position = position_jitterdodge(dodge.width = -0.2)\n               ) +\n  geom_point(aes(x = avg_prey, y = n_cats),\n             size = 3,\n             ) +\n  scale_color_manual(values = c(\"steelblue3\", \"maroon4\")) + \n  labs(\n    title = \"How good are loner cats at hunting\",\n    subtitle = \"as opposed to the cats that live in group \\n\n                Grouped w.r.t the sex of the cat\",\n    x = \"Prey caught per month\",\n    y = \"Number of cats\",\n    color = \"Animal Sex\"\n  ) +\n  scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +\n  geom_text(aes(x = 10, y= 8, label = \"Has a cat door\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "presentation.html#plot",
+    "href": "presentation.html#plot",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Plot",
+    "text": "Plot"
+  },
+  {
+    "objectID": "presentation.html#plot-1",
+    "href": "presentation.html#plot-1",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Plot",
+    "text": "Plot"
+  },
+  {
+    "objectID": "presentation.html#code-2",
+    "href": "presentation.html#code-2",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Code",
+    "text": "Code\n\ncats_new |>\n  #stat(quantile) calculates the values for the data distribution\n  #Three quantiles - 25th, 50th and 75th\n  #factor function converts the quantile value to a category to attach a color to it\n  ggplot(aes(x=prey_p_month,y=animal_reproductive_condition, \n             fill = factor(stat(quantile)))) +\n  #quantiles 3 selected\n  #alpha of 0.5 to show transperancy\n  #bandwidth specifies the width of the kernel\n  #smaller bandwidth captures finer details, variations but also noise\n  #larger bandiwdth results in wider kernerl and more generalized view\n  stat_density_ridges(quantile_lines = TRUE, \n                      quantiles = 3, \n                      alpha = 0.5,\n                      geom = \"density_ridges_gradient\", \n                      bandwidth = 1.5) +\n    scale_fill_manual(values = c(\"pink2\",\"skyblue\",\"maroon4\"), \n                      name = \"Quantile\") +\n  scale_x_continuous(breaks = seq(0,23,5))+\n  #seperate density_ridge by country\n  facet_wrap(~cats_new$study_site) +\n  labs(\n    title = \"How are cats impacted by their reproductive condition?\",\n    subtitle = \"Categorized by different countries\",\n    x = \"Prey per month\",\n    y = \"Annimal reproductive condition\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "presentation.html#plot-3",
+    "href": "presentation.html#plot-3",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Plot",
+    "text": "Plot"
+  },
+  {
+    "objectID": "presentation.html#text-1",
+    "href": "presentation.html#text-1",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Text",
+    "text": "Text"
+  },
+  {
+    "objectID": "presentation.html#q2.-how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern",
+    "href": "presentation.html#q2.-how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Q2. How does the reproductive status of cats influence the hunting pattern?",
+    "text": "Q2. How does the reproductive status of cats influence the hunting pattern?\n\n\nPlot 1\n\nA density ridge plot with animal reproductive condition with prey caught per month\nCategorized by country\n\n\nPlot 2\n\nAge of the cat with prey caught per month\nCategorized by animal reproduction condition"
+  },
+  {
+    "objectID": "presentation.html#text-2",
+    "href": "presentation.html#text-2",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Text",
+    "text": "Text\nThe graph shows how cats’ hunting abilities vary by country and neuter status. Cats who haven’t been neutered tend to be better hunters in both Australia and the United Kingdom. Notably, in the US and New Zealand, data for unneutered cats is absent, Among the displayed data, neutered cats in the US tend to catch slightly more prey, indicating that the effects of neutering on hunting abilities can vary by region."
+  },
+  {
+    "objectID": "presentation.html#code-3",
+    "href": "presentation.html#code-3",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Code",
+    "text": "Code\n\ncats_new |>\n  ggplot(aes(x = prey_p_month, y = age_years, color=animal_reproductive_condition)) + \n  geom_hex(bins=15, show.legend = FALSE) +\n  geom_hex(data = cats_new |> \n             filter(animal_reproductive_condition == \"Unneutered\"), \n           bins = 15, \n           fill = \"maroon4\", \n           color = \"maroon4\",\n           show.legend = TRUE) +\n  scale_color_manual(values=c(\"white\", \"black\")) +\n  # scale_fill_manual(values = \"pink2\", \"maroon4\") +\n  scale_x_continuous(breaks = seq(0,22,2)) + \n  scale_fill_gradient(low = \"pink2\", high = \"salmon2\") +\n  labs(\n    title = \"How are cats impacted by their reproductive condition?\",\n    subtitle =  \"Observed w.r.t the age of the cat\",\n    x = \"Prey caught per month\",\n    y = \"Age of the cat\"\n  ) +\n  theme_minimal() +\n  theme(\n    panel.grid.minor = element_line(linetype = \"dashed\", color = \"grey\"),\n    panel.grid.major = element_blank(),\n    legend.position = \"top\", legend.justification = \"right\"\n  ) + \n  guides(\n    color = guide_legend(override.aes = list(fill = c(\"pink2\", \"maroon4\"),\n                                             color = c(\"white\", \"black\")))\n  )"
+  },
+  {
+    "objectID": "presentation.html#plot-4",
+    "href": "presentation.html#plot-4",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Plot",
+    "text": "Plot"
+  },
+  {
+    "objectID": "presentation.html#text-3",
+    "href": "presentation.html#text-3",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Text",
+    "text": "Text\n\nAs cats age, they generally catch less prey, regardless of being Fixed or Unneutered.\nUnneutered cats aged 10-14 years are the most proficient hunters.\nOlder unneutered cats catch fewer prey compared to their younger selves.\nData is limited on unneutered cats over 15 years old, suggesting they might hunt less or are underrepresented in the study."
   }
 ]
