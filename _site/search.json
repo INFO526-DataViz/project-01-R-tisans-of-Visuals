@@ -1,5 +1,89 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "",
+    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "",
+    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\n\n\n\n\n\nOur team decided to anlysis the Pet Cats data set from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. This data set contains information on individual cat characteristics, including age,gender, neuter status and hunting behaviour along with timestamped GPS data. Since cats having a fascinating characteristics, our team has chosen to utilize this data set to gain a valuable insights into cat hunting bhaviours. We aim to explore whether the number of cats living together has any impact on hunting behavior and whether the reproductive status influences their hunting patterns.\nEach country data set is divided into two subsets. The first subset comprises observations of 11 variables, providing data such as ground speed, geographic longitude and latitude estimated by sensors, timestamps for sensor measurements, and event IDs. The second subset contains observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month, the type of food that the cats consume, reproductive condition, and the sex of the animals. For this project, our team has utilize this data to create visualizations aimed at analyzing hunting behavior."
+  },
+  {
+    "objectID": "index.html#introduction-1",
+    "href": "index.html#introduction-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\n\nAre the cats which live together better at hunting than those which live alone?\nIn this question, we are investigating whether cats that live together exhibit better hunting abilities compared to cats that live alone. Our interest lies in understanding if the presence of other cats in the same living environment influences the hunting skills and behavior of individual cats. To explore this question, we have aggregated data from different countries into a single data set. We are utilizing four key features from the data set: the number of cats (n_cats), the number of prey caught per month (prey_per_month), the age of the cats, and we are additionally using the feature of the cat’s sex to analyze hunting behavior in relation to gender."
+  },
+  {
+    "objectID": "index.html#approach",
+    "href": "index.html#approach",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Approach",
+    "text": "Approach\nOur initial plot is a scatter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups. The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the scatterplot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age."
+  },
+  {
+    "objectID": "index.html#analysis",
+    "href": "index.html#analysis",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "index.html#discussion",
+    "href": "index.html#discussion",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Discussion",
+    "text": "Discussion"
+  },
+  {
+    "objectID": "index.html#introduction-2",
+    "href": "index.html#introduction-2",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Introduction",
+    "text": "Introduction\n\nHow does the reproductive status of cats influence the hunting pattern?\nOur second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors)."
+  },
+  {
+    "objectID": "index.html#approach-1",
+    "href": "index.html#approach-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Approach",
+    "text": "Approach"
+  },
+  {
+    "objectID": "index.html#analysis-1",
+    "href": "index.html#analysis-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "index.html#discussion-1",
+    "href": "index.html#discussion-1",
+    "title": "Paws N’ Patterns 🐾",
+    "section": "Discussion",
+    "text": "Discussion"
+  },
+  {
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
     "title": "Analysing Cat Hunting Behaviour",
@@ -108,7 +192,21 @@
     "objectID": "presentation.html#text",
     "href": "presentation.html#text",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "Text",
-    "text": "Text\n\nKittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.\nHunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.\nMature cats show varied hunting success rates, with a broad spread in the data."
+    "section": "Source:",
+    "text": "Source:\nInformation about the dataset description is derived from the following Tidy Tuesday page: Pet Cats."
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Project title",
+    "section": "",
+    "text": "The presentation is created using the Quarto CLI\n## sets the start of a new slide\n\n\n\n\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\n\n\n\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome text\ngoes here"
+  },
+  {
+    "objectID": "presentation.html#footnotes",
+    "href": "presentation.html#footnotes",
+    "title": "Project title",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAnd add footnotes↩︎"
   }
 ]

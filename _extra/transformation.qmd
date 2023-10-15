@@ -170,14 +170,17 @@ cats_new |>
   geom_point(aes(x = avg_prey, y = n_cats),
              size = 3,
              ) +
+  scale_color_manual(values = c("steelblue3", "maroon4")) + 
   labs(
     title = "How good are loner cats at hunting",
     subtitle = "as opposed to the cats that live in group \n
                 Grouped w.r.t the sex of the cat",
     x = "Prey caught per month",
-    y = "Number of cats"
+    y = "Number of cats",
+    color = "Animal Sex"
   ) +
   scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +
+  geom_text(aes(x = 10, y= 8, label = "Has a cat door")) +
   theme_minimal()
 ```
 
@@ -196,6 +199,7 @@ cat_annot <- cats_new |>
   filter(n_cats < 2 | n_cats > 6) |>
   summarise(prey_p_month = max(prey_p_month),
             .groups = "keep")
+
 cat_annot
 ```
 
@@ -219,7 +223,7 @@ cats_new |>
   geom_jitter(data = cats_new, color = "snow3") + 
   geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +
   facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
-  scale_fill_manual(values=c("skyblue","orange","salmon")) +
+  scale_fill_manual(values=c("steelblue3","maroon4","salmon2")) +
   labs(
     title = "How good are loner cats at hunting?",
     subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
@@ -227,7 +231,8 @@ cats_new |>
     x = "Number of cats",
     y = "Prey caught per month"
   ) +
-  geom_text_repel(data = cat_annot, aes(label = "label"), ) +
+  geom_text_repel(data = cat_annot, aes(label = prey_p_month), 
+                  nudge_x = 0.3, nudge_y = 0.2, size = 5) +
   # geom_text_repel(aes(group = age_grp, label = "label")) +
   theme_minimal()
 
@@ -271,12 +276,24 @@ cats_new |>
   theme_minimal() +
   theme(
     panel.grid.minor = element_line(linetype = "dashed", color = "grey"),
-    panel.grid.major = element_blank()
+    panel.grid.major = element_blank(),
+    legend.position = "top", legend.justification = "right"
   ) + 
   guides(
     color = guide_legend(override.aes = list(fill = c("pink2", "maroon4"),
                                              color = c("white", "black")))
   )
+```
+
+```{r}
+
+{r}
+
+ridge_annot <- cats_new |>
+  group_by(study_site, animal_reproductive_condition) |>
+  summarise(prey_p_month = mean(prey_p_month), .groups = "keep")
+
+ridge_annot
 ```
 
 ```{r, warning=FALSE, message=FALSE}
@@ -290,11 +307,15 @@ cats_new |>
                       alpha = 0.5,
                       geom = "density_ridges_gradient", 
                       calc_ecdf = TRUE,
-                      bandwidth = 1.26) +
+                      bandwidth = 1.5) +
   #scale_fill_viridis_d() +
-    scale_fill_manual(values = c("pink2","salmon2","maroon4")) +
+    scale_fill_manual(values = c("pink2","salmon2","maroon4"), 
+                      name = "Quantile") +
   scale_x_continuous(breaks = seq(0,23,5))+
   facet_wrap(~cats_new$study_site) +
+  # geom_label(data = ridge_annot, aes(x = 0.1, 
+  #                                    y = animal_reproductive_condition, 
+  #                                    label="label")) +
   labs(
     title = "How are cats impacted by their reproductive condition?",
     subtitle = "Categorized by different countries",
