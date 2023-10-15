@@ -1,184 +1,114 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "",
-    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
-  },
-  {
-    "objectID": "index.html#abstract",
-    "href": "index.html#abstract",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "",
-    "text": "Our project aims on analyzing cat hunting behaviors. Domestic cats (Felis catus) are a subject of conservation concern due to their annual predation of billions of native prey. However, the ecological significance of these pets as predators lacks clarity when spatial context is not taken into account [1]. Our data set consist of pet cats hunting details from different countries. Our project aims to address two key questions: Do cats living together exhibit hunting skills better than solitary cats and does the reproductive status of cats affects their hunting behavior."
-  },
-  {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Introduction",
-    "text": "Introduction\nOur team decided to anlysis the Pet Cats data set from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. This data set contains information on individual cat characteristics, including age,gender, neuter status and hunting behaviour along with timestamped GPS data. Since cats having a fascinating characteristics, our team has chosen to utilize this data set to gain a valuable insights into cat hunting bhaviours. We aim to explore whether the number of cats living together has any impact on hunting behavior and whether the reproductive status influences their hunting patterns.\nEach country data set is divided into two subsets. The first subset comprises observations of 11 variables, providing data such as ground speed, geographic longitude and latitude estimated by sensors, timestamps for sensor measurements, and event IDs. The second subset contains observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month, the type of food that the cats consume, reproductive condition, and the sex of the animals. For this project, our team has utilize this data to create visualizations aimed at analyzing hunting behavior."
-  },
-  {
-    "objectID": "index.html#introduction-1",
-    "href": "index.html#introduction-1",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Introduction",
-    "text": "Introduction\n\nAre the cats which live together better at hunting than those which live alone?\nIn this question, we are investigating whether cats that live together exhibit better hunting abilities compared to cats that live alone. Our interest lies in understanding if the presence of other cats in the same living environment influences the hunting skills and behavior of individual cats. To explore this question, we have aggregated data from different countries into a single data set. We are utilizing four key features from the data set: the number of cats (n_cats), the number of prey caught per month (prey_per_month), the age of the cats, and we are additionally using the feature of the cat’s sex to analyze hunting behavior in relation to gender."
-  },
-  {
-    "objectID": "index.html#approach",
-    "href": "index.html#approach",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Approach",
-    "text": "Approach\nOur initial plot is a scatter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups. The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the scatterplot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age."
-  },
-  {
-    "objectID": "index.html#analysis",
-    "href": "index.html#analysis",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Analysis",
-    "text": "Analysis"
-  },
-  {
-    "objectID": "index.html#discussion",
-    "href": "index.html#discussion",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Discussion",
-    "text": "Discussion"
-  },
-  {
-    "objectID": "index.html#introduction-2",
-    "href": "index.html#introduction-2",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Introduction",
-    "text": "Introduction\n\nHow does the reproductive status of cats influence the hunting pattern?\nOur second question focuses on finding the hunting patterns based on the reproductive conditions of the cat. Reproductive status can significantly affect the behavior and activity of cats, and this study seeks to understand whether there are any patterns in hunting activities based on whether cats are neutered or not. For answering this question we have some features from the data set which includes the reproductive condition of the animal (animal_reproductive_condition ) which specifies whether the animal was neutered or not, the number of prey caught per month (prey_p_month ), the time cats spends indoors (hrs_indoors)."
-  },
-  {
-    "objectID": "index.html#approach-1",
-    "href": "index.html#approach-1",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Approach",
-    "text": "Approach"
-  },
-  {
-    "objectID": "index.html#analysis-1",
-    "href": "index.html#analysis-1",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Analysis",
-    "text": "Analysis"
-  },
-  {
-    "objectID": "index.html#discussion-1",
-    "href": "index.html#discussion-1",
-    "title": "Paws N’ Patterns 🐾",
-    "section": "Discussion",
-    "text": "Discussion"
-  },
-  {
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Quarto",
     "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
   },
   {
     "objectID": "presentation.html#layouts",
     "href": "presentation.html#layouts",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Layouts",
     "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
     "objectID": "presentation.html#code",
     "href": "presentation.html#code",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Code",
-    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+    "text": "Code\n\ncat_annot <- cats_new |>\n  filter(n_cats > 0) |>\n  mutate(\n    age_grp = case_when(\n      age_years >= 0 & age_years <= 5 ~ \"Kitten\",\n      age_years > 5 & age_years <= 10 ~ \"Young\",\n      TRUE ~ \"Mature\"\n    )\n  ) |>\n  group_by(age_grp, n_cats) |>\n  filter(n_cats < 2 | n_cats > 6) |>\n  summarise(prey_p_month = max(prey_p_month),\n            .groups = \"keep\")\n\ncats_new |>\n  filter(n_cats > 0) |>\n  mutate(\n    age_grp = case_when(\n      age_years >= 0 & age_years <= 5 ~ \"Kitten\",\n      age_years > 5 & age_years <= 10 ~ \"Young\",\n      TRUE ~ \"Mature\"\n    ),\n    hrs_bin = ifelse(hrs_indoors <= 10, 10, 20)\n  ) |>\n  ggplot(aes(x = reorder(n_cats, str_sort(n_cats)), \n             y = prey_p_month)) +\n  geom_jitter(data = cats_new, color = \"snow3\") + \n  geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +\n  facet_wrap(~ fct_relevel(age_grp, c(\"Kitten\", \"Young\", \"Mature\"))) +\n  scale_fill_manual(values=c(\"steelblue3\",\"maroon4\",\"salmon2\")) +\n  labs(\n    title = \"How good are loner cats at hunting?\",\n    subtitle = \"as opposed to the cats that live in group \\nGrouped w.r.t age\",\n    caption = \"Q 1 | Plot 1\",\n    x = \"Number of cats\",\n    y = \"Prey caught per month\"\n  ) +\n  geom_text_repel(data = cat_annot, aes(label = prey_p_month), \n                  nudge_x = 0.3, nudge_y = 0.2, size = 5) +\n  # geom_text_repel(aes(group = age_grp, label = \"label\")) +\n  theme_minimal()"
   },
   {
     "objectID": "presentation.html#plots",
     "href": "presentation.html#plots",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Plots",
     "text": "Plots"
   },
   {
     "objectID": "presentation.html#plot-and-text",
     "href": "presentation.html#plot-and-text",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Plot and text",
-    "text": "Plot and text\n\n\n\nSome text\ngoes here"
+    "text": "Plot and text\n\n\n\nThe scatter plot showcases the hunting prowess of cats in relation to their group size and age. The data reveals that cats, especially those categorized as “Kittens”, excel in hunting when they are either alone or in a group of no more than 2, capturing a rate that often falls between 10 and 20 prey monthly.\nAs the group size surpasses two cats, there’s a noticeable dip in hunting efficiency, most prominently seen in the “Young” age bracket where many data points hover below 10 captures per month.\n\n\n\nThe “Mature” cats display a wide spread in their data, indicating varied hunting success rates. In summation, the chart suggests that kittens, when hunting solo or in pairs, tend to outperform larger groups, particularly when pitted against groups of young cats."
   },
   {
     "objectID": "presentation.html#tables",
     "href": "presentation.html#tables",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Tables",
-    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
+    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,"
   },
   {
     "objectID": "presentation.html#images",
     "href": "presentation.html#images",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Images",
     "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
     "href": "presentation.html#math-expressions",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Math Expressions",
     "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
   },
   {
     "objectID": "presentation.html#feeling-adventurous",
     "href": "presentation.html#feeling-adventurous",
-    "title": "Project title",
+    "title": "Analysing Cat Hunting Behaviour",
     "section": "Feeling adventurous?",
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
   },
   {
-    "objectID": "proposal.html",
-    "href": "proposal.html",
+    "objectID": "presentation.html#dataset",
+    "href": "presentation.html#dataset",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "",
-    "text": "tag_id\n\n\nanimal_id\n\n\nanimal_taxon\n\n\ndeploy_on_date\n\n\ndeploy_off_date\n\n\nhunt\n\n\nprey_p_month\n\n\nanimal_reproductive_condition\n\n\nanimal_sex\n\n\nhrs_indoors\n\n\nn_cats\n\n\nfood_dry\n\n\nfood_wet\n\n\nfood_other\n\n\nstudy_site\n\n\nage_years\n\n\n\n\n\n\nTommy-Tag\n\n\nTommy\n\n\nFelis catus\n\n\n2017-06-03 01:02:09\n\n\n2017-06-10 02:10:52\n\n\nTRUE\n\n\n12.5\n\n\nNeutered\n\n\nm\n\n\n12.5\n\n\n2\n\n\nTRUE\n\n\nTRUE\n\n\nFALSE\n\n\nUK\n\n\n11\n\n\n\n\nAthena\n\n\nAthena\n\n\nFelis catus\n\n\n2017-06-24 01:02:13\n\n\n2017-06-30 23:59:32\n\n\nTRUE\n\n\n3.0\n\n\nSpayed\n\n\nf\n\n\n7.5\n\n\n2\n\n\nTRUE\n\n\nTRUE\n\n\nFALSE\n\n\nUK\n\n\n3\n\n\n\n\n\n\n\n\n\n\n\n\ntag_id\n\n\nevent_id\n\n\nvisible\n\n\ntimestamp\n\n\nlocation_long\n\n\nlocation_lat\n\n\nground_speed\n\n\nheight_above_ellipsoid\n\n\nalgorithm_marked_outlier\n\n\nmanually_marked_outlier\n\n\nstudy_name\n\n\n\n\n\n\nAres\n\n\n3395610551\n\n\nTRUE\n\n\n2017-06-24 01:03:57\n\n\n-5.113851\n\n\n50.17032\n\n\n684\n\n\n154.67\n\n\nFALSE\n\n\nFALSE\n\n\nPet Cats United Kingdom\n\n\n\n\nAres\n\n\n3395610552\n\n\nTRUE\n\n\n2017-06-24 01:11:20\n\n\n-5.113851\n\n\n50.17032\n\n\n936\n\n\n154.67\n\n\nFALSE\n\n\nFALSE\n\n\nPet Cats United Kingdom\n\n\n\n\n\n\n\n\n\nThe Pet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, time-stamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We all found the dataset interesting, as cats have fascinating characteristics. There seems to be potential relations between hunting capacities, reproductive condition, food habits, age. Representing them through visualizations would provide a great learning curve as the data is varied."
+    "section": "Dataset",
+    "text": "Dataset\n\nDataset is drawn from TidyTuesday\n## sets the start of a new slide"
   },
   {
-    "objectID": "proposal.html#dataset",
-    "href": "proposal.html#dataset",
+    "objectID": "presentation.html#dataset-description",
+    "href": "presentation.html#dataset-description",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "",
-    "text": "tag_id\n\n\nanimal_id\n\n\nanimal_taxon\n\n\ndeploy_on_date\n\n\ndeploy_off_date\n\n\nhunt\n\n\nprey_p_month\n\n\nanimal_reproductive_condition\n\n\nanimal_sex\n\n\nhrs_indoors\n\n\nn_cats\n\n\nfood_dry\n\n\nfood_wet\n\n\nfood_other\n\n\nstudy_site\n\n\nage_years\n\n\n\n\n\n\nTommy-Tag\n\n\nTommy\n\n\nFelis catus\n\n\n2017-06-03 01:02:09\n\n\n2017-06-10 02:10:52\n\n\nTRUE\n\n\n12.5\n\n\nNeutered\n\n\nm\n\n\n12.5\n\n\n2\n\n\nTRUE\n\n\nTRUE\n\n\nFALSE\n\n\nUK\n\n\n11\n\n\n\n\nAthena\n\n\nAthena\n\n\nFelis catus\n\n\n2017-06-24 01:02:13\n\n\n2017-06-30 23:59:32\n\n\nTRUE\n\n\n3.0\n\n\nSpayed\n\n\nf\n\n\n7.5\n\n\n2\n\n\nTRUE\n\n\nTRUE\n\n\nFALSE\n\n\nUK\n\n\n3\n\n\n\n\n\n\n\n\n\n\n\n\ntag_id\n\n\nevent_id\n\n\nvisible\n\n\ntimestamp\n\n\nlocation_long\n\n\nlocation_lat\n\n\nground_speed\n\n\nheight_above_ellipsoid\n\n\nalgorithm_marked_outlier\n\n\nmanually_marked_outlier\n\n\nstudy_name\n\n\n\n\n\n\nAres\n\n\n3395610551\n\n\nTRUE\n\n\n2017-06-24 01:03:57\n\n\n-5.113851\n\n\n50.17032\n\n\n684\n\n\n154.67\n\n\nFALSE\n\n\nFALSE\n\n\nPet Cats United Kingdom\n\n\n\n\nAres\n\n\n3395610552\n\n\nTRUE\n\n\n2017-06-24 01:11:20\n\n\n-5.113851\n\n\n50.17032\n\n\n936\n\n\n154.67\n\n\nFALSE\n\n\nFALSE\n\n\nPet Cats United Kingdom\n\n\n\n\n\n\n\n\n\nThe Pet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand. The UK dataset contains two subsets called cats_uk and cats_uk_reference. So does the US dataset.\ncats_uk contains 18215 observations of 11 variables providing data such as ground speed, geographic longitude and latitude estimated by the sensor, time-stamp for sensor measurements and an event id. These are all numerical variables.\ncats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. reproductive condition and animal sex are categorical variables.\n\n\n\nWe selected this dataset because we can gain insights into the habits of cats by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We all found the dataset interesting, as cats have fascinating characteristics. There seems to be potential relations between hunting capacities, reproductive condition, food habits, age. Representing them through visualizations would provide a great learning curve as the data is varied."
+    "section": "Dataset Description",
+    "text": "Dataset Description\n\n\nDataset is drawn from TidyTuesday\nThe Pet Cats data set comes from Movebank for Animal Tracking Data, collected from volunteers using GPS sensors on their pet cats around UK, US, Australia and New Zealand.\nThe dataset from US,UK,Australia,New Zealand have been merged to form a new data set which is used for plotting is"
   },
   {
-    "objectID": "proposal.html#questions",
-    "href": "proposal.html#questions",
+    "objectID": "presentation.html#section",
+    "href": "presentation.html#section",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "Questions",
-    "text": "Questions\n1) Are the cats which live together better at hunting than those which live alone?\n2) How does the reproductive status of cats influence the hunting pattern?"
+    "section": "#",
+    "text": "#"
   },
   {
-    "objectID": "proposal.html#analysis-plan",
-    "href": "proposal.html#analysis-plan",
+    "objectID": "presentation.html#cats_uk_reference-contains-101-observations-of-16-variables-and-primarily-describes-the-number-of-cats-living-in-a-house-whether-they-are-allowed-to-hunt-their-prey-per-month-and-age.-these-are-numerical-data.-also-the-data-contains-the-nature-of-the-food-that-the-cats-eat-in-the-form-of-a-logical-variable.-reproductive-condition-and-animal-sex-are-categorical-variables.-layouts",
+    "href": "presentation.html#cats_uk_reference-contains-101-observations-of-16-variables-and-primarily-describes-the-number-of-cats-living-in-a-house-whether-they-are-allowed-to-hunt-their-prey-per-month-and-age.-these-are-numerical-data.-also-the-data-contains-the-nature-of-the-food-that-the-cats-eat-in-the-form-of-a-logical-variable.-reproductive-condition-and-animal-sex-are-categorical-variables.-layouts",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "Analysis plan",
-    "text": "Analysis plan\n\nQuestion 1\n\nThe first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: n_cats (number of cats living in the house), avg_ground_speed (the average speed of entire tracking period), prey_p_month (prey caught per month), age_years (cat’s age). All of these variables are already present in the dataset except avg_ground_speed, which will be derived from the geo-tagged dataset using data feature manipulation. The geo-tagged dataset cats_uk.csv contains the ground speed of the cat (referenced with tag_id) for each day it was tracked (and went outside). We will take the average of those values of speed for each cat, and create a new column in the reference dataset called avg_ground_speed.\nWe chose to add “age” (years) and “ground_speed” because it gives a varied dynamic on the cat’s hunting abilities. Ground speed shows how fast the cat hunts, and age is an indirect factor of the cat’s experience.\nWe will then use a Bubble Chart to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:\n\n1) number of cats on the x-axis\n2) prey caught per month on the y-axis,\n3) The size of each bubble will correspond to the values of average ground speed and\n4) The color of the bubbles will be determined by the age of the cats.\n\nA Violin plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.\n\n\n\nQuestion 2\n\nThe second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains animal_reproductive_condition that specifies whether the animal was neutered or not. We also have prey_p_month and hrs_indoors that reflect how much time a cat spends indoors or outdoors hunting.\nWe are planning to go with a Parallel Plot or a Line Chart that will effectively compare the three variables together.\n\n1) Two of the axes of either graph will contain the numeric variables prey_p_month and hrs_indoors.\n2) The third categorical variable will help further to categorize (differentiate) the groups in the plot.\n\nThis visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point."
+    "section": "cats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. reproductive condition and animal sex are categorical variables. Layouts",
+    "text": "cats_uk_reference contains 101 observations of 16 variables and primarily describes the number of cats living in a house, whether they are allowed to hunt, their prey per month and age. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. reproductive condition and animal sex are categorical variables. Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
-    "objectID": "proposal.html#source",
-    "href": "proposal.html#source",
+    "objectID": "presentation.html#q1.",
+    "href": "presentation.html#q1.",
     "title": "Analysing Cat Hunting Behaviour",
-    "section": "Source:",
-    "text": "Source:\nInformation about the dataset description is derived from the following Tidy Tuesday page: Pet Cats."
+    "section": "Q1.",
+    "text": "Q1.\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
+  },
+  {
+    "objectID": "presentation.html#q1.-are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone",
+    "href": "presentation.html#q1.-are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Q1. Are the cats which live together better at hunting than those which live alone?",
+    "text": "Q1. Are the cats which live together better at hunting than those which live alone?\n\n\nPlot 1\n\njitter plot with pray caught per month by the number of cats living together\ncats have been categorized based on their age group\n\n\nPlot 2\n\nLine plot with pray caught per month by the number of cats living together\ncats have been categorized based on their sex"
+  },
+  {
+    "objectID": "presentation.html#text",
+    "href": "presentation.html#text",
+    "title": "Analysing Cat Hunting Behaviour",
+    "section": "Text",
+    "text": "Text\n\nKittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.\nHunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.\nMature cats show varied hunting success rates, with a broad spread in the data."
   }
 ]

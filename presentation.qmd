@@ -1,7 +1,10 @@
 ---
-title: "Project title"
+title: "Analysing Cat Hunting Behaviour"
 subtitle: "INFO 526 - Fall 2023 - Project 1"
-author: "Author names"
+author: "Team R-tisans of Visual : Visalakshi Prakash Iyer,
+         Rahul Bangad, 
+         Kashyap Sai Prasad Nadendla,
+         Athira Thekkemadathil Anilkumar"
 title-slide-attributes:
   data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
   data-background-size: stretch
@@ -21,9 +24,14 @@ execute:
 #| include: false
 
 # Load packages here
-pacman::p_load(tidymodels,
-               tidyverse)
-
+pacman::p_load(tidyverse,
+               ggplot2,
+               here,
+               ggridges,
+               ggtext,
+               ggrepel
+               )
+cats_new <- read.csv(here("cats_all_new.csv"))
 ```
 
 ```{r}
@@ -52,74 +60,141 @@ mtcars$speed <- mtcars$hp / mtcars$wt
 data("penguins")
 ```
 
-# Using Quarto for presentations
+# Understanding the Hunt: Cat Predatory Behavior {.slide-understanding-hunt style=".slide-understanding-hunt {     background: linear-gradient(to bottom right, #E0E0E0, #A9A9A9); /* Gradient from light grey to dark grey */     color: #FFFFFF; /* White text color */     display: flex;     align-items: center; /* Center the content vertically */     justify-content: center; /* Center the content horizontally */ }.slide-understanding-hunt h1 {     font-family: 'Georgia', serif; /* Stylish font */     font-size: 2.5em; /* Font size */     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */     margin: 0; /* Remove default margins */ }"}
 
-## Quarto
+## Dataset Description
 
--   The presentation is created using the Quarto CLI
+::: incremental
+-   Dataset is drawn from TidyTuesday
 
--   `##` sets the start of a new slide
+-   The **Pet Cats** data set comes from [**Movebank for Animal Tracking Data**](https://www.datarepository.movebank.org/handle/10255/move.882), collected from volunteers using GPS sensors on their pet cats around *UK, US, Australia and New Zealand*.
 
-## Layouts
+-   The dataset from US,UK,Australia,New Zealand have been merged to form a new data set which is used for plotting is
 
-You can use plain text
+    ::: {.column width="40%"}
+    :::
+:::
+
+## Q1. Are the cats which live together better at hunting than those which live alone?
 
 ::: columns
-::: {.column width="40%"}
--   or bullet points[^1]
+::: {.column width="50%"}
+**Plot 1**
+
+-   jitter plot with pray caught per month by the number of cats living together
+
+-   cats have been categorized based on their age group
 :::
 
-::: {.column width="60%"}
-or in two columns
+::: {.column width="50%"}
+**Plot 2**
+
+-   Line plot with pray caught per month by the number of cats living together
+-   cats have been categorized based on their sex
 :::
 :::
-
-[^1]: And add footnotes
-
--   like
-
--   this
 
 ## Code
 
-```{r, echo=FALSE}
-model <- lm(mpg ~ speed, data = mtcars) 
+```{r, echo=TRUE, warning=FALSE , message=FALSE}
+cat_annot <- cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    )
+  ) |>
+  group_by(age_grp, n_cats) |>
+  filter(n_cats < 2 | n_cats > 6) |>
+  summarise(prey_p_month = max(prey_p_month),
+            .groups = "keep")
 
-model |> tidy()
-
-model |> glance()
+cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    ),
+    hrs_bin = ifelse(hrs_indoors <= 10, 10, 20)
+  ) |>
+  ggplot(aes(x = reorder(n_cats, str_sort(n_cats)), 
+             y = prey_p_month)) +
+  geom_jitter(data = cats_new, color = "snow3") + 
+  geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +
+  facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
+  scale_fill_manual(values=c("steelblue3","maroon4","salmon2")) +
+  labs(
+    title = "How good are loner cats at hunting?",
+    subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
+    caption = "Q 1 | Plot 1",
+    x = "Number of cats",
+    y = "Prey caught per month"
+  ) +
+  geom_text_repel(data = cat_annot, aes(label = prey_p_month), 
+                  nudge_x = 0.3, nudge_y = 0.2, size = 5) +
+  # geom_text_repel(aes(group = age_grp, label = "label")) +
+  theme_minimal()
 
 ```
 
 ## Plots
 
-```{r}
-penguins |>
-  mutate(species = ifelse(species == "Adelie", "Adelie", "Other")) |>
-  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point()
+```{r, echo=FALSE, warning=FALSE , message=FALSE}
+cat_annot <- cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    )
+  ) |>
+  group_by(age_grp, n_cats) |>
+  filter(n_cats < 2 | n_cats > 6) |>
+  summarise(prey_p_month = max(prey_p_month),
+            .groups = "keep")
+
+cats_new |>
+  filter(n_cats > 0) |>
+  mutate(
+    age_grp = case_when(
+      age_years >= 0 & age_years <= 5 ~ "Kitten",
+      age_years > 5 & age_years <= 10 ~ "Young",
+      TRUE ~ "Mature"
+    ),
+    hrs_bin = ifelse(hrs_indoors <= 10, 10, 20)
+  ) |>
+  ggplot(aes(x = reorder(n_cats, str_sort(n_cats)), 
+             y = prey_p_month)) +
+  geom_jitter(data = cats_new, color = "snow3") + 
+  geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +
+  facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
+  scale_fill_manual(values=c("steelblue3","maroon4","salmon2")) +
+  labs(
+    title = "How good are loner cats at hunting?",
+    subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
+    caption = "Q 1 | Plot 1",
+    x = "Number of cats",
+    y = "Prey caught per month"
+  ) +
+  geom_text_repel(data = cat_annot, aes(label = prey_p_month), 
+                  nudge_x = 0.3, nudge_y = 0.2, size = 5) +
+  # geom_text_repel(aes(group = age_grp, label = "label")) +
+  theme_minimal()
+
 ```
 
-## Plot and text
+## Text
 
-::: columns
-::: {.column width="50%"}
--   Some text
+-   Kittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.
 
--   goes here
-:::
+-   Hunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.
 
-::: {.column width="50%"}
-```{r, warning=FALSE, fig.width=5.5}
-penguins |>
-  ggplot(aes(x = bill_length_mm, y = species, color = species)) +
-  geom_boxplot(linewidth = 0.75,
-               outlier.size = 2.5) +
-  theme_minimal(base_size = 15) +
-  theme(legend.key.size = unit(0.8, "cm"))
-```
-:::
-:::
+-   Mature cats show varied hunting success rates, with a broad spread in the data.
 
 # A new section...
 
@@ -128,10 +203,10 @@ penguins |>
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
 ```{r}
-penguins |> 
-  head() |>
-  kableExtra::kable() |>
-  kableExtra::kable_styling()
+#penguins |> 
+  #head() |>
+  #kableExtra::kable() |>
+ # kableExtra::kable_styling()
 ```
 
 ## Images
