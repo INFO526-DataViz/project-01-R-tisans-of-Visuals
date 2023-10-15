@@ -180,6 +180,7 @@ cats_new |>
     color = "Animal Sex"
   ) +
   scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +
+  geom_text(aes(x = 10, y= 8, label = "Has a cat door")) +
   theme_minimal()
 ```
 
@@ -197,12 +198,8 @@ cat_annot <- cats_new |>
   group_by(age_grp, n_cats) |>
   filter(n_cats < 2 | n_cats > 6) |>
   summarise(prey_p_month = max(prey_p_month),
-            .groups = "keep") |>
-  mutate(
-    label_val = case_when(
-      
-    )
-  )
+            .groups = "keep")
+
 cat_annot
 ```
 
@@ -279,7 +276,8 @@ cats_new |>
   theme_minimal() +
   theme(
     panel.grid.minor = element_line(linetype = "dashed", color = "grey"),
-    panel.grid.major = element_blank()
+    panel.grid.major = element_blank(),
+    legend.position = "top", legend.justification = "right"
   ) + 
   guides(
     color = guide_legend(override.aes = list(fill = c("pink2", "maroon4"),
