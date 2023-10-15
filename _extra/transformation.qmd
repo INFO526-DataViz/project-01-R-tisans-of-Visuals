@@ -199,8 +199,10 @@ cat_annot <- cats_new |>
   summarise(prey_p_month = max(prey_p_month),
             .groups = "keep") |>
   mutate(
-    label_val = case_when(
-      
+    label_color = case_when(
+      age_grp == "Kitten" ~ "steelblue3",
+      age_grp == "Young" ~ "pink3",
+      TRUE ~ "maroon4"
     )
   )
 cat_annot
@@ -226,7 +228,7 @@ cats_new |>
   geom_jitter(data = cats_new, color = "snow3") + 
   geom_jitter(aes(fill = age_grp), size=2.2, pch=21) +
   facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +
-  scale_fill_manual(values=c("steelblue3","maroon4","salmon2")) +
+  scale_fill_manual(values=c("steelblue3","maroon4","pink2")) +
   labs(
     title = "How good are loner cats at hunting?",
     subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
@@ -234,12 +236,15 @@ cats_new |>
     x = "Number of cats",
     y = "Prey caught per month"
   ) +
-  geom_text_repel(data = cat_annot, aes(label = prey_p_month), 
-                  nudge_x = 0.3, nudge_y = 0.2, size = 5) +
-  # geom_text_repel(aes(group = age_grp, label = "label")) +
+  geom_label_repel(data = cat_annot, 
+                  aes(label = glue::glue("prey = {prey_p_month}")),
+                      nudge_x = 0.4, nudge_y = 0.5, size = 3.5, 
+                      alpha = 0.75,
+                      color = cat_annot$label_color,
+                      fontface = 'bold'
+                  ) +
   theme_minimal()
 
-# annotation with min and max value (with resp. n_cats)
 ```
 
 ```{r}
