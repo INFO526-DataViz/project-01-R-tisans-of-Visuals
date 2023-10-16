@@ -245,6 +245,18 @@ ridge_annot <- cats_new |>
   )
 
 ridge_annot
+
+```
+
+```{r}
+
+cats_new |>
+  filter(n_cats != 0) |>
+  ggplot(aes(x = prey_p_month, 
+             fill = animal_reproductive_condition)) + 
+  geom_density(alpha=0.8) 
+  # geom_errorbar(aes(y = age_years))
+  # geom_jitter()
 ```
 
 ```{r, warning=FALSE, message=FALSE}
