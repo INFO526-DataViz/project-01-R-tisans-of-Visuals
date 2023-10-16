@@ -30,6 +30,8 @@ In this question, we are investigating whether cats that live together exhibit b
 
 Our initial plot is a jitter plot illustrating the hunting abilities of cats. We have categorized the cats into three distinct age groups: kittens (0 to 5 years), young cats (5 to 10 years), and mature cats (above 10 years). The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the jitter plot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age.
 
+For the second plot, we have chosen a line plot to visualize the hunting behavior of cats in relation to their gender. The x-axis represents the number of prey caught, while the y-axis indicates the number of cats. This line plot illustrates the average value of prey caught with respect to gender, allowing us to compare the hunting performance of male and female cats.
+
 ## **Analysis**
 
 ![](images/q1p1.png){fig-alt="q1p1" fig-align="center"}
@@ -42,6 +44,8 @@ The primary goal of our initial question was to understand the hunting behavior 
 
 The observation from Figure 1 indicates that kittens living alone and those in small groups exhibit superior hunting skills. Notably, the data reveals that cats living alone tend to improve their hunting abilities as they transition from kitten to young age, but this gradually decreases as they mature. Based on the figure, it's evident that kittens catch approximately 21 prey per month. As they transition to the young age category, the number of prey caught increases to around 28, but it gradually reduces back to 21 when they reach the mature age category. However, Mature cats exhibit diverse hunting success rates, as indicated by the wide range of data in the observations. Additionally, when the number of cats living together exceeds two, the prey caught decreases as the cats age.
 
+Plot 2 provides an illustration of the hunting efficiency of cats, comparing those that live alone to those in groups, with a focus on gender. The dispersion of data points indicates variations in hunting abilities among both male and female cats. The figure reveals that male cats living alone tend to be more efficient hunters, with an average of up to 11 prey per month. There is one notable exception where female cats outperform in hunting, and that is when they have access to a cat door. On average, male cats appear to outperform female cats in terms of prey caught per month.
+
 # Question 2 : Exploring the Impact of Reproductive Status on Hunting Patterns in Cats
 
 ## Introduction
@@ -52,14 +56,20 @@ Our second question focuses on finding the hunting patterns based on the reprodu
 
 ## Approach
 
+In the first plot, we utilized a ridgeline plot with mean quantiles to investigate the impact of reproductive status on hunting patterns in cats with respect to different countries. Here we are considering four different countries and they are: UK, US, Australia and New Zealand. To conduct this analysis, we encountered missing values in the dataset that were crucial for our research. As a solution, we performed some data sampling. Specifically, the prey caught per month data was missing for the country New Zealand, and we addressed this by filling the gaps with the average mean value. This approach allowed us to gain insights into how reproductive status influences the hunting behavior of cats, even in the presence of missing data.
+
+For the second plot, we employed a hexbin plot to examine the influence of reproductive status on hunting patterns in cats, particularly concerning age. The x-axis represents the prey caught per month, while the y-axis represents the age of the cat. The plot features data points representing neutered and fixed cats, allowing us to visualize how reproductive status relates to hunting behavior in different age groups.
+
 ## **Analysis**
 
 ![](images/q2p1.png){fig-alt="q2p1" fig-align="center"}
 
 ![](images/q2p2.png){fig-alt="q2p2" fig-align="center"}
 
-## **Discussion**
+## **Discussion 2**
 
-The plot provides valuable insights into the hunting behavior of cats, with a focus on the impact of age and reproductive status. In Figure 3, we explore cats' hunting behavior based on their reproductive condition. To facilitate our analysis, we've segmented the data by countries, including Australia, New Zealand, the United Kingdom, and the United States. The density plot reveals a consistent trend: neutered cats tend to engage in more hunting across all these countries.
+The plot provides valuable insights into the hunting behavior of cats, with a focus on the impact of age and reproductive status. In Figure 3, we explore cats' hunting behavior based on their reproductive condition. To facilitate our analysis, we've segmented the data by countries, including Australia, New Zealand, the United Kingdom, and the United States. The ridgeline plot reveals a consistent trend: neutered cats tend to engage in more hunting across all these countries. The majority of the data falls within the range of the 25th and 50th quantiles. However, it's important to note that there is a lack of neutered data for the countries New Zealand and the United States. This data gap should be considered when interpreting the results for these specific countries.
 
 The figure 4 offers provides valuable insights into the hunting behavior of cats, with a focus on the impact of age and reproductive status. Notably, it reveals that as cats grow older, regardless of whether they are Fixed or Unneutered, their prey-catching activity decreases. However, the data highlights a fascinating trend among Unneutered cats, particularly those aged 10 to 14 years, who exhibit the highest hunting prowess. It's intriguing to note that older Unneutered cats, beyond 15 years, seem to be less active hunters, which might imply a decrease in hunting behavior with age. This observation could be due to older cats hunting less or, possibly, a smaller representation of older Unneutered cats in the study. In summary, the cat's age and reproductive status play a substantial role in influencing their hunting habits, with younger Unneutered cats being the most proficient hunters, while older cats, regardless of reproductive status, tend to hunt less as they age.
+
+# References 
