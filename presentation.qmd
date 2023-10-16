@@ -98,66 +98,6 @@ data("penguins")
 
 # Plot 1
 
-## Code
-
-```{r, echo=TRUE, warning=FALSE , message=FALSE, eval=FALSE}
-
-cat_annot <- cats_new |>   
-  filter(n_cats > 0) |>   
-  mutate(     
-    age_grp = case_when(       
-      age_years >= 0 & age_years <= 5 ~ "Kitten",       
-      age_years > 5 & age_years <= 10 ~ "Young",       
-      TRUE ~ "Mature"     
-      )   
-    ) |>   
-  group_by(age_grp, n_cats) |>   
-  filter(n_cats < 2 | n_cats > 6) |>   
-  summarise(prey_p_month = max(prey_p_month),             
-            .groups = "keep") |>   
-  mutate(     
-    label_color = case_when(       
-      age_grp == "Kitten" ~ "steelblue4",       
-      age_grp == "Young" ~ "pink4",       
-      TRUE ~ "maroon4"     
-      )   
-    )
-
-cats_new |>   
-  filter(n_cats > 0) |>   
-  mutate(     
-    age_grp = case_when(       
-      age_years >= 0 & age_years <= 5 ~ "Kitten",       
-      age_years > 5 & age_years <= 10 ~ "Young",       
-      TRUE ~ "Mature"     
-      ),     
-    hrs_bin = ifelse(hrs_indoors <= 10, 10, 20)   
-    ) |>   
-  ggplot(aes(x = reorder(n_cats, str_sort(n_cats)),               
-             y = prey_p_month)) +   
-  geom_jitter(data = cats_new, color = "snow3") +    
-  geom_jitter(aes(fill = age_grp), 
-              size=2.2, pch=21, show.legend = FALSE) +   
-  facet_wrap(~ fct_relevel(age_grp, c("Kitten", "Young", "Mature"))) +   
-  scale_fill_manual(values=c("steelblue3","maroon4","pink2")) +   
-  labs(     
-    title = "How good are loner cats at hunting?",     
-    subtitle = "as opposed to the cats that live in group \nGrouped w.r.t age",
-    caption = "Q 1 | Plot 1",     
-    x = "Number of cats",     
-    y = "Prey caught per month"   
-    ) +   
-  geom_label_repel(
-    data = cat_annot,                    
-    aes(label = glue::glue("prey = {prey_p_month}")),                   
-    nudge_x = 0.4, nudge_y = 0.5, size = 3.5,                   
-    color = cat_annot$label_color,                   
-    fontface = 'bold',                   
-    ) +   
-  theme_minimal() 
-
-```
-
 ## Plot
 
 ```{r, echo=FALSE, warning=FALSE , message=FALSE}
@@ -227,57 +167,6 @@ cats_new |>
 -   Mature cats show varied hunting success rates, with a broad spread in the data.
 
 # Plot 2
-
-## Code
-
-```{r, echo=TRUE, warning=FALSE , message=FALSE, eval=FALSE}
-
-cats_new |>   
-  filter(n_cats > 0) |>   
-  group_by(animal_sex, n_cats) |>   
-  summarise(avg_prey = median(prey_p_month),              
-            min_prey = min(prey_p_month),             
-            max_prey = max(prey_p_month),             
-            .groups = "keep") |>   
-  mutate (     
-    n_cats = ifelse(animal_sex == "f", n_cats + 0.2, n_cats - 0.2),     
-    avg_prey = ifelse(animal_sex == "f", avg_prey + 0.2, avg_prey - 0.2)     
-    ) |>   
-  ggplot(aes(color=animal_sex)) +   
-  geom_segment(aes(x = min_prey,                    
-                   y = n_cats,                    
-                   xend = max_prey,                    
-                   yend = n_cats                    
-                   ),
-               linewidth = 0.8,                
-               position = position_jitterdodge(dodge.width = 0)                
-               ) +   
-  geom_point(aes(x = avg_prey, y = n_cats), 
-             size = 3) +   
-  scale_color_manual(values = c("maroon4", "steelblue3"),                       
-                     labels = c("female", "male")) +    
-  labs(     
-    title = "How good are loner cats at hunting",     
-    subtitle = "as opposed to the cats that live in group \nGrouped w.r.t the sex of the cat",     
-    caption = "Q 1 | Plot 2",     
-    x = "Prey caught per month",     
-    y = "Number of cats",     
-    color = "Animal Sex"   
-    ) +   
-  scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +   
-  scale_x_continuous(breaks = c(seq(0,30,2))) +   
-  geom_text(aes(x = 10, y = 7.7),              
-            label = expression(italic("Young cat with cat door access")),             
-            color = "maroon4",             
-            alpha = 0.7             
-            ) +   
-  theme_minimal() +    
-  theme(     
-    legend.position = c(1, 0.9),      
-    legend.justification = "right",     
-    legend.background = element_rect(fill="white",linetype = "blank")   
-    )
-```
 
 ## Plot
 
@@ -362,33 +251,6 @@ cats_new |>
 
 # Plot 1
 
-## Code
-
-```{r, echo=TRUE, warning=FALSE , message=FALSE, eval=FALSE}
-
-cats_new |>   
-  ggplot(aes(x=prey_p_month,y=animal_reproductive_condition,               
-             fill = factor(stat(quantile)))) +   
-  stat_density_ridges(quantile_lines = TRUE,                        
-                      quantiles = 3,                        
-                      alpha = 0.5,                       
-                      geom = "density_ridges_gradient",                        
-                      calc_ecdf = TRUE,                       
-                      bandwidth = 1.5) +     
-  scale_fill_manual(values = c("pink2","steelblue","maroon4"),
-                    name = "Quantile") +   
-  scale_x_continuous(breaks = seq(0,23,5))+   
-  facet_wrap(~ cats_new$study_site) +   
-  labs(     
-    title = "How are cats impacted by their reproductive condition?",     
-    subtitle = "Categorized by different countries",     
-    caption = "Q 2 | Plot 1",     
-    x = "Prey per month",     
-    y = "Annimal reproductive condition"   
-    ) +   
-  theme_minimal() 
-```
-
 ## Plot
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -426,70 +288,6 @@ cats_new |>
 -   Notably, in the US and New Zealand, data for unneutered cats is absent. Among the displayed data, neutered cats in the US tend to catch slightly more prey.
 
 # Plot 2
-
-## Code
-
-```{r, echo=TRUE, warning=FALSE, message=FALSE, eval=FALSE}
-
-cats_new |>
-  ggplot(aes(x = prey_p_month, y = age_years, 
-             color=animal_reproductive_condition)) + 
-  geom_hex(bins=15, show.legend = FALSE) +
-  geom_hex(data = cats_new |> 
-             filter(animal_reproductive_condition == "Unneutered"), 
-           bins = 15, 
-           fill = "maroon4", 
-           color = "maroon4",
-           show.legend = TRUE) +
-  geom_vline(xintercept = 9.3, color="maroon4") +
-  geom_hline(yintercept = 12.9, color="maroon4") +
-  scale_color_manual(values=c("white", "black")) +
-  scale_x_continuous(breaks = seq(0,30,2)) + 
-  scale_y_continuous(breaks = seq(0,24,4)) + 
-  scale_fill_gradient(low = "pink2", high = "salmon2") +
-  labs(
-    title = "How are cats impacted by their reproductive condition?",
-    subtitle =  "Observed w.r.t the age of the cat",
-    caption = "Q 2 | Plot 2",
-    x = "Prey caught per month",
-    y = "Age of the cat"
-  ) +
-  theme_minimal() +
-  theme(
-    panel.grid.minor = element_line(linetype = "dashed", color = "grey"),
-    panel.grid.major = element_blank(),
-    legend.position = "top", legend.justification = "right"
-  ) + 
-  guides(
-    color = guide_legend(override.aes = list(fill = c("pink2", "maroon4"),
-                                             color = c("white", "black")),
-                         title = "reproductive condition"
-                         )
-  ) + 
-  annotate("label", 
-           x = 21, y = 15,
-           label = expression(italic("spends only 2hrs inside")),
-           size = 2.5,
-           color = "maroon4",
-           fontface = "bold",
-           fill = alpha(c("white"),0.2)
-                  ) + 
-  annotate("text",
-           x = 12, y = 18,
-           label = expression(italic("prey = 9")),
-           size = 3,
-           color = "black",
-           fontface = "bold"
-                  ) +
-  annotate("text", 
-           x = 27, y = 13.5,
-           label = expression(italic("age = 12")),
-           size = 3,
-           color = "black",
-           fontface = "bold"
-                  ) +
-  coord_fixed() 
-```
 
 ## Plot
 
