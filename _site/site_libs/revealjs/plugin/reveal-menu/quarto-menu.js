@@ -37,10 +37,7 @@ window.RevealMenuToolHandlers = {
   downloadDrawings: revealMenuToolHandler(function () {
     RevealChalkboard.download();
   }),
-<<<<<<< HEAD
   togglePdfExport: revealMenuToolHandler(function () {
     PdfExport.togglePdfExport();
   }),
-=======
->>>>>>> fe67987ab6e483c6d5a57dfe161db4ce252c68d5
 };

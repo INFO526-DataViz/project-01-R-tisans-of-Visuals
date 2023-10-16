@@ -10,8 +10,8 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
-  <meta name="author" content="Author names">
-  <title>🐈 Paws N’ Patterns - Project title</title>
+  <meta name="author" content="Team R-tisans of Visual : Visalakshi Prakash Iyer, Rahul Bangad, Kashyap Sai Prasad Nadendla, Athira Thekkemadathil Anilkumar">
+  <title>🐈 Paws N’ Patterns - Analysing Cat Hunting Behaviour</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -319,214 +384,373 @@
       margin-right: 0; 
     }
   </style>
-  
-  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/watercolour_sys02_img34_teacup-ocean.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Project title</h1>
+<section id="title-slide" data-background-image="images/front_bg.png" data-background-opacity="1" data-background-size="fill" data-slide-number="none" class="quarto-title-block center">
+  <h1 class="title">Analysing Cat Hunting Behaviour</h1>
   <p class="subtitle">INFO 526 - Fall 2023 - Project 1</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Author names 
+Team R-tisans of Visual : Visalakshi Prakash Iyer, Rahul Bangad, Kashyap Sai Prasad Nadendla, Athira Thekkemadathil Anilkumar 
 </div>
 </div>
 </div>
 
 </section>
 <section>
-<section id="using-quarto-for-presentations" class="title-slide slide level1 center">
-<h1>Using Quarto for presentations</h1>
+<section id="understanding-the-hunt-cat-predatory-behavior" class="title-slide slide level1 slide-understanding-hunt center" style=".slide-understanding-hunt {     background: linear-gradient(to bottom right, #E0E0E0, #A9A9A9); /* Gradient from light grey to dark grey */     color: #FFFFFF; /* White text color */     display: flex;     align-items: center; /* Center the content vertically */     justify-content: center; /* Center the content horizontally */ }.slide-understanding-hunt h1 {     font-family: 'Georgia', serif; /* Stylish font */     font-size: 2.5em; /* Font size */     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */     margin: 0; /* Remove default margins */ }">
+<h1>Understanding the Hunt: Cat Predatory Behavior</h1>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
+<section id="dataset-description" class="slide level2">
+<h2>Dataset Description</h2>
+<div>
 <ul>
-<li><p>The presentation is created using the Quarto CLI</p></li>
-<li><p><code>##</code> sets the start of a new slide</p></li>
+<li class="fragment"><p>Dataset is drawn from TidyTuesday</p></li>
+<li class="fragment"><p>The <strong>Pet Cats</strong> data set comes from <a href="https://www.datarepository.movebank.org/handle/10255/move.882"><strong>Movebank for Animal Tracking Data</strong></a>, collected from volunteers using GPS sensors on their pet cats around <em>UK, US, Australia and New Zealand</em>.</p></li>
+<li class="fragment"><p>The dataset from US, UK, Australia, New Zealand have been merged to form a new data set which is used for plotting.</p></li>
 </ul>
-</section>
-<section id="layouts" class="slide level2">
-<h2>Layouts</h2>
-<p>You can use plain text</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>or bullet points<sup>1</sup></li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p>or in two columns</p>
-</div>
-</div>
-<ul>
-<li><p>like</p></li>
-<li><p>this</p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>And add footnotes</p></li></ol></aside></section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic       p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
-1 (Intercept)   25.3      3.08        8.22 0.00000000358
-2 speed         -0.116    0.0642     -1.81 0.0806       </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
 </div>
 </section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
-
-<img data-src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="1800" class="r-stretch"></section>
-<section id="plot-and-text" class="slide level2">
-<h2>Plot and text</h2>
+<section id="q1.-are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone" class="slide level2 smaller">
+<h2>Q1. Are the cats which live together better at hunting than those which live alone?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<p><strong>Plot 1</strong></p>
 <ul>
-<li><p>Some text</p></li>
-<li><p>goes here</p></li>
+<li><p>Jitter plot with pray caught per month by the number of cats living together</p></li>
+<li><p>Cats have been categorized based on their age group</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="1650"></p>
-</div>
-</div>
+<p><strong>Plot 2</strong></p>
+<ul>
+<li>Line plot with pray caught per month by the number of cats living together</li>
+<li>Cats have been categorized based on their sex</li>
+</ul>
 </div>
 </div>
 </section></section>
 <section>
-<section id="a-new-section" class="title-slide slide level1 center">
-<h1>A new section…</h1>
+<section id="plot-1" class="title-slide slide level1 center">
+<h1>Plot 1</h1>
 
 </section>
-<section id="tables" class="slide level2">
-<h2>Tables</h2>
-<p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
+<section id="code" class="slide level2">
+<h2>Code</h2>
 <div class="cell">
-<div class="cell-output-display">
-<table class="table" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">island</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_depth_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">flipper_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">body_mass_g</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">sex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.1</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">181</td>
-<td style="text-align: right;">3750</td>
-<td style="text-align: left;">male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.5</td>
-<td style="text-align: right;">17.4</td>
-<td style="text-align: right;">186</td>
-<td style="text-align: right;">3800</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">40.3</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">195</td>
-<td style="text-align: right;">3250</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">36.7</td>
-<td style="text-align: right;">19.3</td>
-<td style="text-align: right;">193</td>
-<td style="text-align: right;">3450</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.3</td>
-<td style="text-align: right;">20.6</td>
-<td style="text-align: right;">190</td>
-<td style="text-align: right;">3650</td>
-<td style="text-align: left;">male</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>cat_annot <span class="ot">&lt;-</span> cats_new <span class="sc">|&gt;</span>   </span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">filter</span>(n_cats <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">mutate</span>(     </span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="at">age_grp =</span> <span class="fu">case_when</span>(       </span>
+<span id="cb1-5"><a href="#cb1-5"></a>      age_years <span class="sc">&gt;=</span> <span class="dv">0</span> <span class="sc">&amp;</span> age_years <span class="sc">&lt;=</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">"Kitten"</span>,       </span>
+<span id="cb1-6"><a href="#cb1-6"></a>      age_years <span class="sc">&gt;</span> <span class="dv">5</span> <span class="sc">&amp;</span> age_years <span class="sc">&lt;=</span> <span class="dv">10</span> <span class="sc">~</span> <span class="st">"Young"</span>,       </span>
+<span id="cb1-7"><a href="#cb1-7"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Mature"</span>     </span>
+<span id="cb1-8"><a href="#cb1-8"></a>      )   </span>
+<span id="cb1-9"><a href="#cb1-9"></a>    ) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">group_by</span>(age_grp, n_cats) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">filter</span>(n_cats <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">|</span> n_cats <span class="sc">&gt;</span> <span class="dv">6</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">summarise</span>(<span class="at">prey_p_month =</span> <span class="fu">max</span>(prey_p_month),             </span>
+<span id="cb1-13"><a href="#cb1-13"></a>            <span class="at">.groups =</span> <span class="st">"keep"</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">mutate</span>(     </span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">label_color =</span> <span class="fu">case_when</span>(       </span>
+<span id="cb1-16"><a href="#cb1-16"></a>      age_grp <span class="sc">==</span> <span class="st">"Kitten"</span> <span class="sc">~</span> <span class="st">"steelblue4"</span>,       </span>
+<span id="cb1-17"><a href="#cb1-17"></a>      age_grp <span class="sc">==</span> <span class="st">"Young"</span> <span class="sc">~</span> <span class="st">"pink4"</span>,       </span>
+<span id="cb1-18"><a href="#cb1-18"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"maroon4"</span>     </span>
+<span id="cb1-19"><a href="#cb1-19"></a>      )   </span>
+<span id="cb1-20"><a href="#cb1-20"></a>    )</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a>cats_new <span class="sc">|&gt;</span>   </span>
+<span id="cb1-23"><a href="#cb1-23"></a>  <span class="fu">filter</span>(n_cats <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-24"><a href="#cb1-24"></a>  <span class="fu">mutate</span>(     </span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="at">age_grp =</span> <span class="fu">case_when</span>(       </span>
+<span id="cb1-26"><a href="#cb1-26"></a>      age_years <span class="sc">&gt;=</span> <span class="dv">0</span> <span class="sc">&amp;</span> age_years <span class="sc">&lt;=</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">"Kitten"</span>,       </span>
+<span id="cb1-27"><a href="#cb1-27"></a>      age_years <span class="sc">&gt;</span> <span class="dv">5</span> <span class="sc">&amp;</span> age_years <span class="sc">&lt;=</span> <span class="dv">10</span> <span class="sc">~</span> <span class="st">"Young"</span>,       </span>
+<span id="cb1-28"><a href="#cb1-28"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Mature"</span>     </span>
+<span id="cb1-29"><a href="#cb1-29"></a>      ),     </span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="at">hrs_bin =</span> <span class="fu">ifelse</span>(hrs_indoors <span class="sc">&lt;=</span> <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">20</span>)   </span>
+<span id="cb1-31"><a href="#cb1-31"></a>    ) <span class="sc">|&gt;</span>   </span>
+<span id="cb1-32"><a href="#cb1-32"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(n_cats, <span class="fu">str_sort</span>(n_cats)),               </span>
+<span id="cb1-33"><a href="#cb1-33"></a>             <span class="at">y =</span> prey_p_month)) <span class="sc">+</span>   </span>
+<span id="cb1-34"><a href="#cb1-34"></a>  <span class="fu">geom_jitter</span>(<span class="at">data =</span> cats_new, <span class="at">color =</span> <span class="st">"snow3"</span>) <span class="sc">+</span>    </span>
+<span id="cb1-35"><a href="#cb1-35"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">fill =</span> age_grp), </span>
+<span id="cb1-36"><a href="#cb1-36"></a>              <span class="at">size=</span><span class="fl">2.2</span>, <span class="at">pch=</span><span class="dv">21</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span>   </span>
+<span id="cb1-37"><a href="#cb1-37"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> <span class="fu">fct_relevel</span>(age_grp, <span class="fu">c</span>(<span class="st">"Kitten"</span>, <span class="st">"Young"</span>, <span class="st">"Mature"</span>))) <span class="sc">+</span>   </span>
+<span id="cb1-38"><a href="#cb1-38"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"steelblue3"</span>,<span class="st">"maroon4"</span>,<span class="st">"pink2"</span>)) <span class="sc">+</span>   </span>
+<span id="cb1-39"><a href="#cb1-39"></a>  <span class="fu">labs</span>(     </span>
+<span id="cb1-40"><a href="#cb1-40"></a>    <span class="at">title =</span> <span class="st">"How good are loner cats at hunting?"</span>,     </span>
+<span id="cb1-41"><a href="#cb1-41"></a>    <span class="at">subtitle =</span> <span class="st">"as opposed to the cats that live in group </span><span class="sc">\n</span><span class="st">Grouped w.r.t age"</span>,</span>
+<span id="cb1-42"><a href="#cb1-42"></a>    <span class="at">caption =</span> <span class="st">"Q 1 | Plot 1"</span>,     </span>
+<span id="cb1-43"><a href="#cb1-43"></a>    <span class="at">x =</span> <span class="st">"Number of cats"</span>,     </span>
+<span id="cb1-44"><a href="#cb1-44"></a>    <span class="at">y =</span> <span class="st">"Prey caught per month"</span>   </span>
+<span id="cb1-45"><a href="#cb1-45"></a>    ) <span class="sc">+</span>   </span>
+<span id="cb1-46"><a href="#cb1-46"></a>  <span class="fu">geom_label_repel</span>(</span>
+<span id="cb1-47"><a href="#cb1-47"></a>    <span class="at">data =</span> cat_annot,                    </span>
+<span id="cb1-48"><a href="#cb1-48"></a>    <span class="fu">aes</span>(<span class="at">label =</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"prey = {prey_p_month}"</span>)),                   </span>
+<span id="cb1-49"><a href="#cb1-49"></a>    <span class="at">nudge_x =</span> <span class="fl">0.4</span>, <span class="at">nudge_y =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">3.5</span>,                   </span>
+<span id="cb1-50"><a href="#cb1-50"></a>    <span class="at">color =</span> cat_annot<span class="sc">$</span>label_color,                   </span>
+<span id="cb1-51"><a href="#cb1-51"></a>    <span class="at">fontface =</span> <span class="st">'bold'</span>,                   </span>
+<span id="cb1-52"><a href="#cb1-52"></a>    ) <span class="sc">+</span>   </span>
+<span id="cb1-53"><a href="#cb1-53"></a>  <span class="fu">theme_minimal</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="images" class="slide level2">
-<h2>Images</h2>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
 
-<img data-src="images/watercolour_sys02_img34_teacup-ocean.png" width="500" class="r-stretch quarto-figure-center"><p class="caption">Image credit: Danielle Navarro, Percolate.</p></section>
-<section id="math-expressions" class="slide level2 smaller">
-<h2>Math Expressions</h2>
-<p>You can write LaTeX math expressions inside a pair of dollar signs, e.g.&nbsp;$\alpha+\beta$ renders <span class="math inline">\(\alpha + \beta\)</span>. You can use the display style with double dollar signs:</p>
-<pre><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$</code></pre>
-<p><span class="math display">\[
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-\]</span></p>
-<p>Limitations:</p>
-<ol type="1">
-<li><p>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at the end of a line, led by a non-space character;</p></li>
-<li><p>There should not be spaces after the opening <code>$</code> or before the closing <code>$</code>.</p></li>
-</ol>
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="1800" class="r-stretch"></section>
+<section id="insights" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>Kittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.</p></li>
+<li><p>Hunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.</p></li>
+<li><p>Mature cats show varied hunting success rates, with a broad spread in the data.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="plot-2" class="title-slide slide level1 center">
+<h1>Plot 2</h1>
+
+</section>
+<section id="code-1" class="slide level2">
+<h2>Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>cats_new <span class="sc">|&gt;</span>   </span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">filter</span>(n_cats <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">group_by</span>(animal_sex, n_cats) <span class="sc">|&gt;</span>   </span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">summarise</span>(<span class="at">avg_prey =</span> <span class="fu">median</span>(prey_p_month),              </span>
+<span id="cb2-5"><a href="#cb2-5"></a>            <span class="at">min_prey =</span> <span class="fu">min</span>(prey_p_month),             </span>
+<span id="cb2-6"><a href="#cb2-6"></a>            <span class="at">max_prey =</span> <span class="fu">max</span>(prey_p_month),             </span>
+<span id="cb2-7"><a href="#cb2-7"></a>            <span class="at">.groups =</span> <span class="st">"keep"</span>) <span class="sc">|&gt;</span>   </span>
+<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">mutate</span> (     </span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="at">n_cats =</span> <span class="fu">ifelse</span>(animal_sex <span class="sc">==</span> <span class="st">"f"</span>, n_cats <span class="sc">+</span> <span class="fl">0.2</span>, n_cats <span class="sc">-</span> <span class="fl">0.2</span>),     </span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="at">avg_prey =</span> <span class="fu">ifelse</span>(animal_sex <span class="sc">==</span> <span class="st">"f"</span>, avg_prey <span class="sc">+</span> <span class="fl">0.2</span>, avg_prey <span class="sc">-</span> <span class="fl">0.2</span>)     </span>
+<span id="cb2-11"><a href="#cb2-11"></a>    ) <span class="sc">|&gt;</span>   </span>
+<span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">color=</span>animal_sex)) <span class="sc">+</span>   </span>
+<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> min_prey,                    </span>
+<span id="cb2-14"><a href="#cb2-14"></a>                   <span class="at">y =</span> n_cats,                    </span>
+<span id="cb2-15"><a href="#cb2-15"></a>                   <span class="at">xend =</span> max_prey,                    </span>
+<span id="cb2-16"><a href="#cb2-16"></a>                   <span class="at">yend =</span> n_cats                    </span>
+<span id="cb2-17"><a href="#cb2-17"></a>                   ),</span>
+<span id="cb2-18"><a href="#cb2-18"></a>               <span class="at">linewidth =</span> <span class="fl">0.8</span>,                </span>
+<span id="cb2-19"><a href="#cb2-19"></a>               <span class="at">position =</span> <span class="fu">position_jitterdodge</span>(<span class="at">dodge.width =</span> <span class="dv">0</span>)                </span>
+<span id="cb2-20"><a href="#cb2-20"></a>               ) <span class="sc">+</span>   </span>
+<span id="cb2-21"><a href="#cb2-21"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> avg_prey, <span class="at">y =</span> n_cats), </span>
+<span id="cb2-22"><a href="#cb2-22"></a>             <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span>   </span>
+<span id="cb2-23"><a href="#cb2-23"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"maroon4"</span>, <span class="st">"steelblue3"</span>),                       </span>
+<span id="cb2-24"><a href="#cb2-24"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"female"</span>, <span class="st">"male"</span>)) <span class="sc">+</span>    </span>
+<span id="cb2-25"><a href="#cb2-25"></a>  <span class="fu">labs</span>(     </span>
+<span id="cb2-26"><a href="#cb2-26"></a>    <span class="at">title =</span> <span class="st">"How good are loner cats at hunting"</span>,     </span>
+<span id="cb2-27"><a href="#cb2-27"></a>    <span class="at">subtitle =</span> <span class="st">"as opposed to the cats that live in group </span><span class="sc">\n</span><span class="st">Grouped w.r.t the sex of the cat"</span>,     </span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="at">caption =</span> <span class="st">"Q 1 | Plot 2"</span>,     </span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="at">x =</span> <span class="st">"Prey caught per month"</span>,     </span>
+<span id="cb2-30"><a href="#cb2-30"></a>    <span class="at">y =</span> <span class="st">"Number of cats"</span>,     </span>
+<span id="cb2-31"><a href="#cb2-31"></a>    <span class="at">color =</span> <span class="st">"Animal Sex"</span>   </span>
+<span id="cb2-32"><a href="#cb2-32"></a>    ) <span class="sc">+</span>   </span>
+<span id="cb2-33"><a href="#cb2-33"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">8</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">11</span>))) <span class="sc">+</span>   </span>
+<span id="cb2-34"><a href="#cb2-34"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">30</span>,<span class="dv">2</span>))) <span class="sc">+</span>   </span>
+<span id="cb2-35"><a href="#cb2-35"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="fl">7.7</span>),              </span>
+<span id="cb2-36"><a href="#cb2-36"></a>            <span class="at">label =</span> <span class="fu">expression</span>(<span class="fu">italic</span>(<span class="st">"Young cat with cat door access"</span>)),             </span>
+<span id="cb2-37"><a href="#cb2-37"></a>            <span class="at">color =</span> <span class="st">"maroon4"</span>,             </span>
+<span id="cb2-38"><a href="#cb2-38"></a>            <span class="at">alpha =</span> <span class="fl">0.7</span>             </span>
+<span id="cb2-39"><a href="#cb2-39"></a>            ) <span class="sc">+</span>   </span>
+<span id="cb2-40"><a href="#cb2-40"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>    </span>
+<span id="cb2-41"><a href="#cb2-41"></a>  <span class="fu">theme</span>(     </span>
+<span id="cb2-42"><a href="#cb2-42"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.9</span>),      </span>
+<span id="cb2-43"><a href="#cb2-43"></a>    <span class="at">legend.justification =</span> <span class="st">"right"</span>,     </span>
+<span id="cb2-44"><a href="#cb2-44"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="st">"white"</span>,<span class="at">linetype =</span> <span class="st">"blank"</span>)   </span>
+<span id="cb2-45"><a href="#cb2-45"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plot-3" class="slide level2">
+<h2>Plot</h2>
+
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-7-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-1" class="slide level2 smaller">
+<h2>Insights</h2>
+<ul>
+<li><p>The plot compares the hunting efficiency of loner cats to those living in groups, categorized by sex (male and female).</p></li>
+<li><p>Cats having access to a cat door tend to catch more prey than those without, indicating the importance of outdoor access for hunting.</p></li>
+<li><p>Female cats, especially loners, display the highest hunting prowess, with one individual catching up to 11 prey items per month.</p></li>
+<li><p>The spread of data points suggests variability in hunting abilities among both male and female cats.</p></li>
+<li><p>On average, female cats seem to outperform male cats in terms of prey caught per month.</p></li>
+</ul>
+</section>
+<section id="q2.-how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern" class="slide level2 smaller">
+<h2>Q2. How does the reproductive status of cats influence the hunting pattern?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Plot 1</strong></p>
+<ul>
+<li><p>A density ridge plot with animal reproductive condition with prey caught per month</p></li>
+<li><p>Categorized by country</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Plot 2</strong></p>
+<ul>
+<li><p>Age of the cat with prey caught per month</p></li>
+<li><p>Categorized by animal reproduction condition</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="plot-1-1" class="title-slide slide level1 center">
+<h1>Plot 1</h1>
+
+</section>
+<section id="code-2" class="slide level2">
+<h2>Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>cats_new <span class="sc">|&gt;</span>   </span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>prey_p_month,<span class="at">y=</span>animal_reproductive_condition,               </span>
+<span id="cb3-3"><a href="#cb3-3"></a>             <span class="at">fill =</span> <span class="fu">factor</span>(<span class="fu">stat</span>(quantile)))) <span class="sc">+</span>   </span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">stat_density_ridges</span>(<span class="at">quantile_lines =</span> <span class="cn">TRUE</span>,                        </span>
+<span id="cb3-5"><a href="#cb3-5"></a>                      <span class="at">quantiles =</span> <span class="dv">3</span>,                        </span>
+<span id="cb3-6"><a href="#cb3-6"></a>                      <span class="at">alpha =</span> <span class="fl">0.5</span>,                       </span>
+<span id="cb3-7"><a href="#cb3-7"></a>                      <span class="at">geom =</span> <span class="st">"density_ridges_gradient"</span>,                        </span>
+<span id="cb3-8"><a href="#cb3-8"></a>                      <span class="at">calc_ecdf =</span> <span class="cn">TRUE</span>,                       </span>
+<span id="cb3-9"><a href="#cb3-9"></a>                      <span class="at">bandwidth =</span> <span class="fl">1.5</span>) <span class="sc">+</span>     </span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"pink2"</span>,<span class="st">"steelblue"</span>,<span class="st">"maroon4"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11"></a>                    <span class="at">name =</span> <span class="st">"Quantile"</span>) <span class="sc">+</span>   </span>
+<span id="cb3-12"><a href="#cb3-12"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">23</span>,<span class="dv">5</span>))<span class="sc">+</span>   </span>
+<span id="cb3-13"><a href="#cb3-13"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> cats_new<span class="sc">$</span>study_site) <span class="sc">+</span>   </span>
+<span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">labs</span>(     </span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="at">title =</span> <span class="st">"How are cats impacted by their reproductive condition?"</span>,     </span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="at">subtitle =</span> <span class="st">"Categorized by different countries"</span>,     </span>
+<span id="cb3-17"><a href="#cb3-17"></a>    <span class="at">caption =</span> <span class="st">"Q 2 | Plot 1"</span>,     </span>
+<span id="cb3-18"><a href="#cb3-18"></a>    <span class="at">x =</span> <span class="st">"Prey per month"</span>,     </span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="at">y =</span> <span class="st">"Annimal reproductive condition"</span>   </span>
+<span id="cb3-20"><a href="#cb3-20"></a>    ) <span class="sc">+</span>   </span>
+<span id="cb3-21"><a href="#cb3-21"></a>  <span class="fu">theme_minimal</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plot-4" class="slide level2">
+<h2>Plot</h2>
+
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-9-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-2" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>The graph shows how cats’ hunting abilities vary by country and neuter status. Cats who haven’t been neutered tend to be better hunters in both Australia and the United Kingdom.</p></li>
+<li><p>Notably, in the US and New Zealand, data for unneutered cats is absent, among the displayed data, neutered cats in the US tend to catch slightly more prey, indicating that the effects of neutering on hunting abilities can vary by region.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="plot-2-1" class="title-slide slide level1 center">
+<h1>Plot 2</h1>
+
+</section>
+<section id="code-3" class="slide level2">
+<h2>Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>cats_new <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> prey_p_month, <span class="at">y =</span> age_years, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>             <span class="at">color=</span>animal_reproductive_condition)) <span class="sc">+</span> </span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_hex</span>(<span class="at">bins=</span><span class="dv">15</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">geom_hex</span>(<span class="at">data =</span> cats_new <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>             <span class="fu">filter</span>(animal_reproductive_condition <span class="sc">==</span> <span class="st">"Unneutered"</span>), </span>
+<span id="cb4-7"><a href="#cb4-7"></a>           <span class="at">bins =</span> <span class="dv">15</span>, </span>
+<span id="cb4-8"><a href="#cb4-8"></a>           <span class="at">fill =</span> <span class="st">"maroon4"</span>, </span>
+<span id="cb4-9"><a href="#cb4-9"></a>           <span class="at">color =</span> <span class="st">"maroon4"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>           <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">9.3</span>, <span class="at">color=</span><span class="st">"maroon4"</span>) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">12.9</span>, <span class="at">color=</span><span class="st">"maroon4"</span>) <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>)) <span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">30</span>,<span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb4-15"><a href="#cb4-15"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">24</span>,<span class="dv">4</span>)) <span class="sc">+</span> </span>
+<span id="cb4-16"><a href="#cb4-16"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">"pink2"</span>, <span class="at">high =</span> <span class="st">"salmon2"</span>) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    <span class="at">title =</span> <span class="st">"How are cats impacted by their reproductive condition?"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19"></a>    <span class="at">subtitle =</span>  <span class="st">"Observed w.r.t the age of the cat"</span>,</span>
+<span id="cb4-20"><a href="#cb4-20"></a>    <span class="at">caption =</span> <span class="st">"Q 2 | Plot 2"</span>,</span>
+<span id="cb4-21"><a href="#cb4-21"></a>    <span class="at">x =</span> <span class="st">"Prey caught per month"</span>,</span>
+<span id="cb4-22"><a href="#cb4-22"></a>    <span class="at">y =</span> <span class="st">"Age of the cat"</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-26"><a href="#cb4-26"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey"</span>),</span>
+<span id="cb4-27"><a href="#cb4-27"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-28"><a href="#cb4-28"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>, <span class="at">legend.justification =</span> <span class="st">"right"</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a>  ) <span class="sc">+</span> </span>
+<span id="cb4-30"><a href="#cb4-30"></a>  <span class="fu">guides</span>(</span>
+<span id="cb4-31"><a href="#cb4-31"></a>    <span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">fill =</span> <span class="fu">c</span>(<span class="st">"pink2"</span>, <span class="st">"maroon4"</span>),</span>
+<span id="cb4-32"><a href="#cb4-32"></a>                                             <span class="at">color =</span> <span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>)))</span>
+<span id="cb4-33"><a href="#cb4-33"></a>  ) <span class="sc">+</span> </span>
+<span id="cb4-34"><a href="#cb4-34"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, </span>
+<span id="cb4-35"><a href="#cb4-35"></a>           <span class="at">x =</span> <span class="dv">21</span>, <span class="at">y =</span> <span class="dv">15</span>,</span>
+<span id="cb4-36"><a href="#cb4-36"></a>           <span class="at">label =</span> <span class="fu">expression</span>(<span class="fu">italic</span>(<span class="st">"spends only 2hrs inside"</span>)),</span>
+<span id="cb4-37"><a href="#cb4-37"></a>           <span class="at">size =</span> <span class="fl">2.5</span>,</span>
+<span id="cb4-38"><a href="#cb4-38"></a>           <span class="at">color =</span> <span class="st">"maroon4"</span>,</span>
+<span id="cb4-39"><a href="#cb4-39"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb4-40"><a href="#cb4-40"></a>           <span class="at">fill =</span> <span class="fu">alpha</span>(<span class="fu">c</span>(<span class="st">"white"</span>),<span class="fl">0.2</span>)</span>
+<span id="cb4-41"><a href="#cb4-41"></a>                  ) <span class="sc">+</span> </span>
+<span id="cb4-42"><a href="#cb4-42"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
+<span id="cb4-43"><a href="#cb4-43"></a>           <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> <span class="dv">18</span>,</span>
+<span id="cb4-44"><a href="#cb4-44"></a>           <span class="at">label =</span> <span class="fu">expression</span>(<span class="fu">italic</span>(<span class="st">"prey = 9"</span>)),</span>
+<span id="cb4-45"><a href="#cb4-45"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb4-46"><a href="#cb4-46"></a>           <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb4-47"><a href="#cb4-47"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a>                  ) <span class="sc">+</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
+<span id="cb4-50"><a href="#cb4-50"></a>           <span class="at">x =</span> <span class="dv">27</span>, <span class="at">y =</span> <span class="fl">13.5</span>,</span>
+<span id="cb4-51"><a href="#cb4-51"></a>           <span class="at">label =</span> <span class="fu">expression</span>(<span class="fu">italic</span>(<span class="st">"age = 12"</span>)),</span>
+<span id="cb4-52"><a href="#cb4-52"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb4-53"><a href="#cb4-53"></a>           <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb4-54"><a href="#cb4-54"></a>           <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb4-55"><a href="#cb4-55"></a>                  ) <span class="sc">+</span></span>
+<span id="cb4-56"><a href="#cb4-56"></a>  <span class="fu">coord_fixed</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plot-5" class="slide level2">
+<h2>Plot</h2>
+
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-11-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-3" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>As cats age, they generally catch less prey, regardless of being Fixed or Unneutered.</p></li>
+<li><p>Unneutered cats aged 10-14 years are the most proficient hunters.</p></li>
+<li><p>Older unneutered cats catch fewer prey compared to their younger selves.</p></li>
+<li><p>Data is limited on unneutered cats over 15 years old, suggesting they might hunt less or are underrepresented in the study.</p></li>
+</ul>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap up</h1>
 
 </section>
-<section id="feeling-adventurous" class="slide level2">
-<h2>Feeling adventurous?</h2>
+<section id="conclusion" class="slide level2 smaller" data-background-image="images/front_bg.png" data-background-size="cover">
+<h2>Conclusion</h2>
+<div>
 <ul>
-<li><p>You are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.</p></li>
-<li><p>But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.</p></li>
+<li><p>Cats that live in group have a lower hunting spree compared to loner cats. Reasons might be old age, unavailability of cat doors or easy access to food and care by a cat-loving owner.</p></li>
+<li><p>Female cats often have a decline in hunting capacities when living in group with other cats, unless they have access to cat door and they are young.</p></li>
+<li><p>Neutered cats show a high spree for hunting compared to Unneutered cats.</p></li>
+<li><p>Although age is a major factor in a cat’s hunting abilities, neutered cats manage to hunt more than the unneutered cats of equal age.</p></li>
+<li><p>There weren’t much cats in NZ and US that were unneutered, which holds our insights back from exploring their hunting behavior for the said conditions.</p></li>
 </ul>
+</div>
+</section>
+<section id="challenges-faced" class="slide level2 smaller">
+<h2>Challenges faced</h2>
+<div>
+<ul>
+<li><p>Our initial analysis plan included exploring ground speed while hunting for every individual cat in the dataset. Later it was discovered that there is no information on ground speed for cats in New Zealand. This would have been an interesting correlation.</p></li>
+<li><p>The lack of data on unneutered cats (owing to the strict neutering policies in some countries) made the insights on the hunting pattern for unneutered cats too limited.</p></li>
+<li><p>There were major chunk of missing values in the dataset coming from New Zealand and Australia. It was handled by imputation techniques. The veracity for the technique is tested by implementing various models and implementing data sampling to get accuracy in the process.</p></li>
+<li><p>The variables that could be a part of the analysis were less. Hence, coming up with a combination of variables that accurately depict our insights was a challenge.</p></li>
+<li><p>There were specific outliers in the data which needed to be explained, in order to justify the relations derived from the dataset. There were additional notes in the raw dataset that helped in analyzing the outliers of the data. The outliers are explained with annotations respectively.</p></li>
+</ul>
+</div>
 
 <div class="footer footer-default">
 
 </div>
 </section></section>
-
     </div>
   </div>
 

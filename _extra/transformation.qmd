@@ -220,7 +220,7 @@ cats_new |>
   scale_y_continuous(breaks = c(seq(0,8,1), c(11))) +
   scale_x_continuous(breaks = c(seq(0,30,2))) +
   geom_text(aes(x = 10, y = 7.7), 
-            label = expression(italic("Has a cat door")),
+            label = expression(italic("Young cat with cat door access")),
             color = "maroon4",
             alpha = 0.7
             ) +
