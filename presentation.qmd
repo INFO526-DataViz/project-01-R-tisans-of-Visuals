@@ -417,7 +417,7 @@ cats_new |>
 
 ```
 
-## Insights
+## Insights {.smaller}
 
 -   The graph shows a clear distinction in hunting behavior across different countries. Cats in the US and UK tend to catch less prey per month compared to their counterparts in AUS and NZ. This could be due to various factors such as differences in local ecosystems, cat populations, or even cultural attitudes towards outdoor cats.
 

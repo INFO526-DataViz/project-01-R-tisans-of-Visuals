@@ -256,21 +256,21 @@
     "href": "presentation.html#insights-1",
     "title": "Analysing Cat Hunting Behaviour",
     "section": "Insights",
-    "text": "Insights\n\nThe plot compares the hunting efficiency of loner cats to those living in groups, categorized by sex (male and female).\nCats having access to a cat door tend to catch more prey than those without, indicating the importance of outdoor access for hunting.\nFemale cats, especially loners, display the highest hunting prowess, with one individual catching up to 11 prey items per month.\nThe spread of data points suggests variability in hunting abilities among both male and female cats.\nOn average, female cats seem to outperform male cats in terms of prey caught per month."
+    "text": "Insights\n\nThe plot compares the hunting efficiency of loner cats to those living in groups, categorized by sex (male and female).\nThe plot shows that male cats have a higher hunting spree compared to female cats. The average prey caught by male cats is steady with increase in their grouping, whereas female cats tend to hunt less as the number of cats increase.\nYoung cats having access to a cat door tend to catch more prey than those without, indicating the importance of outdoor access for hunting.\nThe spread of data points suggests variability in hunting abilities among both male and female cats."
   },
   {
     "objectID": "presentation.html#insights-2",
     "href": "presentation.html#insights-2",
     "title": "Analysing Cat Hunting Behaviour",
     "section": "Insights",
-    "text": "Insights\n\nThe graph shows how cats’ hunting abilities vary by country and neuter status. Cats who haven’t been neutered tend to be better hunters in both Australia and the United Kingdom.\nNotably, in the US and New Zealand, data for unneutered cats is absent, among the displayed data, neutered cats in the US tend to catch slightly more prey, indicating that the effects of neutering on hunting abilities can vary by region."
+    "text": "Insights\n\nThe graph shows a clear distinction in hunting behavior across different countries. Cats in the US and UK tend to catch less prey per month compared to their counterparts in AUS and NZ. This could be due to various factors such as differences in local ecosystems, cat populations, or even cultural attitudes towards outdoor cats.\nThe reproductive condition of cats seems to have a significant impact on their hunting habits. Fixed cats tend to catch higher amount of prey than unneutered ones. We can see that the first and second quantiles for fixed cats across AUS and UK hold majority of cats than that for unneutered cats. This could be due to hormonal changes or behavioral differences associated with these conditions.\nNotably, in the US and New Zealand, data for unneutered cats is absent. Among the displayed data, neutered cats in the US tend to catch slightly more prey."
   },
   {
     "objectID": "presentation.html#insights-3",
     "href": "presentation.html#insights-3",
     "title": "Analysing Cat Hunting Behaviour",
     "section": "Insights",
-    "text": "Insights\n\nAs cats age, they generally catch less prey, regardless of being Fixed or Unneutered.\nUnneutered cats aged 10-14 years are the most proficient hunters.\nOlder unneutered cats catch fewer prey compared to their younger selves.\nData is limited on unneutered cats over 15 years old, suggesting they might hunt less or are underrepresented in the study."
+    "text": "Insights\n\nThe hunting frequency for cats decline by age immensely when they are unneutered.\nThe highest prey caught by an unneutered cat is far less than a fixed cat of equivalent age.\nFixed cats are better hunters than unneutered cats by a significant range.\nData is limited on unneutered cats over 12 years old, suggesting they might hunt less or are underrepresented in the study."
   },
   {
     "objectID": "index.html#discussion-2",
