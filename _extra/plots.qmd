@@ -234,7 +234,9 @@ cats_new |>
   ) + 
   guides(
     color = guide_legend(override.aes = list(fill = c("pink2", "maroon4"),
-                                             color = c("white", "black")))
+                                             color = c("white", "black")),
+                         title = "reproductive condition"
+                         )
   ) + 
   annotate("label", 
            x = 21, y = 15,
