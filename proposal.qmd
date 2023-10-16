@@ -52,9 +52,9 @@ We selected this dataset because we can gain *insights into the habits of cats* 
 
 -   We will then use a jitter plot to visualize the relationships between these variables effectively. In our plot the values are encoded as:
 
-    -   1\) number of cats on the x-axis
-    -   2\) prey caught per month on the y-axis,
-    -   4\) points on the plot will be grouped by age.
+    -   number of cats on the x-axis
+    -   prey caught per month on the y-axis,
+    -   points on the plot will be grouped by age.
 
 -   A line plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.
 
@@ -64,9 +64,9 @@ We selected this dataset because we can gain *insights into the habits of cats* 
 
 -   We are planning to go with a **Ridgeline Plot** or a **Hexbin** **Plot** that will effectively compare the three variables together.
 
-    -   1\) Two of the axes of either graph will contain the numeric variables `prey_p_month` and `hrs_indoors`.
+    -   Two of the axes of either graph will contain the numeric variables `prey_p_month` and `hrs_indoors`.
 
-    -   2\) The third categorical variable will help further to categorize (differentiate) the groups in the plot.
+    -   The third categorical variable will help further to categorize (differentiate) the groups in the plot.
 
 -   This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.
 
