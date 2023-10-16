@@ -73,3 +73,11 @@ The plot provides valuable insights into the hunting behavior of cats, with a fo
 The figure 4 offers provides valuable insights into the hunting behavior of cats, with a focus on the impact of age and reproductive status. Notably, it reveals that as cats grow older, regardless of whether they are Fixed or Unneutered, their prey-catching activity decreases. However, the data highlights a fascinating trend among Unneutered cats, particularly those aged 10 to 14 years, who exhibit the highest hunting prowess. It's intriguing to note that older Unneutered cats, beyond 15 years, seem to be less active hunters, which might imply a decrease in hunting behavior with age. This observation could be due to older cats hunting less or, possibly, a smaller representation of older Unneutered cats in the study. In summary, the cat's age and reproductive status play a substantial role in influencing their hunting habits, with younger Unneutered cats being the most proficient hunters, while older cats, regardless of reproductive status, tend to hunt less as they age.
 
 # References
+
+72.9% of cats in AUS are allowed to go outside, extensive hunting threatens local wildlife: ([\@sagepub.com](https://journals.sagepub.com/doi/pdf/10.1016/j.jfms.2008.06.010))
+
+26% of cats are not neutered in UK as they don't go outside much: [Cats Report 2022](https://www.cats.org.uk/about-cp/cats-report-2022)
+
+17% of pet owners in US feed free-roaming cats: [Pets by the numbers \| HumanePro](https://humanepro.org/page/pets-by-the-numbers)
+
+\>90% cat owners of New Zeland indicated that their cats were flea treated, and desexed, has easy access to cat doors: ([\@mdpi.com](https://www.mdpi.com/2076-2615/13/4/631))
