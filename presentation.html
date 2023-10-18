@@ -8,10 +8,10 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Author names">
-  <title>Project Title - Project title</title>
+  <meta name="author" content="Team R-tisans of Visual : Visalakshi Prakash Iyer, Rahul Bangad, Kashyap Sai Prasad Nadendla, Athira Thekkemadathil Anilkumar">
+  <title>🐈 Paws N’ Patterns - Analysing Cat Hunting Behaviour</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -319,214 +319,177 @@
       margin-right: 0; 
     }
   </style>
-  
-  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/watercolour_sys02_img34_teacup-ocean.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Project title</h1>
+<section id="title-slide" data-background-image="images/front_bg.png" data-background-opacity="1" data-background-size="fill" data-slide-number="none" class="quarto-title-block center">
+  <h1 class="title">Analysing Cat Hunting Behaviour</h1>
   <p class="subtitle">INFO 526 - Fall 2023 - Project 1</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Author names 
+Team R-tisans of Visual : Visalakshi Prakash Iyer, Rahul Bangad, Kashyap Sai Prasad Nadendla, Athira Thekkemadathil Anilkumar 
 </div>
 </div>
 </div>
 
 </section>
 <section>
-<section id="using-quarto-for-presentations" class="title-slide slide level1 center">
-<h1>Using Quarto for presentations</h1>
+<section id="understanding-the-hunt-cat-predatory-behavior" class="title-slide slide level1 slide-understanding-hunt center" style=".slide-understanding-hunt {     background: linear-gradient(to bottom right, #E0E0E0, #A9A9A9); /* Gradient from light grey to dark grey */     color: #FFFFFF; /* White text color */     display: flex;     align-items: center; /* Center the content vertically */     justify-content: center; /* Center the content horizontally */ }.slide-understanding-hunt h1 {     font-family: 'Georgia', serif; /* Stylish font */     font-size: 2.5em; /* Font size */     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */     margin: 0; /* Remove default margins */ }">
+<h1>Understanding the Hunt: Cat Predatory Behavior</h1>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
+<section id="dataset-description" class="slide level2">
+<h2>Dataset Description</h2>
+<div>
 <ul>
-<li><p>The presentation is created using the Quarto CLI</p></li>
-<li><p><code>##</code> sets the start of a new slide</p></li>
+<li class="fragment"><p>Dataset is drawn from TidyTuesday</p></li>
+<li class="fragment"><p>The <strong>Pet Cats</strong> data set comes from <a href="https://www.datarepository.movebank.org/handle/10255/move.882"><strong>Movebank for Animal Tracking Data</strong></a>, collected from volunteers using GPS sensors on their pet cats around <em>UK, US, Australia and New Zealand</em>.</p></li>
+<li class="fragment"><p>The dataset from US, UK, Australia, New Zealand have been merged to form a new data set which is used for plotting.</p></li>
 </ul>
-</section>
-<section id="layouts" class="slide level2">
-<h2>Layouts</h2>
-<p>You can use plain text</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>or bullet points<sup>1</sup></li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p>or in two columns</p>
-</div>
-</div>
-<ul>
-<li><p>like</p></li>
-<li><p>this</p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>And add footnotes</p></li></ol></aside></section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic       p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
-1 (Intercept)   25.3      3.08        8.22 0.00000000358
-2 speed         -0.116    0.0642     -1.81 0.0806       </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
 </div>
 </section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
-
-<img data-src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="1800" class="r-stretch"></section>
-<section id="plot-and-text" class="slide level2">
-<h2>Plot and text</h2>
+<section id="q1.-are-the-cats-which-live-together-better-at-hunting-than-those-which-live-alone" class="slide level2 smaller">
+<h2>Q1. Are the cats which live together better at hunting than those which live alone?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<p><strong>Plot 1</strong></p>
 <ul>
-<li><p>Some text</p></li>
-<li><p>goes here</p></li>
+<li><p>Jitter plot with pray caught per month by the number of cats living together</p></li>
+<li><p>Cats have been categorized based on their age group</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="1650"></p>
-</div>
-</div>
+<p><strong>Plot 2</strong></p>
+<ul>
+<li>Line plot with pray caught per month by the number of cats living together</li>
+<li>Cats have been categorized based on their sex</li>
+</ul>
 </div>
 </div>
 </section></section>
 <section>
-<section id="a-new-section" class="title-slide slide level1 center">
-<h1>A new section…</h1>
+<section id="plot-1" class="title-slide slide level1 center">
+<h1>Plot 1</h1>
 
 </section>
-<section id="tables" class="slide level2">
-<h2>Tables</h2>
-<p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">island</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_depth_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">flipper_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">body_mass_g</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">sex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.1</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">181</td>
-<td style="text-align: right;">3750</td>
-<td style="text-align: left;">male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.5</td>
-<td style="text-align: right;">17.4</td>
-<td style="text-align: right;">186</td>
-<td style="text-align: right;">3800</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">40.3</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">195</td>
-<td style="text-align: right;">3250</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">36.7</td>
-<td style="text-align: right;">19.3</td>
-<td style="text-align: right;">193</td>
-<td style="text-align: right;">3450</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.3</td>
-<td style="text-align: right;">20.6</td>
-<td style="text-align: right;">190</td>
-<td style="text-align: right;">3650</td>
-<td style="text-align: left;">male</td>
-</tr>
-</tbody>
-</table>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
 
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-4-1.png" width="1800" class="r-stretch"></section>
+<section id="insights" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>Kittens excel in hunting , especially when living alone or in pairs, capturing between 10 and 20 prey monthly.</p></li>
+<li><p>Hunting efficiency declines as group size exceeds two, particularly among young cats which often capture less than 10 prey monthly.</p></li>
+<li><p>Mature cats show varied hunting success rates, with a broad spread in the data.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="plot-2" class="title-slide slide level1 center">
+<h1>Plot 2</h1>
 
-</div>
-</div>
 </section>
-<section id="images" class="slide level2">
-<h2>Images</h2>
+<section id="plot-3" class="slide level2">
+<h2>Plot</h2>
 
-<img data-src="images/watercolour_sys02_img34_teacup-ocean.png" width="500" class="r-stretch quarto-figure-center"><p class="caption">Image credit: Danielle Navarro, Percolate.</p></section>
-<section id="math-expressions" class="slide level2 smaller">
-<h2>Math Expressions</h2>
-<p>You can write LaTeX math expressions inside a pair of dollar signs, e.g.&nbsp;$\alpha+\beta$ renders <span class="math inline">\(\alpha + \beta\)</span>. You can use the display style with double dollar signs:</p>
-<pre><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$</code></pre>
-<p><span class="math display">\[
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-\]</span></p>
-<p>Limitations:</p>
-<ol type="1">
-<li><p>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at the end of a line, led by a non-space character;</p></li>
-<li><p>There should not be spaces after the opening <code>$</code> or before the closing <code>$</code>.</p></li>
-</ol>
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-1" class="slide level2 smaller">
+<h2>Insights</h2>
+<ul>
+<li><p>The plot compares the hunting efficiency of loner cats to those living in groups, categorized by sex (male and female).</p></li>
+<li><p>The plot shows that male cats have a higher hunting spree compared to female cats. The average prey caught by male cats is steady with increase in their grouping, whereas female cats tend to hunt less as the number of cats increase.</p></li>
+<li><p>Young cats having access to a cat door tend to catch more prey than those without, indicating the importance of outdoor access for hunting.</p></li>
+<li><p>The spread of data points suggests variability in hunting abilities among both male and female cats.</p></li>
+</ul>
+</section>
+<section id="q2.-how-does-the-reproductive-status-of-cats-influence-the-hunting-pattern" class="slide level2 smaller">
+<h2>Q2. How does the reproductive status of cats influence the hunting pattern?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Plot 1</strong></p>
+<ul>
+<li><p>A density ridge plot with animal reproductive condition with prey caught per month</p></li>
+<li><p>Categorized by country</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Plot 2</strong></p>
+<ul>
+<li><p>Age of the cat with prey caught per month</p></li>
+<li><p>Categorized by animal reproduction condition</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="plot-1-1" class="title-slide slide level1 center">
+<h1>Plot 1</h1>
+
+</section>
+<section id="plot-4" class="slide level2">
+<h2>Plot</h2>
+
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-2" class="slide level2 smaller">
+<h2>Insights</h2>
+<ul>
+<li><p>The graph shows a clear distinction in hunting behavior across different countries. Cats in the US and UK tend to catch less prey per month compared to their counterparts in AUS and NZ. This could be due to various factors such as differences in local ecosystems, cat populations, or even cultural attitudes towards outdoor cats.</p></li>
+<li><p>The reproductive condition of cats seems to have a significant impact on their hunting habits. Fixed cats tend to catch higher amount of prey than unneutered ones. We can see that the first and second quantiles for fixed cats across AUS and UK hold majority of cats than that for unneutered cats. This could be due to hormonal changes or behavioral differences associated with these conditions.</p></li>
+<li><p>Notably, in the US and New Zealand, data for unneutered cats is absent. Among the displayed data, neutered cats in the US tend to catch slightly more prey.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="plot-2-1" class="title-slide slide level1 center">
+<h1>Plot 2</h1>
+
+</section>
+<section id="plot-5" class="slide level2">
+<h2>Plot</h2>
+
+<img data-src="presentation_files/figure-revealjs/unnamed-chunk-7-1.png" width="1800" class="r-stretch"></section>
+<section id="insights-3" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>The hunting frequency for cats decline by age immensely when they are unneutered.</p></li>
+<li><p>The highest prey caught by an unneutered cat is far less than a fixed cat of equivalent age.</p></li>
+<li><p>Fixed cats are better hunters than unneutered cats by a significant range.</p></li>
+<li><p>Data is limited on unneutered cats over 12 years old, suggesting they might hunt less or are underrepresented in the study.</p></li>
+</ul>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap up</h1>
 
 </section>
-<section id="feeling-adventurous" class="slide level2">
-<h2>Feeling adventurous?</h2>
+<section id="conclusion" class="slide level2 smaller" data-background-image="images/front_bg.png" data-background-size="cover">
+<h2>Conclusion</h2>
+<div>
 <ul>
-<li><p>You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.</p></li>
-<li><p>But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.</p></li>
+<li><p>Cats that live in group have a lower hunting spree compared to loner cats. Reasons might be old age, unavailability of cat doors or easy access to food and care by a cat-loving owner.</p></li>
+<li><p>When it comes to their reproductive condition, Fixed cats show a high spree for hunting compared to Unneutered cats.</p></li>
+<li><p>Although age is a major factor in a cat’s hunting abilities, fixed cats manage to hunt more than the unneutered cats of equal age.</p></li>
+<li><p>There weren’t much cats in NZ and US that were unneutered, which holds our insights back from exploring their hunting behavior for the said conditions.</p></li>
 </ul>
+</div>
+</section>
+<section id="challenges-faced" class="slide level2 smaller">
+<h2>Challenges faced</h2>
+<div>
+<ul>
+<li><p>Our initial analysis plan included exploring ground speed while hunting for every individual cat in the dataset. Later it was discovered that there is no information on ground speed for cats in New Zealand. This would have been an interesting correlation.</p></li>
+<li><p>The lack of data on unneutered cats (owing to the strict neutering policies in some countries) made the insights on the hunting pattern for unneutered cats too limited.</p></li>
+<li><p>There were major chunk of missing values in the dataset coming from New Zealand and Australia. It was handled by imputation techniques. The veracity for the technique is tested by implementing various models and implementing data sampling to get accuracy in the process.</p></li>
+<li><p>The variables that could be a part of the analysis were less. Hence, coming up with a combination of variables that accurately depict our insights was a challenge.</p></li>
+<li><p>There were specific outliers in the data which needed to be explained, in order to justify the relations derived from the dataset. There were additional notes in the raw dataset that helped in analyzing the outliers of the data. The outliers are explained with annotations respectively.</p></li>
+</ul>
+</div>
 
 <div class="footer footer-default">
 
 </div>
 </section></section>
-
     </div>
   </div>
 

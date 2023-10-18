@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Title - Analysing Cat Hunting Behaviour</title>
+<title>🐈 Paws N’ Patterns - Analysing Cat Hunting Behaviour</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Project Title</span>
+    <span class="navbar-title">🐈 Paws N’ Patterns</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -156,41 +157,296 @@ ul.task-list li input[type="checkbox"] {
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 101
-Columns: 16
-$ tag_id                        &lt;chr&gt; "Tommy-Tag", "Athena", "Ares", "Lola", "…
-$ animal_id                     &lt;chr&gt; "Tommy", "Athena", "Ares", "Lola", "Mave…
-$ animal_taxon                  &lt;chr&gt; "Felis catus", "Felis catus", "Felis cat…
-$ deploy_on_date                &lt;dttm&gt; 2017-06-03 01:02:09, 2017-06-24 01:02:1…
-$ deploy_off_date               &lt;dttm&gt; 2017-06-10 02:10:52, 2017-06-30 23:59:3…
-$ hunt                          &lt;lgl&gt; TRUE, TRUE, NA, TRUE, TRUE, TRUE, TRUE, …
-$ prey_p_month                  &lt;dbl&gt; 12.5, 3.0, 0.0, 3.0, 3.0, 3.0, 3.0, 17.5…
-$ animal_reproductive_condition &lt;chr&gt; "Neutered", "Spayed", "Neutered", "Spaye…
-$ animal_sex                    &lt;chr&gt; "m", "f", "m", "f", "m", "f", "m", "m", …
-$ hrs_indoors                   &lt;dbl&gt; 12.5, 7.5, 7.5, 17.5, 12.5, 12.5, 12.5, …
-$ n_cats                        &lt;dbl&gt; 2, 2, 2, 1, 1, 2, 3, 4, 2, 2, 1, 1, 1, 2…
-$ food_dry                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
-$ food_wet                      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
-$ food_other                    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, …
-$ study_site                    &lt;chr&gt; "UK", "UK", "UK", "UK", "UK", "UK", "UK"…
-$ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1, 8,…</code></pre>
+<div class="cell-output-display">
+
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+tag_id
+</th>
+<th style="text-align:right;">
+animal_id
+</th>
+<th style="text-align:right;">
+animal_taxon
+</th>
+<th style="text-align:right;">
+deploy_on_date
+</th>
+<th style="text-align:right;">
+deploy_off_date
+</th>
+<th style="text-align:right;">
+hunt
+</th>
+<th style="text-align:right;">
+prey_p_month
+</th>
+<th style="text-align:right;">
+animal_reproductive_condition
+</th>
+<th style="text-align:right;">
+animal_sex
+</th>
+<th style="text-align:right;">
+hrs_indoors
+</th>
+<th style="text-align:right;">
+n_cats
+</th>
+<th style="text-align:right;">
+food_dry
+</th>
+<th style="text-align:right;">
+food_wet
+</th>
+<th style="text-align:right;">
+food_other
+</th>
+<th style="text-align:right;">
+study_site
+</th>
+<th style="text-align:right;">
+age_years
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+Tommy-Tag
+</td>
+<td style="text-align:right;">
+Tommy
+</td>
+<td style="text-align:right;">
+Felis catus
+</td>
+<td style="text-align:right;">
+2017-06-03 01:02:09
+</td>
+<td style="text-align:right;">
+2017-06-10 02:10:52
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+12.5
+</td>
+<td style="text-align:right;">
+Neutered
+</td>
+<td style="text-align:right;">
+m
+</td>
+<td style="text-align:right;">
+12.5
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+UK
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+Athena
+</td>
+<td style="text-align:right;">
+Athena
+</td>
+<td style="text-align:right;">
+Felis catus
+</td>
+<td style="text-align:right;">
+2017-06-24 01:02:13
+</td>
+<td style="text-align:right;">
+2017-06-30 23:59:32
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+Spayed
+</td>
+<td style="text-align:right;">
+f
+</td>
+<td style="text-align:right;">
+7.5
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+UK
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+<div class="cell-output-display">
+
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+tag_id
+</th>
+<th style="text-align:right;">
+event_id
+</th>
+<th style="text-align:right;">
+visible
+</th>
+<th style="text-align:right;">
+timestamp
+</th>
+<th style="text-align:right;">
+location_long
+</th>
+<th style="text-align:right;">
+location_lat
+</th>
+<th style="text-align:right;">
+ground_speed
+</th>
+<th style="text-align:right;">
+height_above_ellipsoid
+</th>
+<th style="text-align:right;">
+algorithm_marked_outlier
+</th>
+<th style="text-align:right;">
+manually_marked_outlier
+</th>
+<th style="text-align:right;">
+study_name
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+Ares
+</td>
+<td style="text-align:right;">
+3395610551
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+2017-06-24 01:03:57
+</td>
+<td style="text-align:right;">
+-5.113851
+</td>
+<td style="text-align:right;">
+50.17032
+</td>
+<td style="text-align:right;">
+684
+</td>
+<td style="text-align:right;">
+154.67
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+Pet Cats United Kingdom
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+Ares
+</td>
+<td style="text-align:right;">
+3395610552
+</td>
+<td style="text-align:right;">
+TRUE
+</td>
+<td style="text-align:right;">
+2017-06-24 01:11:20
+</td>
+<td style="text-align:right;">
+-5.113851
+</td>
+<td style="text-align:right;">
+50.17032
+</td>
+<td style="text-align:right;">
+936
+</td>
+<td style="text-align:right;">
+154.67
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+FALSE
+</td>
+<td style="text-align:right;">
+Pet Cats United Kingdom
+</td>
+</tr>
+</tbody>
+
+</table>
 </div>
 </div>
 <section id="description-of-data" class="level4">
 <h4 class="anchored" data-anchor-id="description-of-data"><strong>Description of data</strong></h4>
-<p><strong>Pet Cats</strong> data set comes from <a href="https://www.datarepository.movebank.org/handle/10255/move.882"><strong>Movebank for Animal Tracking Data</strong></a>, collected from volunteers using GPS sensors on their pet cats around <em>UK, US, Australia and New Zealand</em>. The <strong>UK dataset</strong> contains two subsets called <code>cats_uk</code> and <code>cats_uk_reference</code>. So does the <strong>US dataset</strong>.</p>
-<p><code>cats_uk</code> contains <em>18215 observations</em> of <em>11 variables</em> providing data such as <code>ground speed</code>, geographic <code>longitude</code> and <code>latitude</code> estimated by the sensor, timestamp for sensor measurements and an event id. These are all numerical variables.</p>
-<p><code>cats_uk_reference</code> contains <em>101 observations</em> of <em>16 variables</em> and primarily describes the number of cats living in a house, whether they are allowed to <code>hunt</code>, their <code>prey per month</code> and <code>age</code>. These are numerical data. Also, <code>type of food</code> the cats eat is a logical variable and <code>reproductive condition</code> and animal sex are categorical variables.</p>
+<p>The <strong>Pet Cats</strong> data set comes from <a href="https://www.datarepository.movebank.org/handle/10255/move.882"><strong>Movebank for Animal Tracking Data</strong></a>, collected from volunteers using GPS sensors on their pet cats around <em>UK, US, Australia and New Zealand</em>. The <strong>UK dataset</strong> contains two subsets called <code>cats_uk</code> and <code>cats_uk_reference</code>. So does the <strong>US dataset</strong>.</p>
+<p><code>cats_uk</code> contains <em>18215 observations</em> of <em>11 variables</em> providing data such as <code>ground speed</code>, geographic <code>longitude</code> and <code>latitude</code> estimated by the sensor, time-stamp for sensor measurements and an event id. These are all numerical variables.</p>
+<p><code>cats_uk_reference</code> contains <em>101 observations</em> of <em>16 variables</em> and primarily describes the number of cats living in a house, whether they are allowed to <code>hunt</code>, their <code>prey per month</code> and <code>age</code>. These are numerical data. Also, the data contains the nature of the food that the cats eat, in the form of a logical variable. <code>reproductive condition</code> and <code>animal sex</code> are categorical variables.</p>
 </section>
 <section id="reason-of-choosing-the-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="reason-of-choosing-the-dataset">Reason of choosing the dataset</h3>
-<p>We selected this dataset because we can gain <em>insights into the habits of cats</em> by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We can also compare across neutered and spayed cats to understand hunting patterns. We all found the dataset interesting, as cats have fascinating characteristics. Representing them through visualizations would provide a great learning curve as the data is varied.</p>
+<p>We selected this dataset because we can gain <em>insights into the habits of cats</em> by finding a relationship between hunting behavior, prey consumption and hours spent indoors. We all found the dataset interesting, as cats have fascinating characteristics. There seems to be potential relations between hunting capacities, reproductive condition, food habits, age. Representing them through visualizations would provide a great learning curve as the data is varied.</p>
 </section>
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<p>1) Are the cats which live together greater at hunting than those who live alone?</p>
+<p>1) Are the cats which live together better at hunting than those which live alone?</p>
 <p>2) How does the reproductive status of cats influence the hunting pattern?</p>
 </section>
 <section id="analysis-plan" class="level2">
@@ -198,25 +454,24 @@ $ age_years                     &lt;dbl&gt; 11, 3, 3, 10, 7, 7, 6, 2, 4, 4, 8, 1
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <ul>
-<li>The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider four features from the dataset: <code>n_cats</code> (number of cats living in the house), <code>avg_ground_speed</code> (the average speed of entire tracking period), <code>prey_p_month</code> (prey caught per month), <code>age_years</code> (cat’s age).</li>
-<li>We will then use a <strong>Bubble Chart</strong> to visualize the relationships between these variables effectively. In our bubble chart the values are encoded as:
+<li><p>The first question is about studying whether the cats who live in group have the ability to hunt better than the cats who live alone. To analyze the above question we will consider some features from the dataset: <code>n_cats</code> (number of cats living in the house), <code>prey_p_month</code> (prey caught per month), <code>age_years</code> (cat’s age). We have categorized the cats into three distinct age groups: kittens (0 to 5 years), young cats (5 to 10 years), and mature cats (above 10 years). The x-axis displays the number of cat data, while the y-axis represents the prey caught per month. The plot is divided into three segments based on age groups. We believe that segmenting the jitter plot by age group is a valuable approach for assessing the hunting capabilities of cats in relation to their age.</p></li>
+<li><p>We will then use a jitter plot to visualize the relationships between these variables effectively. In our plot the values are encoded as:</p>
 <ul>
-<li>1) number of cats on the x-axis</li>
-<li>2) prey caught per month on the y-axis,</li>
-<li>3) The size of each bubble will correspond to the values of average ground speed and</li>
-<li>4) The color of the bubbles will be determined by the age of the cats.</li>
+<li>number of cats on the x-axis</li>
+<li>prey caught per month on the y-axis,</li>
+<li>points on the plot will be grouped by age.</li>
 </ul></li>
-<li>A <em>Violin plot</em> can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.</li>
+<li><p>A line plot can also be a suitable plot here, but the information gain will be apparent only upon actual experiments with data and visualization.</p></li>
 </ul>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <ul>
-<li><p>The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains <code>animal_reproductive_condition</code> that specifies whether the animal was neutered or spayed. There are also cats who has not been neutered. We also have <code>prey_p_month</code> and <code>hrs_indoors</code> that reflec how much time a cat spends indoors or outdoors hunting.</p></li>
-<li><p>We are planning to go with a <strong>Parrallel Plot</strong> or a <strong>Line Chart</strong> that will effectively compare the three variables together.</p>
+<li><p>The second question asks whether there is a difference in the hunting pattern based on the reproductive condition of the cat. The dataset contains <code>animal_reproductive_condition</code> that specifies whether the animal was neutered or not. We also have <code>prey_p_month</code> and age that reflect the hunting pattern with respect to age.</p></li>
+<li><p>We are planning to go with a <strong>Ridgeline Plot</strong> or a <strong>Hexbin</strong> <strong>Plot</strong> that will effectively compare the three variables together.</p>
 <ul>
-<li><p>1) Two of the axes of either graph will contain the numeric variables <code>prey_p_month</code> and <code>hrs_indoors</code>.</p></li>
-<li><p>2) The third categorical variable will act as a distinguish-er in the groups of the plot.</p></li>
+<li><p>Two of the axes of either graph will contain the numeric variables <code>prey_p_month</code> and <code>hrs_indoors</code>.</p></li>
+<li><p>The third categorical variable will help further to categorize (differentiate) the groups in the plot.</p></li>
 </ul></li>
 <li><p>This visualization will be finalized based on the amount of information retrieval from either if the charts mentioned in the above point.</p></li>
 </ul>
